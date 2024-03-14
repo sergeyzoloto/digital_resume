@@ -20,7 +20,7 @@ div {
 body {
   margin: 0;
   padding: 24px;
-  background-color: var(--grey);
+  background-color: var(--whitesmoke);
   font-family: Consolas, 'Courier New', monospace;
   font-size: 15px;
 }
@@ -127,7 +127,8 @@ ul {
 }
 
 .navbar {
-  display: flex;
+  /*display: flex;*/
+  display: none;
   justify-content: space-around;
   align-items: center;
   align-content: center;
