@@ -1,43 +1,23 @@
-import { useState } from "react";
 import "./App.css";
 
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import MainLayout from "./layout/MainLayout";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center min-h-svh">
-        <Card>
-          <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-            <Button
-              onClick={() => setCount((count) => count + 1)}
-              variant="default"
-              size="lg"
-            >
-              <p>count is {count}</p>
-            </Button>
-          </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
-        </Card>
-      </div>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <MainLayout>
+            <HomePage />
+          </MainLayout>
+        }
+      />
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
   );
 }
 
