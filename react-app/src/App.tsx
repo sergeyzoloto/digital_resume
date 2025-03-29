@@ -24,7 +24,11 @@ function App() {
           </CardHeader>
           <CardContent>
             <p>Card Content</p>
-            <Button onClick={() => setCount((count) => count + 1)}>
+            <Button
+              onClick={() => setCount((count) => count + 1)}
+              variant="default"
+              size="lg"
+            >
               <p>count is {count}</p>
             </Button>
           </CardContent>
