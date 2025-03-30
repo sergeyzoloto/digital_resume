@@ -9,9 +9,9 @@ const HomePage = () => {
         <h1 className="text-4xl font-bold">Sergey Zolotko</h1>
         <p className="text-xl mt-2">Full Stack Developer</p>
         <p className="mt-4 max-w-2xl">
-          I'm a motivated business analyst making a shift into web development.
-          I love solving problems creatively and working with different teams to
-          turn ideas into reality.
+          Business analyst making a shift into web development. I love solving
+          problems creatively and working with different teams to turn ideas
+          into reality.
         </p>
       </section>
 
@@ -25,12 +25,41 @@ const HomePage = () => {
           <CardContent>
             <p>
               <strong>Full Stack Web Developer Trainee</strong> - HackYourFuture
+              (09/2022 - Present, Amsterdam, Netherlands)
             </p>
-            <p>09/2022 - Ongoing | Amsterdam, Netherlands</p>
+            <ul className="list-disc pl-5">
+              <li>
+                Proficient in HTML, CSS, JavaScript, NodeJS, ExpressJS, MySQL,
+                and ReactJS.
+              </li>
+              <li>
+                Developed a single-page application for quick access to cocktail
+                recipes.
+              </li>
+              <li>
+                Collaborated on a social networking site with an online chat
+                function.
+              </li>
+            </ul>
             <p>
-              Developed a single-page application for cocktail recipes and
-              worked on a social networking site.
+              <strong>SQL Data Analyst</strong> - Mobile TeleSystems (MTS)
+              (02/2020 - 10/2020, Moscow, Russia)
             </p>
+            <ul className="list-disc pl-5">
+              <li>Optimized database queries and built ad hoc reports.</li>
+              <li>Measured the COVID-19 impact on company base behavior.</li>
+            </ul>
+            <p>
+              <strong>Lead Financial Analyst</strong> - Alfa Bank (08/2018 -
+              08/2019, Moscow, Russia)
+            </p>
+            <ul className="list-disc pl-5">
+              <li>Adapted SQL for data analysis and planning processes.</li>
+              <li>
+                Developed planning models and managed corporate loan portfolio
+                reports.
+              </li>
+            </ul>
           </CardContent>
         </Card>
 
@@ -45,8 +74,10 @@ const HomePage = () => {
               (2022)
             </p>
             <p>
-              <strong>Specialist Diploma</strong> - Bauman Moscow State
-              Technical University (2013)
+              <strong>
+                Specialist Diploma in Transport Machines Engineering
+              </strong>{" "}
+              - Bauman Moscow State Technical University (2007 - 2013)
             </p>
           </CardContent>
         </Card>
