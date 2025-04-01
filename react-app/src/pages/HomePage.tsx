@@ -1,127 +1,30 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { ThemeProvider } from "../components/sections/theme-provider";
+import { Header } from "../components/sections/header";
+import { HeroSection } from "../components/sections/hero-section";
+import { AboutSection } from "../components/sections/about-section";
+import { ExperienceSection } from "../components/sections/experience-section";
+import { SkillsSection } from "../components/sections/skills-section";
+import { EducationSection } from "../components/sections/education-section";
+import { ContactSection } from "../components/sections/contact-section";
+import { Footer } from "../components/sections/footer";
 
-const HomePage = () => {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-900">
-      {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center py-20 bg-blue-500 text-white">
-        <h1 className="text-4xl font-bold">Sergey Zolotko</h1>
-        <p className="text-xl mt-2">Full Stack Developer</p>
-        <p className="mt-4 max-w-2xl">
-          Business analyst making a shift into web development. I love solving
-          problems creatively and working with different teams to turn ideas
-          into reality.
-        </p>
-      </section>
-
-      {/* CV Section */}
-      <section className="container mx-auto py-10 px-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {/* Experience */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Experience</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>
-              <strong>Full Stack Web Developer Trainee</strong> - HackYourFuture
-              (09/2022 - Present, Amsterdam, Netherlands)
-            </p>
-            <ul className="list-disc pl-5">
-              <li>
-                Proficient in HTML, CSS, JavaScript, NodeJS, ExpressJS, MySQL,
-                and ReactJS.
-              </li>
-              <li>
-                Developed a single-page application for quick access to cocktail
-                recipes.
-              </li>
-              <li>
-                Collaborated on a social networking site with an online chat
-                function.
-              </li>
-            </ul>
-            <p>
-              <strong>SQL Data Analyst</strong> - Mobile TeleSystems (MTS)
-              (02/2020 - 10/2020, Moscow, Russia)
-            </p>
-            <ul className="list-disc pl-5">
-              <li>Optimized database queries and built ad hoc reports.</li>
-              <li>Measured the COVID-19 impact on company base behavior.</li>
-            </ul>
-            <p>
-              <strong>Lead Financial Analyst</strong> - Alfa Bank (08/2018 -
-              08/2019, Moscow, Russia)
-            </p>
-            <ul className="list-disc pl-5">
-              <li>Adapted SQL for data analysis and planning processes.</li>
-              <li>
-                Developed planning models and managed corporate loan portfolio
-                reports.
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* Education */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Education</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>
-              <strong>Full Stack Web Development</strong> - HackYourFuture
-              (2022)
-            </p>
-            <p>
-              <strong>
-                Specialist Diploma in Transport Machines Engineering
-              </strong>{" "}
-              - Bauman Moscow State Technical University (2007 - 2013)
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Skills */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Skills</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>
-              HTML, CSS, JavaScript, SQL, MongoDB, Express, React, Node.js,
-              Python, Java, Spring
-            </p>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Footer Section */}
-      <footer className="bg-gray-800 text-white py-6 text-center">
-        <p>Contact: s.z____@_____m | +3_________5</p>
-        <div className="flex justify-center gap-4 mt-2">
-          <Button asChild variant="outline">
-            <a
-              href="https://www.linkedin.com/in/sergey-zolotko/"
-              target="_blank"
-              className="flex items-center gap-2"
-            >
-              LinkedIn
-            </a>
-          </Button>
-          <Button asChild variant="outline">
-            <a
-              href="https://github.com/sergeyzoloto"
-              target="_blank"
-              className="flex items-center gap-2"
-            >
-              GitHub
-            </a>
-          </Button>
-        </div>
-      </footer>
-    </div>
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <div className="min-h-screen bg-background font-sans antialiased">
+        <Header />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ExperienceSection />
+          <SkillsSection />
+          <EducationSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
-};
+}
 
-export default HomePage;
+export default App;
