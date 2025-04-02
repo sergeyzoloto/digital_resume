@@ -7,14 +7,12 @@ export function HeroSection() {
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Sergey Zolotko
-              </h1>
+              <h1 className="font-bold tracking-tighter">Sergey Zolotko</h1>
               <p className="text-xl text-muted-foreground">
                 Analyst-Developer based in The Netherlands
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+            <div className="flex flex-row gap-2">
               <Button asChild>
                 <a href="#contact">
                   Contact Me
