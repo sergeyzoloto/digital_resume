@@ -2,9 +2,9 @@ import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+    <section className="min-h-screen py-20 md:py-32 overflow-hidden bg-green-500/50">
+      <div className="px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center md:flex-row">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="font-bold tracking-tighter">Sergey Zolotko</h1>
@@ -59,9 +59,9 @@ export function HeroSection() {
               <img
                 src="/placeholder.svg?height=600&width=600"
                 alt="Sergey Zolotko"
-                width={600}
-                height={600}
-                className="object-cover"
+                width={450}
+                height={450}
+                className="object-cover bg-red-500"
               />
             </div>
           </div>
