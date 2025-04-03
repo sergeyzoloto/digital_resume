@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen py-20 md:py-32 overflow-hidden bg-green-500/50">
+    <section className="min-h-screen flex items-center justify-center overflow-hidden bg-green-500/50">
       <div className="px-4 md:px-6">
         <div className="flex flex-col items-center justify-center md:flex-row">
           <div className="flex flex-col justify-center space-y-4">
