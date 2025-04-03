@@ -7,12 +7,13 @@ export function HeroSection() {
       className="min-h-screen w-full flex items-center justify-center overflow-hidden width-container"
     >
       <div className="w-full">
-        <div className="flex flex-col items-center justify-center md:flex-row w-full">
+        <div className="grid grid-cols-none sm:grid-cols-2 sm:gap-4 gap-16 w-full">
+          {/* Left Column */}
           <div className="flex flex-col justify-center space-y-4 w-full">
             <div className="space-y-2">
               <h1 className="font-bold tracking-tighter">Sergey Zolotko</h1>
               <p className="text-xl text-muted-foreground">
-                Analyst-Developer based in The Netherlands
+                Analyst-Developer based in&nbsp;The&nbsp;Netherlands
               </p>
             </div>
             <div className="flex flex-row gap-2">
@@ -57,12 +58,13 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center">
+          {/* Right Column */}
+          <div className="flex items-center justify-self-start sm:justify-self-end">
             <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px]">
               <img
                 src="/profile-pic.jpg"
                 alt="Sergey Zolotko"
-                className="object-contain max-w-full h-auto bg-red-500"
+                className="object-contain max-w-full h-auto bg-gray-500"
               />
             </div>
           </div>
