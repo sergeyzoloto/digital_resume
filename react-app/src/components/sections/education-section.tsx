@@ -9,10 +9,13 @@ import { Badge } from "../ui/badge";
 
 export function EducationSection() {
   return (
-    <section id="education" className="py-12 md:py-16 bg-green-500/50">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
+    <section
+      id="education"
+      className="min-h-screen w-full flex items-center justify-center bg-green-500/50"
+    >
+      <div className="w-full">
+        <div className="w-full flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="w-full space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Education
             </h2>
@@ -21,7 +24,7 @@ export function EducationSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto max-w-3xl py-12">
+        <div className="mx-auto py-12">
           <Card>
             <CardHeader className="flex flex-row items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">

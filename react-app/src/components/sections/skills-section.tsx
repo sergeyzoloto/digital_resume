@@ -4,8 +4,11 @@ import { Progress } from "../ui/progress";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-12 md:py-16 bg-muted/50 bg-red-500/50">
-      <div className="container px-4 md:px-6">
+    <section
+      id="skills"
+      className="min-h-screen w-full flex items-center justify-center bg-red-500/50"
+    >
+      <div className="w-full">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -16,7 +19,7 @@ export function SkillsSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:gap-12">
+        <div className="mx-auto grid grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:gap-12">
           <Card>
             <CardHeader>
               <CardTitle>Technical Skills</CardTitle>
