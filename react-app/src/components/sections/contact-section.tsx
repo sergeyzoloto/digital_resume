@@ -13,7 +13,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen w-full flex items-center justify-center bg-red-500/50 pl-4 pr-8 md:pl-8"
+      className="min-h-screen w-full flex items-center justify-center bg-red-500/50 width-container"
     >
       <div className="w-full">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
