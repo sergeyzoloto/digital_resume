@@ -2,10 +2,10 @@ import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center overflow-hidden bg-green-500/50">
-      <div className="px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center md:flex-row">
-          <div className="flex flex-col justify-center space-y-4">
+    <section className="min-h-screen w-full flex items-center justify-center overflow-hidden bg-green-500/50">
+      <div className="w-full">
+        <div className="flex flex-col items-center justify-center md:flex-row w-full">
+          <div className="flex flex-col justify-center space-y-4 w-full">
             <div className="space-y-2">
               <h1 className="font-bold tracking-tighter">Sergey Zolotko</h1>
               <p className="text-xl text-muted-foreground">

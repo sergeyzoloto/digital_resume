@@ -4,7 +4,7 @@ import { Progress } from "../ui/progress";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-12 md:py-16 bg-muted/50">
+    <section id="skills" className="py-12 md:py-16 bg-muted/50 bg-red-500/50">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">

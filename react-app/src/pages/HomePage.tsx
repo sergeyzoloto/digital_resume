@@ -12,10 +12,10 @@ function App() {
       <div className="min-h-screen bg-background font-sans antialiased">
         <main>
           <HeroSection />
-          <AboutSection />
           <ExperienceSection />
-          <SkillsSection />
           <EducationSection />
+          <SkillsSection />
+          <AboutSection />
           <ContactSection />
         </main>
       </div>

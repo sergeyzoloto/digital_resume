@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className="fixed min-w-screen top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center justify-between w-full">
-        <a href="/" className="font-bold text-xl px-4">
+        <a href="/" className="font-bold text-xl">
           Sergey Zolotko
         </a>
 
@@ -72,13 +72,13 @@ export function Header() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-48">
             <DropdownMenuItem asChild>
-              <a href="#about" onClick={toggleMenu}>
-                About
+              <a href="#experience" onClick={toggleMenu}>
+                Experience
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="#experience" onClick={toggleMenu}>
-                Experience
+              <a href="#education" onClick={toggleMenu}>
+                Education
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
@@ -87,8 +87,8 @@ export function Header() {
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="#education" onClick={toggleMenu}>
-                Education
+              <a href="#about" onClick={toggleMenu}>
+                About
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
@@ -105,16 +105,16 @@ export function Header() {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <a
-            href="#about"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            About
-          </a>
-          <a
             href="#experience"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             Experience
+          </a>
+          <a
+            href="#education"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Education
           </a>
           <a
             href="#skills"
@@ -123,10 +123,10 @@ export function Header() {
             Skills
           </a>
           <a
-            href="#education"
+            href="#about"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Education
+            About
           </a>
           <a
             href="#contact"
