@@ -2,7 +2,10 @@ import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center overflow-hidden width-container">
+    <section
+      id="top"
+      className="min-h-screen w-full flex items-center justify-center overflow-hidden width-container"
+    >
       <div className="w-full">
         <div className="flex flex-col items-center justify-center md:flex-row w-full">
           <div className="flex flex-col justify-center space-y-4 w-full">
