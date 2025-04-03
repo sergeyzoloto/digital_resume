@@ -57,7 +57,7 @@ export function HeroSection() {
           <div className="flex items-center justify-center">
             <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px]">
               <img
-                src="/placeholder.svg"
+                src="/profile-pic.jpg"
                 alt="Sergey Zolotko"
                 className="object-contain max-w-full h-auto bg-red-500"
               />

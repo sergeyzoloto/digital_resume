@@ -10,12 +10,10 @@ interface MainLayoutProps {
 function MainLayout({ children }: Readonly<MainLayoutProps>) {
   return (
     <div>
-      {" "}
       <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-        {/* Layout content */}
         <Header />
         {children}
-        <Footer />{" "}
+        <Footer />
       </ThemeProvider>
     </div>
   );

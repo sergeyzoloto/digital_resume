@@ -2,27 +2,7 @@ h1 {
   font-size: clamp(2rem, calc(7vw + 1rem), 4rem);
 }
 
-/* WebKit Browsers */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #555;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #888 var(--background);
+  scrollbar-color: var(--foreground) var(--background);
 }
