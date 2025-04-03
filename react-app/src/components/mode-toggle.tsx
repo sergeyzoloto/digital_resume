@@ -1,12 +1,12 @@
 "use client";
 import { useTheme } from "./theme-provider";
-import { Button } from "../ui/button";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
+} from "./ui/dropdown-menu";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();

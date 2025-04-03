@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { ModeToggle } from "./sections/mode-toggle";
+import { ModeToggle } from "./mode-toggle";
 
 import {
   DropdownMenu,
