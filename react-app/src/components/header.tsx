@@ -70,7 +70,7 @@ export function Header() {
               )}
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-48">
+          <DropdownMenuContent className="w-48 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <DropdownMenuItem asChild>
               <a href="#experience" onClick={toggleMenu}>
                 Experience
@@ -136,52 +136,6 @@ export function Header() {
           </a>
           <ModeToggle />
         </nav>
-
-        {/* Mobile navigation */}
-        {isMenuOpen && (
-          <div className="absolute z-50 top-16 left-0 right-0 border-b md:hidden bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <nav className="flex flex-col p-4">
-              <a
-                href="#about"
-                className="py-2 text-muted-foreground hover:text-foreground transition-colors"
-                onClick={toggleMenu}
-              >
-                About
-              </a>
-              <a
-                href="#experience"
-                className="py-2 text-muted-foreground hover:text-foreground transition-colors"
-                onClick={toggleMenu}
-              >
-                Experience
-              </a>
-              <a
-                href="#skills"
-                className="py-2 text-muted-foreground hover:text-foreground transition-colors"
-                onClick={toggleMenu}
-              >
-                Skills
-              </a>
-              <a
-                href="#education"
-                className="py-2 text-muted-foreground hover:text-foreground transition-colors"
-                onClick={toggleMenu}
-              >
-                Education
-              </a>
-              <a
-                href="#contact"
-                className="py-2 text-muted-foreground hover:text-foreground transition-colors"
-                onClick={toggleMenu}
-              >
-                Contact
-              </a>
-              <div className="py-2">
-                <ModeToggle />
-              </div>
-            </nav>
-          </div>
-        )}
       </div>
     </header>
   );
