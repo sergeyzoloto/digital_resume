@@ -2,7 +2,7 @@ import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center overflow-hidden bg-green-500/50">
+    <section className="min-h-screen w-full flex items-center justify-center overflow-hidden bg-green-500/50 pl-4 pr-8 md:pl-8">
       <div className="w-full">
         <div className="flex flex-col items-center justify-center md:flex-row w-full">
           <div className="flex flex-col justify-center space-y-4 w-full">
@@ -55,13 +55,11 @@ export function HeroSection() {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted">
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px]">
               <img
-                src="/placeholder.svg?height=600&width=600"
+                src="/placeholder.svg"
                 alt="Sergey Zolotko"
-                width={450}
-                height={450}
-                className="object-cover bg-red-500"
+                className="object-contain max-w-full h-auto bg-red-500"
               />
             </div>
           </div>
