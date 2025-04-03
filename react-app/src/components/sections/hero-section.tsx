@@ -6,17 +6,17 @@ export function HeroSection() {
       id="top"
       className="min-h-screen w-full flex items-center justify-center overflow-hidden width-container"
     >
-      <div className="w-full">
-        <div className="grid grid-cols-none sm:grid-cols-2 sm:gap-4 gap-16 w-full">
+      <div className="w-3/4 bg-green-500/25 sm:w-full">
+        <div className="flex flex-col sm:flex-row w-full bg-red-500/25">
           {/* Left Column */}
-          <div className="flex flex-col justify-center space-y-4 w-full">
-            <div className="space-y-2">
+          <div className="flex flex-col justify-center items-start space-y-4 w-full bg-red-500/25">
+            <div className="space-y-2 bg-red-500/25">
               <h1 className="font-bold tracking-tighter">Sergey Zolotko</h1>
               <p className="text-xl text-muted-foreground">
                 Analyst-Developer based in&nbsp;The&nbsp;Netherlands
               </p>
             </div>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row gap-2 bg-red-500/25">
               <Button asChild>
                 <a href="#contact">
                   Contact Me
@@ -59,8 +59,8 @@ export function HeroSection() {
             </div>
           </div>
           {/* Right Column */}
-          <div className="flex items-center justify-self-start sm:justify-self-end">
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px]">
+          <div className="flex items-start bg-blue-500/25">
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px] bg-blue-500/25">
               <img
                 src="/profile-pic.jpg"
                 alt="Sergey Zolotko"
