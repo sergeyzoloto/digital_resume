@@ -14,26 +14,17 @@ import {
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <header className="fixed min-w-screen top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 pl-4 pr-8 md:pl-8">
-      <div className="flex h-16 items-center justify-between w-full">
+    <header className="fixed min-w-screen top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 md:px-8">
+      <div className="flex h-10 md:h-16 items-center justify-between w-full">
         <a href="/" className="font-bold text-xl">
           Sergey Zolotko
         </a>
 
         {/* Mobile menu button */}
-        <DropdownMenu>
+        <DropdownMenu onOpenChange={(open) => setIsMenuOpen(open)}>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={toggleMenu}
-            >
+            <Button variant="ghost" size="icon" className="md:hidden">
               {isMenuOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,29 +61,29 @@ export function Header() {
               )}
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-48 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <DropdownMenuContent className="w-48 bg-background/95 backdrop-blur-3xl supports-[backdrop-filter]:bg-background/60">
             <DropdownMenuItem asChild>
-              <a href="#experience" onClick={toggleMenu}>
+              <a href="#experience" onClick={() => setIsMenuOpen(false)}>
                 Experience
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="#education" onClick={toggleMenu}>
+              <a href="#education" onClick={() => setIsMenuOpen(false)}>
                 Education
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="#skills" onClick={toggleMenu}>
+              <a href="#skills" onClick={() => setIsMenuOpen(false)}>
                 Skills
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="#about" onClick={toggleMenu}>
+              <a href="#about" onClick={() => setIsMenuOpen(false)}>
                 About
               </a>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <a href="#contact" onClick={toggleMenu}>
+              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </a>
             </DropdownMenuItem>
