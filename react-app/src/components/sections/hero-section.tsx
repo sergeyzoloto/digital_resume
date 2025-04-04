@@ -6,7 +6,7 @@ export function HeroSection() {
       id="top"
       className="min-h-screen w-full flex items-center justify-center overflow-hidden width-container"
     >
-      <div className="w-3/4 sm:w-full">
+      <div className="w-5/6 sm:w-full">
         <div className="flex flex-col sm:flex-row w-full gap-4">
           {/* Left Column */}
           <div className="flex flex-col justify-center items-start space-y-4 w-full">
