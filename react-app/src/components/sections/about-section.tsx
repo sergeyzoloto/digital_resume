@@ -2,11 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 export function AboutSection() {
   return (
-    <section
-      id="about"
-      className="min-h-screen py-12 md:py-16 bg-green-500/50 width-container"
-    >
-      <div className="w-full">
+    <section id="about" className="min-h-screen py-12 md:py-16 page-container">
+      <div className="w-full mt-2 bg-green-500/50">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">

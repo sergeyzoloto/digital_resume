@@ -4,7 +4,7 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="min-h-screen w-full flex items-center justify-center overflow-hidden width-container"
+      className="min-h-screen w-full flex items-center justify-center overflow-hidden page-container pt-4 md:pt-6"
     >
       <div className="w-5/6 sm:w-full">
         <div className="flex flex-col sm:flex-row w-full gap-4">
