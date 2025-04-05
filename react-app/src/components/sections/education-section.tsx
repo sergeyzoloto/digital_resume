@@ -11,7 +11,7 @@ export function EducationSection() {
   return (
     <section
       id="education"
-      className="min-h-screen w-full flex items-top justify-center page-container"
+      className="min-h-screen w-full flex items-top justify-center page-container snap-start snap-always"
     >
       <div className="w-full mt-4 bg-green-500/50">
         <div className="w-full flex flex-col items-center justify-center space-y-4 text-center">

@@ -8,7 +8,7 @@ import { ContactSection } from "../components/sections/contact-section";
 function HomePage() {
   return (
     <div className="min-h-screen bg-background font-sans antialiased">
-      <main>
+      <main className="snap-y snap-mandatory overflow-y-scroll scroll-smooth sm:scroll-smooth h-screen">
         <HeroSection />
         <ExperienceSection />
         <EducationSection />

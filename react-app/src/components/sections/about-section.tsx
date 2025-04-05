@@ -2,7 +2,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 export function AboutSection() {
   return (
-    <section id="about" className="min-h-screen py-12 md:py-16 page-container">
+    <section
+      id="about"
+      className="min-h-screen py-12 md:py-16 page-container snap-start snap-always"
+    >
       <div className="w-full mt-4 bg-green-500/50">
         <div className="flex flex-col items-top justify-center space-y-4 text-center">
           <div className="space-y-2">
