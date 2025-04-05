@@ -6,9 +6,9 @@ export function SkillsSection() {
   return (
     <section
       id="skills"
-      className="min-h-screen w-full flex items-center justify-center page-container"
+      className="min-h-screen w-full flex items-top justify-center page-container"
     >
-      <div className="w-full mt-2 bg-red-500/50">
+      <div className="w-full mt-4 bg-red-500/50">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
