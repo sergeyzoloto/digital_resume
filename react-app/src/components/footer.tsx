@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 
 export function Footer() {
@@ -5,15 +7,27 @@ export function Footer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      // Check if any scroll has happened
+      const mainElement = document.querySelector("main");
+      if (mainElement) {
+        setIsScrolled(mainElement.scrollTop > 0);
+      }
     };
 
-    // Attach the scroll event listener
-    window.addEventListener("scroll", handleScroll);
+    // Attach the scroll event listener to the main element
+    const mainElement = document.querySelector("main");
+    if (mainElement) {
+      mainElement.addEventListener("scroll", handleScroll);
+
+      // Initial check in case page is already scrolled
+      handleScroll();
+    }
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (mainElement) {
+        mainElement.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
@@ -23,7 +37,9 @@ export function Footer() {
         <div className="flex items-center flex-row gap-2 px-0 pt-0">
           <p
             className={`text-sm leading-loose text-muted-foreground text-left transition-opacity duration-300 ${
-              isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+              isScrolled
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
             }`}
           >
             <a
