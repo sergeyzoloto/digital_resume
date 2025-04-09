@@ -1,33 +1,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function Footer() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if any scroll has happened
-      const mainElement = document.querySelector("main");
-      if (mainElement) {
-        setIsScrolled(mainElement.scrollTop > 0);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
-    // Attach the scroll event listener to the main element
-    const mainElement = document.querySelector("main");
-    if (mainElement) {
-      mainElement.addEventListener("scroll", handleScroll);
-
-      // Initial check in case page is already scrolled
-      handleScroll();
-    }
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
 
     // Cleanup the event listener on component unmount
     return () => {
-      if (mainElement) {
-        mainElement.removeEventListener("scroll", handleScroll);
-      }
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -46,7 +38,7 @@ export function Footer() {
               href="#top"
               className="text-sm font-medium text-muted-foreground"
             >
-              Back to top
+              {t.navigation.backToTop}
             </a>
           </p>
         </div>
@@ -57,7 +49,7 @@ export function Footer() {
             rel="noreferrer"
             className="text-sm font-medium text-muted-foreground underline underline-offset-4"
           >
-            LinkedIn
+            {t.navigation.linkedin}
           </a>
           <a
             href="#"
@@ -65,7 +57,7 @@ export function Footer() {
             rel="noreferrer"
             className="text-sm font-medium text-muted-foreground underline underline-offset-4"
           >
-            GitHub
+            {t.navigation.github}
           </a>
         </div>
       </div>

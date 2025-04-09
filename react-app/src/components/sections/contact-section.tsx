@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../ui/button";
 import {
   Card,
@@ -9,9 +11,14 @@ import {
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Section } from "../ui/section";
-import { contactData } from "../../data/contact";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function ContactSection() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const contactData = t.contact;
+
   return (
     <Section
       id="contact"
@@ -22,9 +29,9 @@ export function ContactSection() {
         <div>
           <Card>
             <CardHeader>
-              <CardTitle>Contact Information</CardTitle>
+              <CardTitle>{contactData.contactInfoTitle}</CardTitle>
               <CardDescription>
-                Feel free to reach out through any of these channels.
+                {contactData.contactInfoDescription}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -108,18 +115,25 @@ export function ContactSection() {
                     htmlFor="name"
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   >
-                    Name
+                    {contactData.formLabels.name}
                   </label>
-                  <Input id="name" placeholder="Your name" />
+                  <Input
+                    id="name"
+                    placeholder={contactData.formLabels.namePlaceholder}
+                  />
                 </div>
                 <div className="space-y-2">
                   <label
                     htmlFor="email"
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                   >
-                    Email
+                    {contactData.formLabels.email}
                   </label>
-                  <Input id="email" type="email" placeholder="Your email" />
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder={contactData.formLabels.emailPlaceholder}
+                  />
                 </div>
               </div>
               <div className="space-y-2">
@@ -127,25 +141,28 @@ export function ContactSection() {
                   htmlFor="subject"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Subject
+                  {contactData.formLabels.subject}
                 </label>
-                <Input id="subject" placeholder="Subject of your message" />
+                <Input
+                  id="subject"
+                  placeholder={contactData.formLabels.subjectPlaceholder}
+                />
               </div>
               <div className="space-y-2">
                 <label
                   htmlFor="message"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Message
+                  {contactData.formLabels.message}
                 </label>
                 <Textarea
                   id="message"
-                  placeholder="Your message"
+                  placeholder={contactData.formLabels.messagePlaceholder}
                   className="min-h-32"
                 />
               </div>
               <Button type="submit" className="w-full">
-                Send Message
+                {contactData.formLabels.submit}
               </Button>
             </form>
           </CardContent>

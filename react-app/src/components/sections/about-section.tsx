@@ -1,8 +1,15 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Section } from "../ui/section";
-import { aboutData } from "../../data/about";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function AboutSection() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const aboutData = t.about;
+
   return (
     <Section
       id="about"

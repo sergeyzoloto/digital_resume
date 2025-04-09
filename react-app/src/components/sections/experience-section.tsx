@@ -9,7 +9,6 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Section } from "../ui/section";
-import { experienceData } from "@/data";
 import {
   Carousel,
   CarouselContent,
@@ -20,11 +19,16 @@ import {
 import { useMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 import type { CarouselApi } from "../ui/carousel";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function ExperienceSection() {
   const isMobile = useMobile();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const { language } = useLanguage();
+  const t = translations[language];
+  const experienceData = t.experience;
 
   // Update current slide when carousel changes
   const onSelect = () => {
@@ -61,7 +65,9 @@ export function ExperienceSection() {
       <CardContent>
         <div className="space-y-4">
           <div>
-            <h4 className="font-medium">Responsibilities:</h4>
+            <h4 className="font-medium">
+              {experienceData.responsibilitiesLabel}
+            </h4>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               {experience.responsibilities.map((responsibility, respIndex) => (
                 <li key={`resp-${index}-${respIndex}`}>{responsibility}</li>
@@ -69,7 +75,7 @@ export function ExperienceSection() {
             </ul>
           </div>
           <div>
-            <h4 className="font-medium">Achievements:</h4>
+            <h4 className="font-medium">{experienceData.achievementsLabel}</h4>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               {experience.achievements.map((achievement, achIndex) => (
                 <li key={`ach-${index}-${achIndex}`}>{achievement}</li>
@@ -78,7 +84,9 @@ export function ExperienceSection() {
           </div>
           {experience.technologies && (
             <div>
-              <h4 className="font-medium">Technologies:</h4>
+              <h4 className="font-medium">
+                {experienceData.technologiesLabel}
+              </h4>
               <div className="flex flex-wrap gap-2 mt-2">
                 {experience.technologies.map((tech, techIndex) => (
                   <Badge key={`tech-${index}-${techIndex}`} variant="secondary">

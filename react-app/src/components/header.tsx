@@ -3,27 +3,32 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./mode-toggle";
-
+import { LanguageSwitcher } from "./language-switcher";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   return (
     <header className="fixed min-w-screen top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 width-container">
       <div className="flex h-10 md:h-16 items-center justify-between w-full">
         <a href="/" className="font-bold text-xl">
-          Sergey Zolotko
+          {t.profile.name}
         </a>
 
         {/* Mobile menu button */}
         <div className="flex items-center gap-2 md:hidden">
-          {/* Theme toggle for mobile - moved outside the dropdown */}
+          {/* Theme toggle and language switcher for mobile - moved outside the dropdown */}
+          <LanguageSwitcher />
           <ModeToggle />
 
           <DropdownMenu
@@ -74,27 +79,27 @@ export function Header() {
                   href="#experience"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Experience
+                  {t.navigation.experience}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <a href="#education" onClick={() => setIsMobileMenuOpen(false)}>
-                  Education
+                  {t.navigation.education}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <a href="#skills" onClick={() => setIsMobileMenuOpen(false)}>
-                  Skills
+                  {t.navigation.skills}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>
-                  About
+                  {t.navigation.about}
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  Contact
+                  {t.navigation.contact}
                 </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -107,32 +112,33 @@ export function Header() {
             href="#experience"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Experience
+            {t.navigation.experience}
           </a>
           <a
             href="#education"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Education
+            {t.navigation.education}
           </a>
           <a
             href="#skills"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Skills
+            {t.navigation.skills}
           </a>
           <a
             href="#about"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            About
+            {t.navigation.about}
           </a>
           <a
             href="#contact"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Contact
+            {t.navigation.contact}
           </a>
+          <LanguageSwitcher />
           <ModeToggle />
         </nav>
       </div>

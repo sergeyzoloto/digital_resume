@@ -1,10 +1,17 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Progress } from "../ui/progress";
 import { Section } from "../ui/section";
-import { skillsData } from "@/data";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function SkillsSection() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const skillsData = t.skills;
+
   return (
     <Section
       id="skills"
@@ -14,7 +21,7 @@ export function SkillsSection() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-12">
         <Card>
           <CardHeader>
-            <CardTitle>Technical Skills</CardTitle>
+            <CardTitle>{skillsData.technicalSkillsTitle}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             {skillsData.technicalSkills.map((skill, index) => (
@@ -36,7 +43,7 @@ export function SkillsSection() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Soft Skills</CardTitle>
+            <CardTitle>{skillsData.softSkillsTitle}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 gap-4">
@@ -53,7 +60,9 @@ export function SkillsSection() {
             </div>
 
             <div className="mt-8">
-              <h4 className="font-medium mb-4">Forecasting Process</h4>
+              <h4 className="font-medium mb-4">
+                {skillsData.forecastingProcess.title}
+              </h4>
               <ol className="space-y-2 list-decimal pl-5">
                 {skillsData.forecastingProcess.steps.map((step, index) => (
                   <li key={`process-step-${index}`}>{step}</li>

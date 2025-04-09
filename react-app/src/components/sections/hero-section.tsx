@@ -1,7 +1,14 @@
+"use client";
+
 import { Button } from "../ui/button";
-import { profileData } from "../../data/profile";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function HeroSection() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const profile = t.profile;
+
   return (
     <section
       id="top"
@@ -12,15 +19,15 @@ export function HeroSection() {
           {/* Left Column */}
           <div className="flex flex-col justify-center items-start space-y-4 w-full">
             <div className="space-y-2">
-              <h1 className="font-bold tracking-tighter">{profileData.name}</h1>
+              <h1 className="font-bold tracking-tighter">{profile.name}</h1>
               <p className="text-xl text-muted-foreground">
-                {profileData.title} based in&nbsp;{profileData.location}
+                {profile.title} based in&nbsp;{profile.location}
               </p>
             </div>
             <div className="flex flex-row flex-wrap gap-2">
               <Button asChild>
                 <a href="#contact">
-                  Contact Me
+                  {profile.contactButton}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -39,7 +46,7 @@ export function HeroSection() {
                 </a>
               </Button>
               <Button variant="outline">
-                Download CV
+                {profile.downloadButton}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -63,8 +70,8 @@ export function HeroSection() {
           <div className="flex items-start">
             <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px]">
               <img
-                src={profileData.profileImage || "/placeholder.svg"}
-                alt={profileData.name}
+                src={profile.profileImage || "/placeholder.svg"}
+                alt={profile.name}
                 className="object-contain max-w-full h-auto bg-gray-500"
               />
             </div>

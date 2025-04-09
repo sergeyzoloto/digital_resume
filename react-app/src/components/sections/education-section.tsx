@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -7,9 +9,14 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Section } from "../ui/section";
-import { educationData } from "../../data/education";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function EducationSection() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const educationData = t.education;
+
   return (
     <Section
       id="education"
@@ -58,7 +65,9 @@ export function EducationSection() {
             </div>
 
             <div className="pt-4">
-              <h4 className="font-medium mb-2">Continuous Education</h4>
+              <h4 className="font-medium mb-2">
+                {educationData.continuousEducation.title}
+              </h4>
               <p className="text-sm text-muted-foreground">
                 {educationData.continuousEducation.description}
               </p>
