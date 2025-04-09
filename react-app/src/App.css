@@ -1,3 +1,56 @@
 h1 {
   font-size: clamp(2rem, calc(7vw + 1rem), 4rem);
 }
+
+/* Styling for WebKit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background)); /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground)); /* Thumb color */
+  border-radius: var(--radius); /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--popover-foreground)); /* Thumb color on hover */
+}
+
+/* Styling for Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: hsl(var(--muted-foreground)) hsl(var(--background)); /* Thumb and track colors */
+}
+
+.width-container {
+  padding-left: calc(var(--spacing) * 4);
+  padding-right: calc(var(--spacing) * 4);
+}
+
+@media screen and (min-width: 768px) {
+  .width-container {
+    padding-left: calc(var(--spacing) * 8);
+    padding-right: calc(var(--spacing) * 8);
+  }
+}
+
+/* These styles handle the header and footer spacing */
+.page-container {
+  padding-left: calc(var(--spacing) * 4);
+  padding-right: calc(var(--spacing) * 4);
+  padding-top: 40px; /* Mobile header height */
+  padding-bottom: 40px; /* Mobile footer height */
+}
+
+@media screen and (min-width: 768px) {
+  .page-container {
+    padding-left: calc(var(--spacing) * 8);
+    padding-right: calc(var(--spacing) * 8);
+    padding-top: 64px; /* Desktop header height */
+    padding-bottom: 64px; /* Desktop footer height */
+  }
+}

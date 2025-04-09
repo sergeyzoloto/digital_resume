@@ -1,21 +1,35 @@
+"use client";
+
 import { Button } from "../ui/button";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
 export function HeroSection() {
+  const { language } = useLanguage();
+  const t = translations[language];
+  const profile = t.profile;
+
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div className="flex flex-col justify-center space-y-4">
+    <section
+      id="top"
+      className="min-h-screen w-full flex items-center justify-center overflow-hidden page-container snap-start snap-always"
+    >
+      <div className="w-5/6 sm:w-full">
+        <div className="flex flex-col sm:flex-row w-full gap-4">
+          {/* Left Column */}
+          <div className="flex flex-col justify-center items-start space-y-4 w-full">
             <div className="space-y-2">
-              <h1 className="font-bold tracking-tighter">Sergey Zolotko</h1>
+              <div className="flex items-center gap-2">
+                <h1 className="font-bold tracking-tighter">{profile.name}</h1>
+              </div>
               <p className="text-xl text-muted-foreground">
-                Analyst-Developer based in The Netherlands
+                {profile.title} based in&nbsp;{profile.location}
               </p>
             </div>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row flex-wrap gap-2">
               <Button asChild>
                 <a href="#contact">
-                  Contact Me
+                  {profile.contactButton}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -34,7 +48,7 @@ export function HeroSection() {
                 </a>
               </Button>
               <Button variant="outline">
-                Download CV
+                {profile.downloadButton}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -54,14 +68,13 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center">
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted">
+          {/* Right Column */}
+          <div className="flex items-start">
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px]">
               <img
-                src="/placeholder.svg?height=600&width=600"
-                alt="Sergey Zolotko"
-                width={600}
-                height={600}
-                className="object-cover"
+                src={profile.profileImage || "/placeholder.svg"}
+                alt={profile.name}
+                className="object-contain max-w-full h-auto bg-gray-500"
               />
             </div>
           </div>

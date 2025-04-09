@@ -1,20 +1,55 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
+
 export function Footer() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <footer className="sticky bottom-0 z-50 w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex flex-col items-center justify-around md:justify-between md:h-16 md:flex-row">
-        <div className="flex flex-col items-center gap-4 pt-2 md:flex-row md:gap-2 md:px-0 md:pt-0">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            {new Date().getFullYear()}
+    <footer className="fixed bottom-0 z-50 min-w-screen border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 width-container">
+      <div className="flex items-center justify-between md:h-16 h-10 flex-row">
+        <div className="flex items-center flex-row gap-2 px-0 pt-0">
+          <p
+            className={`text-sm leading-loose text-muted-foreground text-left transition-opacity duration-300 ${
+              isScrolled
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
+            <a
+              href="#top"
+              className="text-sm font-medium text-muted-foreground"
+            >
+              {t.navigation.backToTop}
+            </a>
           </p>
         </div>
-        <div className="flex gap-4 pb-4 md:pb-0">
+        <div className="flex gap-4 md:pr-4">
           <a
             href="#"
             target="_blank"
             rel="noreferrer"
             className="text-sm font-medium text-muted-foreground underline underline-offset-4"
           >
-            LinkedIn
+            {t.navigation.linkedin}
           </a>
           <a
             href="#"
@@ -22,7 +57,7 @@ export function Footer() {
             rel="noreferrer"
             className="text-sm font-medium text-muted-foreground underline underline-offset-4"
           >
-            GitHub
+            {t.navigation.github}
           </a>
         </div>
       </div>
