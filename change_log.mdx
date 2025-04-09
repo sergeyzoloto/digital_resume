@@ -4,9 +4,27 @@ All notable changes to this project will be documented in this file.
 
 06/04/2025
 
-Date: April 6, 2025
+Date: April 6, 2025  
 Updates:
-Initial setup of the project with React, TypeScript, and Tailwind CSS.
-Added responsive sections for showcasing experience, education, skills, and contact information.
-Integrated Storybook for component documentation and testing.
-Configured Vite for development and build processes.
+
+- Initial setup of the project with React, TypeScript, and Tailwind CSS.
+- Added responsive sections for showcasing experience, education, skills, and contact information.
+- Integrated Storybook for component documentation and testing.
+- Configured Vite for development and build processes.
+
+09/04/2025
+
+Date: April 9, 2025  
+Updates:
+
+- Created a reusable `Section` component in `src/components/ui/section.tsx` to handle common structure and styling.
+- Refactored all six section components to use this base component:
+  - HeroSection (kept original structure due to its unique layout)
+  - ExperienceSection
+  - EducationSection
+  - SkillsSection
+  - AboutSection
+  - ContactSection
+- Removed debugging background colors (like `bg-red-500/50` and `bg-green-500/50`).
+- Added necessary UI components that were missing (input, textarea, badge, progress, card, button).
+- Ensured consistent styling and layout across all sections.

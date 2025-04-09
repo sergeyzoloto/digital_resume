@@ -1,97 +1,83 @@
-# Task List
+# Task Breakdown for Digital Resume Project
 
-## 1. Separate sections into a separate component and keep working with a unified section format
+## Task 1: Unify Section Components
 
-### Steps:
+**Goal**: Create a reusable section component to standardize layout and reduce duplication.
 
-1. Create a `Section` component in `src/components/ui/section.tsx`:
-   - Accept props like `id`, `title`, `description`, and `children`.
-   - Apply consistent styling for all sections.
-2. Refactor existing sections (`HeroSection`, `SkillsSection`, etc.) to use the new `Section` component.
-3. Test all sections to ensure they render correctly.
+1. Create a new `Section.tsx` component:
 
----
+   - Accept props for title, description, background color, and children content
+   - Handle consistent styling and layout for all sections
 
-## 2. Make a slider in the experience section for mobile screens
+2. Refactor existing sections to use this component:
+   - Keep individual section content logic separate
+   - Update all section files to use the new component
 
-### Steps:
+## Task 2: Create Mobile Experience Slider
 
-1. Import the `Carousel` component from the `shadcn` library.
-2. Wrap the `ExperienceSection` content inside the `Carousel` component.
-3. Configure the `Carousel` for horizontal scrolling on mobile screens.
-4. Add fallback styling for larger screens (e.g., grid layout).
-5. Test the slider functionality on mobile devices.
+**Goal**: Improve experience section readability on mobile with a slider.
 
----
+1. Install or use shadcn Carousel component:
 
-## 3. Replace the light/dark mode selection button with a dialogue box call button
+   - Import from `@/components/ui/carousel`
 
-### Steps:
+2. Modify experience section:
+   - Wrap experience cards in carousel component
+   - Only apply carousel at mobile breakpoints
+   - Add navigation indicators and controls
+   - Ensure it's fully accessible
 
-1. Replace the `ModeToggle` button in `Header` with a button that opens a `Dialog` component.
-2. Create a `ThemeDialog` component:
-   - Use the `Dialog` component from `@radix-ui/react-dialog`.
-   - Include options for light and dark mode selection.
-3. Ensure the `Dialog` opens and closes correctly.
+## Task 3: Simplify Theme Switching
 
----
+**Goal**: Replace complex theme dropdown with a simple toggle.
 
-## 4. Replace three modes with two, default to system mode to use a toggle switch for light/dark instead
+1. Update theme-provider.tsx:
 
-### Steps:
+   - Remove "system" option from UI (keep it as default)
+   - Simplify to just light/dark options
 
-1. Update the `ThemeProvider` logic:
-   - Remove the "system" mode.
-   - Default to the system theme but allow toggling between light and dark modes.
-2. Replace the dropdown menu in `ThemeDialog` with a toggle switch for light/dark mode.
-3. Test the toggle functionality.
+2. Replace ModeToggle component:
+   - Change dropdown menu to a simple toggle switch
+   - Make sure the icon changes based on current theme
+   - Keep system as the implicit default
 
----
+## Task 4: Create Data-Driven Content Architecture
 
-## 5. Replace the page content with content from the dataset, which is stored in a separate variable
+**Goal**: Separate content from presentation for easier updates and translations.
 
-### Steps:
+1. Create data structure:
 
-1. Create a `content.ts` file in `src/data/` to store the dataset.
-2. Replace hardcoded content in sections with dynamic content from the dataset.
-3. Use TypeScript types to ensure data consistency.
-4. Test all sections to verify the content renders correctly.
+   - Add a `data` folder with content files
+   - Create `content.ts` for English default content
+   - Organize by sections (hero, experience, skills, etc.)
 
----
+2. Update components to use data:
+   - Replace hard-coded content with data references
+   - Add typings for content structure
 
-## 6. Transfer the actual summary to an appendix instead of a sample for the layout
+## Task 5: Add Multilingual Support
 
-### Steps:
+**Goal**: Enable switching between English, Russian and Dutch languages.
 
-1. Create an `Appendix` section in the dataset for the summary content.
-2. Add a new `AppendixSection` component to render the summary.
-3. Place the `AppendixSection` at the end of the page layout.
-4. Test to ensure the summary is displayed correctly.
+1. Add translation files:
 
----
+   - Create `content.ru.ts` for Russian translation
+   - Create `content.nl.ts` for Dutch translation
+   - Match the structure of the English content file
 
-## 7. Add Russian and Dutch translations to the dataset
+2. Create language context:
+   - Add language selection state
+   - Create hooks for accessing current language
 
-### Steps:
+## Task 6: Implement Language Selection
 
-1. Extend the dataset in `content.ts` to include translations for all content in Russian and Dutch.
-2. Use a nested structure for translations (e.g., `content.en`, `content.ru`, `content.nl`).
-3. Test to ensure the dataset structure is correct.
+**Goal**: Allow users to change language via the UI.
 
----
+1. Create language switcher component:
 
-## 8. Add a language selection option to the dialogue box
+   - Add it to the header next to theme toggle
+   - Simple dropdown or toggle between languages
 
-### Steps:
-
-1. Update the `ThemeDialog` component to include a language selection dropdown.
-2. Store the selected language in the `ThemeProvider` context.
-3. Dynamically render content based on the selected language.
-4. Test the language selection functionality.
-
----
-
-## Combined Testing
-
-1. Test the entire application to ensure all tasks are integrated seamlessly.
-2. Verify responsiveness, accessibility, and functionality across browsers.
+2. Persist language preference:
+   - Store selected language in localStorage
+   - Apply language on page load
