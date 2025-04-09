@@ -9,38 +9,40 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { Check } from "lucide-react";
+import { LanguageIndicator } from "./language-indicator";
 
 export function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
 
   // Find the current language option
-  const currentLanguage =
-    languages.find((lang) => lang.code === language) || languages[0];
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="w-9 px-0">
-          <span className="sr-only">Switch language</span>
-          <span className="text-sm font-medium">
-            {currentLanguage.code.toUpperCase()}
-          </span>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="relative"
+          aria-label="Select language"
+        >
+          <LanguageIndicator />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+        className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 min-w-[160px]"
       >
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onClick={() => setLanguage(lang.code)}
-            className={
-              language === lang.code ? "bg-accent text-accent-foreground" : ""
-            }
+            className="flex items-center justify-between cursor-pointer"
           >
-            <span className="mr-2">{lang.code.toUpperCase()}</span>
-            {lang.nativeName}
+            <div className="flex items-center gap-2">
+              <span className="font-medium">{lang.nativeName}</span>
+            </div>
+            {language === lang.code && <Check className="h-4 w-4" />}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

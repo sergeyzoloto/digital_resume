@@ -4,6 +4,7 @@ export interface LanguageOption {
   code: Language;
   name: string;
   nativeName: string;
+  flag?: string;
 }
 
 export const languages: LanguageOption[] = [

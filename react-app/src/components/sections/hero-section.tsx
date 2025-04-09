@@ -19,7 +19,9 @@ export function HeroSection() {
           {/* Left Column */}
           <div className="flex flex-col justify-center items-start space-y-4 w-full">
             <div className="space-y-2">
-              <h1 className="font-bold tracking-tighter">{profile.name}</h1>
+              <div className="flex items-center gap-2">
+                <h1 className="font-bold tracking-tighter">{profile.name}</h1>
+              </div>
               <p className="text-xl text-muted-foreground">
                 {profile.title} based in&nbsp;{profile.location}
               </p>
