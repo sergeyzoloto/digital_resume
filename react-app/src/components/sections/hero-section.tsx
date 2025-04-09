@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import { profileData } from "../../data/profile";
 
 export function HeroSection() {
   return (
@@ -11,9 +12,9 @@ export function HeroSection() {
           {/* Left Column */}
           <div className="flex flex-col justify-center items-start space-y-4 w-full">
             <div className="space-y-2">
-              <h1 className="font-bold tracking-tighter">Sergey Zolotko</h1>
+              <h1 className="font-bold tracking-tighter">{profileData.name}</h1>
               <p className="text-xl text-muted-foreground">
-                Analyst-Developer based in&nbsp;The&nbsp;Netherlands
+                {profileData.title} based in&nbsp;{profileData.location}
               </p>
             </div>
             <div className="flex flex-row flex-wrap gap-2">
@@ -62,8 +63,8 @@ export function HeroSection() {
           <div className="flex items-start">
             <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px]">
               <img
-                src="/profile-pic.jpg"
-                alt="Sergey Zolotko"
+                src={profileData.profileImage || "/placeholder.svg"}
+                alt={profileData.name}
                 className="object-contain max-w-full h-auto bg-gray-500"
               />
             </div>
