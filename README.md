@@ -49,40 +49,40 @@ src/
 ### Installation
 
 1. Clone the repository
-   \`\`\`bash
+   ```bash
    git clone <https://github.com/yourusername/digitalresume.git>
    cd digitalresume
-   \`\`\`
+   ```
 
 2. Install dependencies
-   \`\`\`bash
+   ```bash
    npm install
 
    # or
 
    yarn
-   \`\`\`
+   ```
 
 3. Start the development server
-   \`\`\`bash
+   ```bash
    npm run dev
 
    # or
 
    yarn dev
-   \`\`\`
+   ```
 
 4. Open your browser and navigate to `http://localhost:5173`
 
 ## Building for Production
 
-\`\`\`bash
+```bash
 npm run build
 
 # or
 
 yarn build
-\`\`\`
+```
 
 The build artifacts will be stored in the `dist/` directory.
 
@@ -90,13 +90,13 @@ The build artifacts will be stored in the `dist/` directory.
 
 This project includes Storybook for component development and documentation.
 
-\`\`\`bash
+```bash
 npm run storybook
 
 # or
 
 yarn storybook
-\`\`\`
+```
 
 ## Acknowledgments
 
