@@ -23,7 +23,7 @@ A modern, responsive, and multilingual digital resume built with React, TypeScri
 
 ## Project Structure
 
-\`\`\`
+```
 src/
 ├── components/ # UI components
 │ ├── sections/ # Page section components
@@ -37,7 +37,7 @@ src/
 ├── pages/ # Page components
 ├── stories/ # Storybook stories
 └── types/ # TypeScript type definitions
-\`\`\`
+```
 
 ## Getting Started
 
