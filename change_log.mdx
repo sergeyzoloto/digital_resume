@@ -29,9 +29,9 @@ Updates:
 - Added necessary UI components that were missing (input, textarea, badge, progress, card, button).
 - Ensured consistent styling and layout across all sections.
 
-10/04/2025
+09/04/2025
 
-Date: April 10, 2025  
+Date: April 9, 2025  
 Updates:
 
 - **Created a structured data layer:**
@@ -68,9 +68,9 @@ Updates:
   - Maintained consistent naming conventions.
   - Ensured all components properly handle the data structure.
 
-11/04/2025
+09/04/2025
 
-Date: April 11, 2025  
+Date: April 9, 2025  
 Updates:
 
 - **Simplified theme switching functionality:**
@@ -79,3 +79,17 @@ Updates:
   3. Updated the `ModeToggle` component to use this function and display the appropriate icon.
   4. Maintained system as the default theme while hiding it from the UI.
   5. Ensured the toggle shows the correct icon based on the actual appearance (considering system preference).
+
+09/04/2025
+
+Date: April 9, 2025  
+Updates:
+
+- **Implemented a mobile experience slider for the experience section:**
+  1. Created a reusable `Carousel` component based on `embla-carousel-react`.
+  2. Added a `useMobile` hook to detect mobile viewport.
+  3. Implemented conditional rendering: carousel on mobile, standard grid on desktop.
+  4. Added navigation controls (prev/next buttons) and slide indicators.
+  5. Ensured proper accessibility with ARIA attributes and keyboard navigation.
+  6. Made the carousel responsive with proper state management.
+  7. Added visual indicators to show the current slide position.
