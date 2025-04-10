@@ -14,19 +14,24 @@ export function HeroSection() {
       id="top"
       className="min-h-screen w-full flex items-center justify-center overflow-hidden page-container snap-start snap-always"
     >
-      <div className="w-5/6 sm:w-full">
-        <div className="flex flex-col sm:flex-row w-full gap-4">
-          {/* Left Column */}
-          <div className="flex flex-col justify-center items-start space-y-4 w-full">
+      {/* Main container with defined width */}
+      <div className="w-5/6 justify-center flex">
+        {/* Hero rectangle container with explicit height */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 w-[300px] h-full sm:h-[300px] sm:w-full relative">
+          {/* Left Column - Content rectangle */}
+          <div className="flex flex-col justify-between h-full w-full sm:w-3/5">
+            {/* Title at the top left */}
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <h1 className="font-bold tracking-tighter">{profile.name}</h1>
+                <h1 className="font-bold tracking-tighter text-3xl sm:text-4xl">
+                  {profile.name}
+                </h1>
               </div>
-              <p className="text-xl text-muted-foreground">
-                {profile.title} based in&nbsp;{profile.location}
-              </p>
+              <p className="text-xl text-muted-foreground">{profile.title}</p>
             </div>
-            <div className="flex flex-row flex-wrap gap-2">
+
+            {/* Buttons at the bottom left */}
+            <div className="flex flex-row flex-wrap gap-2 mt-8 sm:mt-0">
               <Button asChild>
                 <a href="#contact">
                   {profile.contactButton}
@@ -68,13 +73,14 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          {/* Right Column */}
-          <div className="flex items-start">
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted max-w-[300px]">
+
+          {/* Right Column - Image aligned to the right edge */}
+          <div className="flex items-center sm:justify-end sm:w-2/5 h-full">
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted w-full max-w-[300px] sm:h-full">
               <img
                 src={profile.profileImage || "/placeholder.svg"}
                 alt={profile.name}
-                className="object-contain max-w-full h-auto bg-gray-500"
+                className="object-cover w-full h-full"
               />
             </div>
           </div>

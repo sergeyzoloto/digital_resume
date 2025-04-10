@@ -1,7 +1,6 @@
 export interface ProfileTranslation {
   name: string;
   title: string;
-  location: string;
   profileImage: string;
   contactButton: string;
   downloadButton: string;

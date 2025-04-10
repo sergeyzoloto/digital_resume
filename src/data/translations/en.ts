@@ -3,8 +3,7 @@ import type { TranslationData } from "./types";
 export const en: TranslationData = {
   profile: {
     name: "Sergey Zolotko",
-    title: "Analyst-Developer",
-    location: "The Netherlands",
+    title: "Analyst-Developer based in\u00A0The\u00A0Netherlands",
     profileImage: "/profile-pic.jpg",
     contactButton: "Contact Me",
     downloadButton: "Download CV",
