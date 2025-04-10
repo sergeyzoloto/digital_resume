@@ -44,6 +44,7 @@ h1 {
   padding-right: calc(var(--spacing) * 4);
   padding-top: 40px; /* Mobile header height */
   padding-bottom: 40px; /* Mobile footer height */
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -52,5 +53,7 @@ h1 {
     padding-right: calc(var(--spacing) * 8);
     padding-top: 64px; /* Desktop header height */
     padding-bottom: 64px; /* Desktop footer height */
+    width: 90%;
+    margin: 0 auto; /* Center the container */
   }
 }

@@ -18,7 +18,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`min-h-screen w-full flex items-top justify-center page-container snap-start snap-always ${className}`}
+      className={`min-h-screen flex items-center justify-center page-container snap-start snap-always ${className}`}
     >
       <div className="w-full mt-4">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">

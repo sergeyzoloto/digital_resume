@@ -15,7 +15,7 @@ export function HeroSection() {
       className="min-h-screen w-full flex items-center justify-center overflow-hidden page-container snap-start snap-always"
     >
       {/* Main container with defined width */}
-      <div className="w-5/6 justify-center flex">
+      <div className="justify-center flex w-full">
         {/* Hero rectangle container with explicit height */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 w-[300px] h-full sm:h-[300px] sm:w-full relative">
           {/* Left Column - Content rectangle */}
