@@ -23,7 +23,7 @@ A modern, responsive, and multilingual digital resume built with React, TypeScri
 
 ## Project Structure
 
-```
+```pl
 src/
 ├── components/ # UI components
 │ ├── sections/ # Page section components
@@ -49,12 +49,14 @@ src/
 ### Installation
 
 1. Clone the repository
+
    ```bash
    git clone <https://github.com/yourusername/digitalresume.git>
    cd digitalresume
    ```
 
 2. Install dependencies
+
    ```bash
    npm install
 
@@ -64,6 +66,7 @@ src/
    ```
 
 3. Start the development server
+
    ```bash
    npm run dev
 
