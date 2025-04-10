@@ -23,7 +23,7 @@ export function HeroSection() {
             {/* Title at the top left */}
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <h1 className="font-bold tracking-tighter text-3xl sm:text-4xl">
+                <h1 className="font-bold tracking-tighter leading-none">
                   {profile.name}
                 </h1>
               </div>

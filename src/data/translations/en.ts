@@ -2,7 +2,7 @@ import type { TranslationData } from "./types";
 
 export const en: TranslationData = {
   profile: {
-    name: "Sergey Zolotko",
+    name: "Sergey\u00A0Zolotko",
     title: "Analyst-Developer based in\u00A0The\u00A0Netherlands",
     profileImage: "/profile-pic.jpg",
     contactButton: "Contact Me",
