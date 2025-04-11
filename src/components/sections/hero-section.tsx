@@ -17,21 +17,23 @@ export function HeroSection() {
       {/* Main container with defined width */}
       <div className="justify-center flex w-full">
         {/* Hero rectangle container with explicit height */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 w-[300px] h-full sm:h-[300px] sm:w-full relative">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8 w-[300px] h-full md:h-[300px] md:w-full relative">
           {/* Left Column - Content rectangle */}
-          <div className="flex flex-col justify-between h-full w-full sm:w-3/5">
+          <div className="flex flex-col justify-between h-full items-center md:w-3/5 w-content md:items-start">
             {/* Title at the top left */}
             <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <h1 className="font-bold tracking-tighter leading-none">
+              <div className="flex items-center md:items-start gap-2">
+                <p className="font-bold tracking-tighter leading-none text-center md:text-left title">
                   {profile.name}
-                </h1>
+                </p>
               </div>
-              <p className="text-xl text-muted-foreground">{profile.title}</p>
+              <p className="text-muted-foreground pt-4 text-center md:text-left subtitle">
+                {profile.title}
+              </p>
             </div>
 
             {/* Buttons at the bottom left */}
-            <div className="flex flex-row flex-wrap gap-2 mt-8 sm:mt-0">
+            <div className="flex flex-row gap-2 mt-8 md:mt-0">
               <Button asChild>
                 <a href="#contact">
                   {profile.contactButton}
@@ -75,8 +77,8 @@ export function HeroSection() {
           </div>
 
           {/* Right Column - Image aligned to the right edge */}
-          <div className="flex items-center sm:justify-end sm:w-2/5 h-full">
-            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted w-full max-w-[300px] sm:h-full">
+          <div className="flex items-center md:justify-end md:w-2/5 h-full">
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-muted w-full max-w-[300px] md:h-full">
               <img
                 src={profile.profileImage || "/placeholder.svg"}
                 alt={profile.name}
