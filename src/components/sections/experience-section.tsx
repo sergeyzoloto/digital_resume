@@ -50,7 +50,10 @@ export function ExperienceSection() {
     experience: (typeof experienceData.items)[0],
     index: number
   ) => (
-    <Card key={`experience-${index}`} className="h-full">
+    <Card
+      key={`experience-${index}`}
+      className="h-[calc(100vh-17rem)] overflow-hidden md:h-auto" // Adjust height for mobile
+    >
       <CardHeader>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
@@ -62,7 +65,9 @@ export function ExperienceSection() {
           </Badge>
         </div>
       </CardHeader>
-      <CardContent>
+      <CardContent className="overflow-y-auto max-h-full px-4">
+        {" "}
+        {/* Scrollable content */}
         <div className="space-y-4">
           <div>
             <h4 className="font-medium">

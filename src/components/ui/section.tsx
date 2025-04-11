@@ -18,22 +18,20 @@ export function Section({
   return (
     <section
       id={id}
-      className={`min-h-screen flex items-center justify-center page-container snap-start snap-always ${className}`}
+      className={`h-screen flex flex-col page-container snap-start snap-always overflow-hidden ${className}`}
     >
-      <div className="w-full mt-4">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              {title}
-            </h2>
-            {description && (
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                {description}
-              </p>
-            )}
-          </div>
+      <div className="flex-1 flex flex-col justify-center items-center mt-4">
+        <div className="space-y-2 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {title}
+          </h2>
+          {description && (
+            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+              {description}
+            </p>
+          )}
         </div>
-        <div className="mx-auto py-12">{children}</div>
+        <div className="w-full pt-4 md:pt-6">{children}</div>
       </div>
     </section>
   );
