@@ -52,7 +52,7 @@ export function ExperienceSection() {
   ) => (
     <Card
       key={`experience-${index}`}
-      className="h-[calc(100vh-17rem)] overflow-hidden md:h-auto" // Adjust height for mobile
+      className="sm:h-[calc(100vh-20rem)] h-[calc(100vh-17rem)] overflow-y-auto flex-[3_1_300px]" // Adjust height for mobile
     >
       <CardHeader>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -66,9 +66,8 @@ export function ExperienceSection() {
         </div>
       </CardHeader>
       <CardContent className="overflow-y-auto max-h-full px-4">
-        {" "}
         {/* Scrollable content */}
-        <div className="space-y-4">
+        <div className="px-2 space-y-4">
           <div>
             <h4 className="font-medium">
               {experienceData.responsibilitiesLabel}
@@ -142,10 +141,12 @@ export function ExperienceSection() {
           </div>
         </div>
       ) : (
-        <div className="grid gap-6 lg:gap-12">
-          {experienceData.items.map((experience, index) =>
-            renderExperienceCard(experience, index)
-          )}
+        <div className="flex flex-row gap-6 lg:gap-12">
+          {experienceData.items
+            .slice(0, 2)
+            .map((experience, index) =>
+              renderExperienceCard(experience, index)
+            )}
         </div>
       )}
     </Section>

@@ -18,7 +18,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`h-screen flex flex-col page-container snap-start snap-always overflow-hidden ${className}`}
+      className={`h-screen flex flex-col page-container snap-start snap-always ${className}`}
     >
       <div className="flex-1 flex flex-col justify-center items-center mt-4">
         <div className="space-y-2 text-center">
@@ -31,7 +31,7 @@ export function Section({
             </p>
           )}
         </div>
-        <div className="w-full pt-4 md:pt-6">{children}</div>
+        <div className="w-full pt-4 md:pt-6 overflow-x-auto">{children}</div>
       </div>
     </section>
   );

@@ -7,14 +7,40 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Finished the hero section layout:
+
   - Aligned the title and buttons to the left on wide screens and centered them on mobile.
   - Ensured the the text content aligns with the image.
+
 - Updated the `Section` component:
+
   - Enforced full-screen height (`h-screen`) with proper handling of overflow.
   - Adjusted layout to ensure consistent alignment and spacing for all sections.
+
 - Improved the `ExperienceSection` component:
+
   - Dynamically calculated the height of experience cards on mobile to fit within the available viewport space, accounting for the header and footer.
   - Added a scrollable container within experience cards to handle content overflow gracefully.
+
+- Updated the `Section` component:
+
+  - Enforced full-screen height (`h-screen`) with proper handling of overflow.
+  - Adjusted layout to ensure consistent alignment and spacing for all sections.
+  - Added horizontal scrolling support for child elements.
+
+- Improved the `ExperienceSection` component:
+
+  - Dynamically calculated the height of experience cards on mobile to fit within the available viewport space, accounting for the header and footer.
+  - Added a scrollable container within experience cards to handle content overflow gracefully.
+  - Limited the number of visible cards on desktop for better layout balance.
+
+- Updated the `useMobile` hook:
+
+  - Adjusted the default breakpoint to `1024px` for better responsiveness.
+
+- Enhanced global styles:
+
+  - Added a maximum width (`max-width: 100rem`) to the `.page-container` for improved layout consistency on larger screens.
+  - Introduced a new `--breakpoint-xs` variable for theme-based breakpoints.
 
 ## 2025-04-10
 
