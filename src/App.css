@@ -67,7 +67,7 @@
     padding-right: calc(var(--spacing) * 8);
     padding-top: 64px; /* Desktop header height */
     padding-bottom: 64px; /* Desktop footer height */
-    width: 90%;
+    width: 100%;
     margin: 0 auto; /* Center the container */
   }
 }
