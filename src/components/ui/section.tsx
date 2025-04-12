@@ -1,4 +1,18 @@
+"use client";
+
+import React from "react";
+
+import { useState } from "react";
 import type { ReactNode } from "react";
+import { useMobile } from "@/hooks/use-mobile";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./carousel";
+import type { CarouselApi } from "./carousel";
 
 export interface SectionProps {
   id: string;
@@ -6,6 +20,14 @@ export interface SectionProps {
   description?: string;
   children: ReactNode;
   className?: string;
+  // Layout options
+  layout?: "default" | "grid" | "cards" | "flex";
+  columns?: number;
+  gap?: string;
+  fullHeight?: boolean;
+  // Carousel options
+  useCarouselOnMobile?: boolean;
+  carouselChildrenFilter?: (children: ReactNode) => ReactNode[];
 }
 
 export function Section({
@@ -14,11 +36,93 @@ export function Section({
   description,
   children,
   className = "",
+  layout = "default",
+  columns = 2,
+  gap = "gap-6 lg:gap-12",
+  fullHeight = true,
+  useCarouselOnMobile = false,
+  carouselChildrenFilter,
 }: SectionProps) {
+  const isMobile = useMobile();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  // Update current slide when carousel changes
+  const onSelect = () => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  };
+
+  // Set up the carousel API
+  useState(() => {
+    if (!api) return;
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  });
+
+  // Determine the layout class based on the layout prop
+  const layoutClass =
+    layout === "grid"
+      ? `grid grid-cols-1 md:grid-cols-${columns} ${gap}`
+      : layout === "cards"
+      ? `flex flex-col md:flex-row ${gap}`
+      : layout === "flex"
+      ? `flex flex-row ${gap}`
+      : "w-full"; // default
+
+  // Extract carousel items if needed
+  const carouselItems = carouselChildrenFilter
+    ? carouselChildrenFilter(children)
+    : React.Children.toArray(children);
+
+  // Render content based on mobile state and carousel option
+  const renderContent = () => {
+    if (isMobile && useCarouselOnMobile) {
+      return (
+        <div className="w-full">
+          <Carousel setApi={setApi} className="w-full">
+            <CarouselContent>
+              {carouselItems.map((child, index) => (
+                <CarouselItem key={`carousel-item-${index}`}>
+                  {child}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-4 gap-2">
+              <CarouselPrevious className="static translate-y-0 translate-x-0" />
+              <CarouselNext className="static translate-y-0 translate-x-0" />
+            </div>
+          </Carousel>
+          {carouselItems.length > 1 && (
+            <div className="flex justify-center mt-4">
+              <div className="flex gap-1">
+                {carouselItems.map((_, index) => (
+                  <div
+                    key={`indicator-${index}`}
+                    className={`h-2 w-2 rounded-full transition-colors ${
+                      current === index ? "bg-primary" : "bg-primary/30"
+                    }`}
+                    aria-hidden="true"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    return <div className={layoutClass}>{children}</div>;
+  };
+
   return (
     <section
       id={id}
-      className={`h-screen flex flex-col page-container snap-start snap-always ${className}`}
+      className={`${
+        fullHeight ? "h-screen" : "min-h-[80vh]"
+      } flex flex-col page-container snap-start snap-always ${className}`}
     >
       <div className="flex-1 flex flex-col justify-center items-center mt-4">
         <div className="space-y-2 text-center">
@@ -31,7 +135,9 @@ export function Section({
             </p>
           )}
         </div>
-        <div className="w-full pt-4 md:pt-6 overflow-x-auto">{children}</div>
+        <div className="w-full pt-4 md:pt-6 overflow-x-auto">
+          {renderContent()}
+        </div>
       </div>
     </section>
   );

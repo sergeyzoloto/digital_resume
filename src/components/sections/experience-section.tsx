@@ -9,41 +9,13 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { Section } from "../ui/section";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../ui/carousel";
-import { useMobile } from "@/hooks/use-mobile";
-import { useState } from "react";
-import type { CarouselApi } from "../ui/carousel";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/data/translations";
 
 export function ExperienceSection() {
-  const isMobile = useMobile();
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
   const { language } = useLanguage();
   const t = translations[language];
   const experienceData = t.experience;
-
-  // Update current slide when carousel changes
-  const onSelect = () => {
-    if (!api) return;
-    setCurrent(api.selectedScrollSnap());
-  };
-
-  // Set up the carousel API
-  useState(() => {
-    if (!api) return;
-    api.on("select", onSelect);
-    return () => {
-      api.off("select", onSelect);
-    };
-  });
 
   // Render experience cards
   const renderExperienceCard = (
@@ -110,45 +82,18 @@ export function ExperienceSection() {
       id="experience"
       title={experienceData.title}
       description={experienceData.description}
+      useCarouselOnMobile={true}
+      carouselChildrenFilter={() =>
+        experienceData.items.map((experience, index) =>
+          renderExperienceCard(experience, index)
+        )
+      }
     >
-      {isMobile ? (
-        <div className="w-full">
-          <Carousel setApi={setApi} className="w-full">
-            <CarouselContent>
-              {experienceData.items.map((experience, index) => (
-                <CarouselItem key={`carousel-experience-${index}`}>
-                  {renderExperienceCard(experience, index)}
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-4 gap-2">
-              <CarouselPrevious className="static translate-y-0 translate-x-0" />
-              <CarouselNext className="static translate-y-0 translate-x-0" />
-            </div>
-          </Carousel>
-          <div className="flex justify-center mt-4">
-            <div className="flex gap-1">
-              {experienceData.items.map((_, index) => (
-                <div
-                  key={`indicator-${index}`}
-                  className={`h-2 w-2 rounded-full transition-colors ${
-                    current === index ? "bg-primary" : "bg-primary/30"
-                  }`}
-                  aria-hidden="true"
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="flex flex-row gap-6 lg:gap-12">
-          {experienceData.items
-            .slice(0, 2)
-            .map((experience, index) =>
-              renderExperienceCard(experience, index)
-            )}
-        </div>
-      )}
+      <div className="flex flex-row gap-6 lg:gap-12">
+        {experienceData.items
+          .slice(0, 2)
+          .map((experience, index) => renderExperienceCard(experience, index))}
+      </div>
     </Section>
   );
 }
