@@ -33,7 +33,7 @@ export function HeroSection() {
             </div>
 
             {/* Buttons at the bottom left */}
-            <div className="flex flex-row gap-2 mt-8 md:mt-0">
+            <div className="flex flex-row flex-wrap gap-2 mt-8 md:mt-0 w-full justify-center md:justify-start">
               <Button asChild>
                 <a href="#contact">
                   {profile.contactButton}
