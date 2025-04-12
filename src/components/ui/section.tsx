@@ -15,19 +15,15 @@ import {
 import type { CarouselApi } from "./carousel";
 
 export interface SectionProps {
-  id: string;
-  title: string;
-  description?: string;
-  children: ReactNode;
-  className?: string;
-  // Layout options
-  layout?: "default" | "grid" | "cards" | "flex";
-  columns?: number;
-  gap?: string;
-  fullHeight?: boolean;
+  readonly id: string;
+  readonly title: string;
+  readonly description?: string;
+  readonly children: ReactNode;
+  readonly className?: string;
+  readonly fullHeight?: boolean;
   // Carousel options
-  useCarouselOnMobile?: boolean;
-  carouselChildrenFilter?: (children: ReactNode) => ReactNode[];
+  readonly useCarouselOnMobile?: boolean;
+  readonly carouselChildrenFilter?: (children: ReactNode) => ReactNode[];
 }
 
 export function Section({
@@ -36,9 +32,6 @@ export function Section({
   description,
   children,
   className = "",
-  layout = "default",
-  columns = 2,
-  gap = "gap-6 lg:gap-12",
   fullHeight = true,
   useCarouselOnMobile = false,
   carouselChildrenFilter,
@@ -61,16 +54,6 @@ export function Section({
       api.off("select", onSelect);
     };
   });
-
-  // Determine the layout class based on the layout prop
-  const layoutClass =
-    layout === "grid"
-      ? `grid grid-cols-1 md:grid-cols-${columns} ${gap}`
-      : layout === "cards"
-      ? `flex flex-col md:flex-row ${gap}`
-      : layout === "flex"
-      ? `flex flex-row ${gap}`
-      : "w-full"; // default
 
   // Extract carousel items if needed
   const carouselItems = carouselChildrenFilter
@@ -114,7 +97,7 @@ export function Section({
       );
     }
 
-    return <div className={layoutClass}>{children}</div>;
+    return <div>{children}</div>;
   };
 
   return (

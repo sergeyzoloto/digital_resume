@@ -11,7 +11,10 @@ export function AboutSection() {
   const aboutData = t.about;
 
   const aboutCards = aboutData.cards.map((card, index) => (
-    <Card key={`about-card-${index}`}>
+    <Card
+      key={`about-card-${index}`}
+      className="sm:h-[calc(100vh-22rem)] h-[calc(100vh-19rem)] overflow-y-auto flex-[1_1_300px]" // Adjust height for mobile
+    >
       <CardHeader>
         <CardTitle>{card.title}</CardTitle>
       </CardHeader>
@@ -50,9 +53,7 @@ export function AboutSection() {
       useCarouselOnMobile={true}
       carouselChildrenFilter={() => aboutCards}
     >
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-12">
-        {aboutCards}
-      </div>
+      <div className="flex lg:gap-4 xl:gap-8">{aboutCards}</div>
     </Section>
   );
 }

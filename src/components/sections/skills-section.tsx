@@ -13,7 +13,10 @@ export function SkillsSection() {
   const skillsData = t.skills;
 
   const technicalSkillsCard = (
-    <Card key="technical-skills">
+    <Card
+      key="technical-skills"
+      className="sm:h-[calc(100vh-20rem)] h-[calc(100vh-17rem)] overflow-y-auto flex-[3_1_300px]" // Adjust height for mobile
+    >
       <CardHeader>
         <CardTitle>{skillsData.technicalSkillsTitle}</CardTitle>
       </CardHeader>
@@ -37,7 +40,10 @@ export function SkillsSection() {
   );
 
   const softSkillsCard = (
-    <Card key="soft-skills">
+    <Card
+      key="soft-skills"
+      className="sm:h-[calc(100vh-20rem)] h-[calc(100vh-17rem)] overflow-y-auto flex-[3_1_300px]" // Adjust height for mobile
+    >
       <CardHeader>
         <CardTitle>{skillsData.softSkillsTitle}</CardTitle>
       </CardHeader>
@@ -77,7 +83,7 @@ export function SkillsSection() {
       useCarouselOnMobile={true}
       carouselChildrenFilter={() => [technicalSkillsCard, softSkillsCard]}
     >
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-12">
+      <div className="flex flex-row lg:gap-4 xl:gap-8">
         {technicalSkillsCard}
         {softSkillsCard}
       </div>

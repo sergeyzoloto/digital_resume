@@ -89,7 +89,7 @@ export function ExperienceSection() {
         )
       }
     >
-      <div className="flex flex-row gap-6 lg:gap-12">
+      <div className="flex flex-row lg:gap-4 xl:gap-8">
         {experienceData.items
           .slice(0, 2)
           .map((experience, index) => renderExperienceCard(experience, index))}
