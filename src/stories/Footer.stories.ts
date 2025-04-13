@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Header } from "../components/header";
+import { Footer } from "../components/footer";
 
 const meta = {
-  title: "Layout/Header",
-  component: Header,
+  title: "Layout/Footer",
+  component: Footer,
   parameters: {
     layout: "fullscreen",
   },
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof Footer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

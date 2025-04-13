@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Header } from "../components/header";
+import { SkillsSection } from "../components/sections/skills-section";
 
 const meta = {
-  title: "Layout/Header",
-  component: Header,
+  title: "Sections/SkillsSection",
+  component: SkillsSection,
   parameters: {
     layout: "fullscreen",
   },
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof SkillsSection>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

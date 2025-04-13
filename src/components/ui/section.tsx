@@ -15,15 +15,15 @@ import {
 import type { CarouselApi } from "./carousel";
 
 export interface SectionProps {
-  readonly id: string;
-  readonly title: string;
-  readonly description?: string;
-  readonly children: ReactNode;
-  readonly className?: string;
-  readonly fullHeight?: boolean;
+  id: string;
+  title: string;
+  description?: string;
+  children: ReactNode;
+  className?: string;
+  fullHeight?: boolean;
   // Carousel options
-  readonly useCarouselOnMobile?: boolean;
-  readonly carouselChildrenFilter?: (children: ReactNode) => ReactNode[];
+  useCarouselOnMobile?: boolean;
+  carouselChildrenFilter?: (children: ReactNode) => ReactNode[];
 }
 
 export function Section({
