@@ -263,7 +263,7 @@ export const ru: TranslationData = {
     experience: "Опыт",
     education: "Образование",
     skills: "Навыки",
-    about: "Обо мне",
+    about: "Обо\u00A0мне",
     contact: "Контакты",
     backToTop: "Наверх",
     linkedin: "LinkedIn",
