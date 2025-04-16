@@ -2,9 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-16
+
+**Changed**:
+
+- Log files restructured
+
 ## 2025-04-13
 
-### Added
+**Added**:
 
 - Created Storybook stories for all UI components:
   - Added stories for core UI components (Section)
@@ -16,7 +22,7 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-04-12
 
-### Added
+**Added**:
 
 - Implemented carousel functionality for all sections on mobile:
   - Enhanced the `Section` component with built-in carousel support
@@ -25,7 +31,7 @@ All notable changes to this project will be documented in this file.
   - Implemented navigation controls and slide indicators for all carousels
   - Applied consistent carousel behavior across all sections
 
-### Changed
+**Changed**:
 
 - Refactored section components to use the new carousel functionality:
   - Updated Experience, Skills, About, Education, and Contact sections
@@ -34,7 +40,7 @@ All notable changes to this project will be documented in this file.
 - Updated the Hero section layout: button alignment
 - Overall alignment alignment and spacing improvements
 
-### Fixed
+**Fixed**:
 
 - Fixed the "Back to Top" button not appearing when scrolling:
   - Replaced scroll event listener with Intersection Observer API for more reliable detection with snap scrolling
@@ -43,7 +49,7 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-04-11
 
-### Changed
+**Changed**:
 
 - Finished the hero section layout:
 
@@ -83,7 +89,7 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-04-10
 
-### Changed
+**Changed**:
 
 - Improved hero section alignment with a structured rectangular layout.
 - Positioned title in the upper left corner and buttons in the lower left corner.
@@ -97,7 +103,7 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-04-09
 
-### Added
+**Added**:
 
 - Multilingual support with English, Russian, and Dutch translations
 - Language switcher component in the header
@@ -107,22 +113,11 @@ All notable changes to this project will be documented in this file.
 - Language indicator component for visual feedback
 - HTML lang attribute updates for accessibility
 
-### Changed
+**Changed**:
 
 - Updated all section components to use translated content
 - Improved header and footer components to support multiple languages
 - Enhanced mobile menu with better icons and accessibility
-
-### Fixed
-
-- Accessibility issues with language selection
-- Mobile layout issues with the language switcher
-
-09/04/2025
-
-Date: April 9, 2025  
-Updates:
-
 - Created a reusable `Section` component in `src/components/ui/section.tsx` to handle common structure and styling.
 - Refactored all six section components to use this base component:
   - HeroSection (kept original structure due to its unique layout)
@@ -135,114 +130,83 @@ Updates:
 - Added necessary UI components that were missing (input, textarea, badge, progress, card, button).
 - Ensured consistent styling and layout across all sections.
 
-09/04/2025
+**Created a structured data layer**:
 
-Date: April 9, 2025  
-Updates:
+- Organized all content into separate data files in a new `/src/data` directory.
+- Defined TypeScript interfaces for each data type to ensure type safety.
+- Created a central export file (`index.ts`) for easier imports.
 
-- **Created a structured data layer:**
+**Implemented data models for each section**:
 
-  - Organized all content into separate data files in a new `/src/data` directory.
-  - Defined TypeScript interfaces for each data type to ensure type safety.
-  - Created a central export file (`index.ts`) for easier imports.
+- Profile data (for hero section).
+- Experience data (work history).
+- Education data (academic background).
+- Skills data (technical and soft skills).
+- About data (personal information).
+- Contact data (contact information and form fields).
 
-- **Implemented data models for each section:**
+**Refactored all section components to use the data**:
 
-  - Profile data (for hero section).
-  - Experience data (work history).
-  - Education data (academic background).
-  - Skills data (technical and soft skills).
-  - About data (personal information).
-  - Contact data (contact information and form fields).
+- Updated each component to consume data from the data layer.
+- Implemented dynamic rendering based on the data structure.
+- Used mapping functions to render lists of items (experiences, skills, etc.).
 
-- **Refactored all section components to use the data:**
+**Benefits of this architecture**:
 
-  - Updated each component to consume data from the data layer.
-  - Implemented dynamic rendering based on the data structure.
-  - Used mapping functions to render lists of items (experiences, skills, etc.).
+- Content is now completely separated from presentation.
+- Resume content can be updated by simply modifying the data files.
+- TypeScript interfaces ensure data consistency and provide better developer experience.
+- The architecture is more maintainable and scalable.
+- Future content updates won't require changes to component code.
 
-- **Benefits of this architecture:**
+**Additional improvements**:
 
-  - Content is now completely separated from presentation.
-  - Resume content can be updated by simply modifying the data files.
-  - TypeScript interfaces ensure data consistency and provide better developer experience.
-  - The architecture is more maintainable and scalable.
-  - Future content updates won't require changes to component code.
+- Used proper TypeScript typing throughout the codebase.
+- Maintained consistent naming conventions.
+- Ensured all components properly handle the data structure.
 
-- **Additional improvements:**
-  - Used proper TypeScript typing throughout the codebase.
-  - Maintained consistent naming conventions.
-  - Ensured all components properly handle the data structure.
+**Simplified theme switching functionality**:
 
-09/04/2025
+1. Replaced the dropdown menu with a single toggle button.
+2. Added a `toggleTheme` utility function to switch between light and dark modes.
+3. Updated the `ModeToggle` component to use this function and display the appropriate icon.
+4. Maintained system as the default theme while hiding it from the UI.
+5. Ensured the toggle shows the correct icon based on the actual appearance (considering system preference).
 
-Date: April 9, 2025  
-Updates:
+**Implemented a mobile experience slider for the experience section**:
 
-- **Simplified theme switching functionality:**
-  1. Replaced the dropdown menu with a single toggle button.
-  2. Added a `toggleTheme` utility function to switch between light and dark modes.
-  3. Updated the `ModeToggle` component to use this function and display the appropriate icon.
-  4. Maintained system as the default theme while hiding it from the UI.
-  5. Ensured the toggle shows the correct icon based on the actual appearance (considering system preference).
+1. Created a reusable `Carousel` component based on `embla-carousel-react`.
+2. Added a `useMobile` hook to detect mobile viewport.
+3. Implemented conditional rendering: carousel on mobile, standard grid on desktop.
+4. Added navigation controls (prev/next buttons) and slide indicators.
+5. Ensured proper accessibility with ARIA attributes and keyboard navigation.
+6. Made the carousel responsive with proper state management.
+7. Added visual indicators to show the current slide position.
 
-09/04/2025
+**Implemented multilingual support**:
 
-Date: April 9, 2025  
-Updates:
+1. Created a language context provider to manage language state.
+2. Added translation files for English, Russian, and Dutch languages.
+3. Implemented a language switcher component in the header.
+4. Updated all section components to use translations based on the selected language.
+5. Persisted language preference in localStorage.
+6. Created proper TypeScript interfaces for all translation data.
+7. Ensured consistent language switching across the entire application.
 
-- **Implemented a mobile experience slider for the experience section:**
-  1. Created a reusable `Carousel` component based on `embla-carousel-react`.
-  2. Added a `useMobile` hook to detect mobile viewport.
-  3. Implemented conditional rendering: carousel on mobile, standard grid on desktop.
-  4. Added navigation controls (prev/next buttons) and slide indicators.
-  5. Ensured proper accessibility with ARIA attributes and keyboard navigation.
-  6. Made the carousel responsive with proper state management.
-  7. Added visual indicators to show the current slide position.
+**Enhanced language selection implementation**:
 
-09/04/2025
+1. Added browser language detection to automatically set the initial language.
+2. Improved the language switcher UI with a globe icon and language indicator.
+3. Added proper HTML `lang` attribute updates for accessibility.
+4. Created a language indicator component for visual feedback.
+5. Updated page title to reflect the current language.
+6. Added proper `aria-labels` for better screen reader support.
+7. Improved mobile menu with Lucide icons for better UX.
+8. Implemented smooth transitions between languages.
 
-Date: April 09, 2025  
-Updates:
+## 2025-04-06
 
-- **Implemented multilingual support:**
-
-  1. Created a language context provider to manage language state.
-  2. Added translation files for English, Russian, and Dutch languages.
-  3. Implemented a language switcher component in the header.
-  4. Updated all section components to use translations based on the selected language.
-  5. Persisted language preference in localStorage.
-  6. Created proper TypeScript interfaces for all translation data.
-  7. Ensured consistent language switching across the entire application.
-
-- **Benefits:**
-  - The resume now supports three languages with a user-friendly language switcher.
-  - Improved accessibility for a wider audience.
-
-09/04/2025
-
-Date: April 09, 2025  
-Updates:
-
-- **Enhanced language selection implementation:**
-
-  1. Added browser language detection to automatically set the initial language.
-  2. Improved the language switcher UI with a globe icon and language indicator.
-  3. Added proper HTML `lang` attribute updates for accessibility.
-  4. Created a language indicator component for visual feedback.
-  5. Updated page title to reflect the current language.
-  6. Added proper `aria-labels` for better screen reader support.
-  7. Improved mobile menu with Lucide icons for better UX.
-  8. Implemented smooth transitions between languages.
-
-- **Benefits:**
-  - The language selection is now more user-friendly and accessible.
-  - Provides better visual feedback and enhances the overall user experience.
-
-06/04/2025
-
-Date: April 6, 2025  
-Updates:
+**Updates**:
 
 - Initial setup of the project with React, TypeScript, and Tailwind CSS.
 - Added responsive sections for showcasing experience, education, skills, and contact information.
