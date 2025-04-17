@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-17
+
+- Refactor layout for header and footer components to align with page content
+
 ## 2025-04-16
 
 **Changed**:

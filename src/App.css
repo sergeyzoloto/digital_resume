@@ -42,6 +42,8 @@
 .width-container {
   padding-left: calc(var(--spacing) * 4);
   padding-right: calc(var(--spacing) * 4);
+  width: 100%;
+  max-width: 100rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -67,7 +69,6 @@
     padding-right: calc(var(--spacing) * 8);
     padding-top: 64px; /* Desktop header height */
     padding-bottom: 64px; /* Desktop footer height */
-    width: 100%;
     margin: 0 auto; /* Center the container */
   }
 }
