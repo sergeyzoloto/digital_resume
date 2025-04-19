@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - Get rid of unused files in the stories folder
 - Add NavigationBar component with dynamic navigation items
 - Update translations
+- Added scroll-context component to track screen position on the main page
 
 ## 2025-04-17
 

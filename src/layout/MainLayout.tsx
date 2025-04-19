@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { ThemeProvider } from "../components/theme-provider";
+import { ScrollProvider } from "../context/scroll-context";
+
 import { usePageTitle } from "@/hooks/use-page-title";
 
 interface MainLayoutProps {
@@ -15,9 +17,11 @@ function MainLayout({ children }: Readonly<MainLayoutProps>) {
   return (
     <div>
       <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-        <Header />
-        {children}
-        <Footer />
+        <ScrollProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ScrollProvider>
       </ThemeProvider>
     </div>
   );

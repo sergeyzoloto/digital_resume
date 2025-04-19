@@ -3,13 +3,16 @@
 import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/data/translations";
+import { useScrollContext } from "@/context/scroll-context";
 
 export function Footer() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { language } = useLanguage();
   const t = translations[language];
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const { activeSection } = useScrollContext();
 
+  // Set up the IntersectionObserver to detect when the hero section is not in view
   useEffect(() => {
     // Create a new IntersectionObserver
     observerRef.current = new IntersectionObserver(
@@ -17,6 +20,7 @@ export function Footer() {
         // When the hero section is not intersecting (not visible),
         // it means we've scrolled down
         const [entry] = entries;
+        // Update the isScrolled state based on the intersection
         setIsScrolled(!entry.isIntersecting);
       },
       {
@@ -43,7 +47,7 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="fixed bottom-0 z-50 min-w-screen border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ">
+    <footer className="fixed bottom-0 z-50 min-w-screen border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex items-center justify-between md:h-16 h-10 flex-row width-container mx-auto">
         <div className="flex items-center flex-row gap-2 px-0 pt-0">
           <a
@@ -59,22 +63,9 @@ export function Footer() {
           </a>
         </div>
         <div className="flex gap-4 md:pr-4">
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-medium text-muted-foreground underline underline-offset-4"
-          >
-            {t.navigation.linkedin}
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-medium text-muted-foreground underline underline-offset-4"
-          >
-            {t.navigation.github}
-          </a>
+          <span className="text-sm text-muted-foreground">
+            Current Section: {activeSection || "Null"}
+          </span>
         </div>
       </div>
     </footer>
