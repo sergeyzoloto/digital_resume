@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-19
+
+- Added dialog demo component stories
+- Get rid of unused files in the stories folder
+
 ## 2025-04-17
 
 - Refactor layout for header and footer components to align with page content

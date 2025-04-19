@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import type { ReactNode } from "react";
 import React from "react";
 import { Section } from "../components/ui/section";
-import { Button } from "./Button";
+import { Button } from "../components/ui/button";
 
 const meta = {
   title: "Components/Section",
@@ -21,9 +21,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const sampleChildren: ReactNode[] = [
-  React.createElement(Button, { label: "First", key: "1" }),
-  React.createElement(Button, { label: "Second", key: "2" }),
-  React.createElement(Button, { label: "Third", key: "3" }),
+  React.createElement(Button, { key: "1" }, "First"),
+  React.createElement(Button, { key: "2" }, "Second"),
+  React.createElement(Button, { key: "3" }, "Third"),
 ];
 
 export const Default: Story = {
