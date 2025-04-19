@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 - Added dialog demo component stories
 - Get rid of unused files in the stories folder
+- Add NavigationBar component with dynamic navigation items
+- Update translations
 
 ## 2025-04-17
 

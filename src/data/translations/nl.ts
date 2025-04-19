@@ -266,7 +266,5 @@ export const nl: TranslationData = {
     about: "Over\u00A0mij",
     contact: "Contact",
     backToTop: "Terug naar boven",
-    linkedin: "LinkedIn",
-    github: "GitHub",
   },
 };

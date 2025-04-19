@@ -266,7 +266,5 @@ export const en: TranslationData = {
     about: "About",
     contact: "Contact",
     backToTop: "Back to top",
-    linkedin: "LinkedIn",
-    github: "GitHub",
   },
 };

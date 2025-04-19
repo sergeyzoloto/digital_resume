@@ -126,8 +126,6 @@ export interface NavigationTranslation {
   about: string;
   contact: string;
   backToTop: string;
-  linkedin: string;
-  github: string;
 }
 
 export interface TranslationData {

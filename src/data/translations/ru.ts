@@ -266,7 +266,5 @@ export const ru: TranslationData = {
     about: "Обо\u00A0мне",
     contact: "Контакты",
     backToTop: "Наверх",
-    linkedin: "LinkedIn",
-    github: "GitHub",
   },
 };
