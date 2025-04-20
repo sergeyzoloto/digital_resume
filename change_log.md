@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-20
+
+- Add SummarySection component and update translations for summary data
+
 ## 2025-04-19
 
 - Added dialog demo component stories

@@ -13,6 +13,8 @@ export interface ExperienceItemTranslation {
   responsibilities: string[];
   achievements: string[];
   technologies?: string[];
+  shortResponsibilities: string;
+  shortAchievements: string;
 }
 
 export interface ExperienceTranslation {
@@ -120,6 +122,7 @@ export interface ContactTranslation {
 }
 
 export interface NavigationTranslation {
+  summary: string;
   experience: string;
   education: string;
   skills: string;
@@ -128,8 +131,14 @@ export interface NavigationTranslation {
   backToTop: string;
 }
 
+export interface SummaryTranslation {
+  title: string;
+  briefIntro: string;
+}
+
 export interface TranslationData {
   profile: ProfileTranslation;
+  summary: SummaryTranslation;
   experience: ExperienceTranslation;
   education: EducationTranslation;
   skills: SkillsTranslation;

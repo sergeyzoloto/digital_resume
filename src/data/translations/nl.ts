@@ -8,6 +8,11 @@ export const nl: TranslationData = {
     contactButton: "Neem contact op",
     downloadButton: "CV downloaden",
   },
+  summary: {
+    title: "Samenvatting",
+    briefIntro:
+      "Ervaren analist-ontwikkelaar met een sterke achtergrond in financiën, gegevensanalyse en programmeren.",
+  },
   experience: {
     title: "Werkervaring",
     description: "Mijn professionele reis in analyse en ontwikkeling.",
@@ -28,6 +33,11 @@ export const nl: TranslationData = {
           "Voortdurend het transactie-per-transactie berekeningsmodel van de leningportefeuille verbeterd (SQL-model)",
         ],
         technologies: ["Excel", "SQL", "PowerPoint", "Oracle"],
+        shortResponsibilities:
+          "Verantwoordelijk voor analyse en planning van de leningportefeuille van het zakelijke segment",
+
+        shortAchievements:
+          "De vereiste huidige leningplannen voor 2019 opgesteld",
       },
       {
         company: "MTS",
@@ -48,6 +58,10 @@ export const nl: TranslationData = {
           "Macro's geschreven in VBA en gegevens verwerkt met Python",
         ],
         technologies: ["VBA", "Excel", "Python"],
+        shortResponsibilities:
+          "Regelmatige item-per-item voorspelling en seizoensgebonden budgettering van inkomsten en uitgaven in regionale vestigingen",
+        shortAchievements:
+          "Succesvol en tijdig de budgetcyclus 2017 afgerond, doelgoedkeuringen ontvangen van vestigingen",
       },
       {
         company: "Why Not Wine",
@@ -68,6 +82,10 @@ export const nl: TranslationData = {
           "De reputatie van het bedrijf op internet geanalyseerd, concurrenten en markttrends bestudeerd",
           "Management accounting in het bedrijf georganiseerd, belangrijkste financiële rapporten voorbereid voor management en externe gebruikers",
         ],
+        shortResponsibilities:
+          "Deelname aan de lancering van het project, marketing, PR, SMM, e-mailmarketing",
+        shortAchievements:
+          "Ervaring opgedaan met het opstarten van een bedrijf vanaf nul",
       },
     ],
     responsibilitiesLabel: "Verantwoordelijkheden:",
@@ -260,6 +278,7 @@ export const nl: TranslationData = {
     },
   },
   navigation: {
+    summary: "Samenvatting",
     experience: "Ervaring",
     education: "Opleiding",
     skills: "Vaardigheden",

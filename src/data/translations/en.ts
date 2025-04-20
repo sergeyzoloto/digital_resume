@@ -8,6 +8,11 @@ export const en: TranslationData = {
     contactButton: "Contact Me",
     downloadButton: "Download CV",
   },
+  summary: {
+    title: "Summary",
+    briefIntro:
+      "I am an analyst-developer with a strong background in finance, data analysis, and programming. I have experience in various industries, including banking and telecommunications.",
+  },
   experience: {
     title: "Work Experience",
     description: "My professional journey in analytics and development.",
@@ -28,6 +33,8 @@ export const en: TranslationData = {
           "Continuously improved the transaction-by-transaction calculation model of the loan portfolio (SQL model)",
         ],
         technologies: ["Excel", "SQL", "PowerPoint", "Oracle"],
+        shortResponsibilities: "Analysis and planning of the loan portfolio",
+        shortAchievements: "Achieved budget approval from customers",
       },
       {
         company: "MTS",
@@ -48,6 +55,9 @@ export const en: TranslationData = {
           "Wrote macros in VBA and processed data using Python",
         ],
         technologies: ["VBA", "Excel", "Python"],
+        shortResponsibilities:
+          "Forecasting and budgeting of income and expenses",
+        shortAchievements: "Successfully completed the 2017 budget cycle",
       },
       {
         company: "Why Not Wine",
@@ -68,6 +78,9 @@ export const en: TranslationData = {
           "Analyzed the company's reputation on the Internet, studied competitors and market trends",
           "Organized management accounting at the enterprise, prepared main financial reports for management and external users",
         ],
+        shortAchievements:
+          "Gained experience in launching a business from scratch",
+        shortResponsibilities: "Marketing, PR, SMM, email marketing",
       },
     ],
     responsibilitiesLabel: "Responsibilities:",
@@ -260,6 +273,7 @@ export const en: TranslationData = {
     },
   },
   navigation: {
+    summary: "Summary",
     experience: "Experience",
     education: "Education",
     skills: "Skills",
