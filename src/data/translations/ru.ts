@@ -126,6 +126,7 @@ export const ru: TranslationData = {
     description: "Мои технические и личностные навыки.",
     technicalSkillsTitle: "Технические навыки",
     softSkillsTitle: "Личностные навыки",
+    skillSet: ["SQL", "Python", "Excel", "Analytics", "VBA"],
     technicalSkills: [
       {
         name: "Excel",

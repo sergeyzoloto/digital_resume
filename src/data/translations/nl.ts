@@ -127,6 +127,7 @@ export const nl: TranslationData = {
     description: "Mijn technische en soft skills.",
     technicalSkillsTitle: "Technische Vaardigheden",
     softSkillsTitle: "Soft Skills",
+    skillSet: ["SQL", "Python", "Excel", "Analytics", "VBA"],
     technicalSkills: [
       {
         name: "Excel",

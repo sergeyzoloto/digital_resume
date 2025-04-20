@@ -4,15 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-04-20
 
-- Add SummarySection component and update translations for summary data
-- Refactor education and skills sections; update UI components accordingly
+- Added SummarySection component and update translations for summary data
+- Refactored education and skills sections; update UI components accordingly
+- Added new cards for brief intro, skills, and education to SummarySection
 
 ## 2025-04-19
 
 - Added dialog demo component stories
-- Get rid of unused files in the stories folder
-- Add NavigationBar component with dynamic navigation items
-- Update translations
+- Got rid of unused files in the stories folder
+- Added NavigationBar component with dynamic navigation items
+- Updated translations
 - Added scroll-context component to track screen position on the main page
 
 ## 2025-04-17

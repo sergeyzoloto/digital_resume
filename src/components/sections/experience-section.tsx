@@ -91,7 +91,7 @@ export function ExperienceSection() {
     >
       <div className="flex flex-row lg:gap-4 xl:gap-8">
         {experienceData.items
-          .slice(0, 2)
+          .slice(0, 3)
           .map((experience, index) => renderExperienceCard(experience, index))}
       </div>
     </Section>

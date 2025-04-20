@@ -123,6 +123,7 @@ export const en: TranslationData = {
     description: "My technical and soft skills.",
     technicalSkillsTitle: "Technical Skills",
     softSkillsTitle: "Soft Skills",
+    skillSet: ["SQL", "Python", "Excel", "Analytics", "VBA"],
     technicalSkills: [
       {
         name: "Excel",

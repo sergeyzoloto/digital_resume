@@ -63,6 +63,7 @@ export interface SkillsTranslation {
   introduction: string;
   technicalSkillsTitle: string;
   softSkillsTitle: string;
+  skillSet: string[];
   technicalSkills: TechnicalSkillTranslation[];
   softSkills: SoftSkillTranslation[];
 }
