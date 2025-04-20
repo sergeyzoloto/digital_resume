@@ -41,29 +41,21 @@ export function EducationSection() {
           </svg>
         </div>
         <div>
-          <CardTitle>{edu.institution}</CardTitle>
-          <CardDescription>{edu.year}</CardDescription>
+          <CardTitle>{edu.degree}</CardTitle>
+          <CardDescription>{edu.institution}</CardDescription>
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {edu.degrees.map((degree, degreeIndex) => (
-            <div key={`degree-${index}-${degreeIndex}`} className="space-y-2">
-              <h4 className="font-medium">{degree.name}</h4>
-              <p className="text-sm text-muted-foreground">{degree.field}</p>
-              <Badge variant="outline">{degree.year}</Badge>
-            </div>
-          ))}
+        <div className="ml-auto">
+          <Badge variant="outline" className="text-sm">
+            {edu.period}
+          </Badge>
         </div>
-
-        <div className="pt-4">
-          <h4 className="font-medium mb-2">
-            {educationData.continuousEducation.title}
-          </h4>
-          <p className="text-sm text-muted-foreground">
-            {educationData.continuousEducation.description}
+        {edu.description.map((desc, descIndex) => (
+          <p key={`edu-desc-${index}-${descIndex}`} className="text-sm">
+            {desc}
           </p>
-        </div>
+        ))}
       </CardContent>
     </Card>
   ));

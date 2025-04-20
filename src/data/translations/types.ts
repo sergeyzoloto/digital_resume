@@ -27,25 +27,17 @@ export interface ExperienceTranslation {
 }
 
 export interface EducationItemTranslation {
+  degree: string;
   institution: string;
-  year: string;
-  degrees: {
-    name: string;
-    field: string;
-    year: string;
-  }[];
-}
-
-export interface ContinuousEducationTranslation {
-  title: string;
-  description: string;
+  period: string;
+  description: string[];
+  shortDescription: string;
 }
 
 export interface EducationTranslation {
   title: string;
   description: string;
   education: EducationItemTranslation[];
-  continuousEducation: ContinuousEducationTranslation;
 }
 
 export interface TechnicalSkillTranslation {
@@ -68,11 +60,11 @@ export interface ForecastingProcessTranslation {
 export interface SkillsTranslation {
   title: string;
   description: string;
+  introduction: string;
   technicalSkillsTitle: string;
   softSkillsTitle: string;
   technicalSkills: TechnicalSkillTranslation[];
   softSkills: SoftSkillTranslation[];
-  forecastingProcess: ForecastingProcessTranslation;
 }
 
 export interface AboutCardTranslation {

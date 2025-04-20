@@ -92,27 +92,31 @@ export const en: TranslationData = {
     description: "My academic background and qualifications.",
     education: [
       {
-        institution: "Bauman Moscow State Technical University",
-        year: "2013",
-        degrees: [
-          {
-            name: "Engineering Degree",
-            field: "Lifting and Transport Systems",
-            year: "2013",
-          },
-          {
-            name: "Economics and Management Degree",
-            field: "Organization of Entrepreneurial Activity",
-            year: "2013",
-          },
+        degree: "Master's Degree in Finance and Credit",
+        institution:
+          "Financial University under the Government of the Russian Federation",
+        period: "2017 - 2019",
+        description: [
+          "Graduated with honors",
+          "Completed a thesis on the topic of financial modeling in Excel",
+          "Studied advanced financial analysis, investment management, and corporate finance.",
         ],
+        shortDescription:
+          "Graduated with honors. Thesis on financial modeling in Excel.",
+      },
+      {
+        degree: "Bachelor's Degree",
+        institution:
+          "Financial University under the Government of the Russian Federation",
+        period: "2013 - 2017",
+        description: [
+          "Graduated with honors",
+          "Studied finance, accounting, and economics.",
+        ],
+        shortDescription:
+          "Graduated with honors. Studied finance, accounting, and economics.",
       },
     ],
-    continuousEducation: {
-      title: "Continuous Education",
-      description:
-        'Currently reading "Web Scraping using Python" and studying regular expressions. Also learning JavaScript from "Eloquent JavaScript" for front-end development. Planning to study APIs, Git, distributed data storage and processing systems, and start using Linux.',
-    },
   },
   skills: {
     title: "Skills",
@@ -181,14 +185,8 @@ export const en: TranslationData = {
         description: "Team-oriented mindset",
       },
     ],
-    forecastingProcess: {
-      title: "Forecasting Process",
-      steps: [
-        "Diagnostics - Collecting and analyzing statistical data, studying business resources",
-        "Forming goals (hypothesis) - Selection of driver indicators",
-        "Coordination - Preparing forecasts, interactive reports, presenting results, consulting business",
-      ],
-    },
+    introduction:
+      "I have a strong background in finance and analytics, with experience in various industries. I am proficient in SQL, Python, and Excel, and have a solid understanding of data analysis and visualization.",
   },
   about: {
     title: "About Me",

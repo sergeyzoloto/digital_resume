@@ -48,6 +48,9 @@ export function SkillsSection() {
         <CardTitle>{skillsData.softSkillsTitle}</CardTitle>
       </CardHeader>
       <CardContent>
+        <p className="text-sm text-muted-foreground mb-4">
+          {skillsData.introduction}
+        </p>
         <div className="grid grid-cols-2 gap-4">
           {skillsData.softSkills.map((skill, index) => (
             <div key={`soft-skill-${index}`} className="space-y-2">
@@ -59,17 +62,6 @@ export function SkillsSection() {
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="mt-8">
-          <h4 className="font-medium mb-4">
-            {skillsData.forecastingProcess.title}
-          </h4>
-          <ol className="space-y-2 list-decimal pl-5">
-            {skillsData.forecastingProcess.steps.map((step, index) => (
-              <li key={`process-step-${index}`}>{step}</li>
-            ))}
-          </ol>
         </div>
       </CardContent>
     </Card>

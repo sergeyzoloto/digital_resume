@@ -97,27 +97,30 @@ export const nl: TranslationData = {
     description: "Mijn academische achtergrond en kwalificaties.",
     education: [
       {
-        institution: "Bauman Moskou Staatsuniversiteit voor Techniek",
-        year: "2013",
-        degrees: [
-          {
-            name: "Technische Graad",
-            field: "Hef- en Transportsystemen",
-            year: "2013",
-          },
-          {
-            name: "Economie en Management Graad",
-            field: "Organisatie van Ondernemersactiviteiten",
-            year: "2013",
-          },
+        degree: "Master in Bedrijfseconomie",
+        institution:
+          "Financiële Universiteit onder de regering van de Russische Federatie",
+        period: "2014 - 2016",
+        description: [
+          "Specialisatie in financiële analyse en bedrijfsplanning.",
+          "Afgestudeerd met een diploma met onderscheiding.",
         ],
+        shortDescription:
+          "Specialisatie in financiële analyse en bedrijfsplanning.",
+      },
+      {
+        degree: "Bachelor in Bedrijfseconomie",
+        institution:
+          "Financiële Universiteit onder de regering van de Russische Federatie",
+        period: "2010 - 2014",
+        description: [
+          "Specialisatie in financiële analyse en bedrijfsplanning.",
+          "Afgestudeerd met een diploma met onderscheiding.",
+        ],
+        shortDescription:
+          "Specialisatie in financiële analyse en bedrijfsplanning.",
       },
     ],
-    continuousEducation: {
-      title: "Voortdurende Educatie",
-      description:
-        'Momenteel lees ik "Web Scraping using Python" en bestudeer ik reguliere expressies. Ook leer ik JavaScript uit "Eloquent JavaScript" voor front-  en bestudeer ik reguliere expressies. Ook leer ik JavaScript uit "Eloquent JavaScript" voor front-end ontwikkeling. Ik ben van plan om API\'s, Git, gedistribueerde gegevensopslag- en verwerkingssystemen te bestuderen en te beginnen met het gebruik van Linux.',
-    },
   },
   skills: {
     title: "Vaardigheden",
@@ -186,14 +189,8 @@ export const nl: TranslationData = {
         description: "Teamgerichte mindset",
       },
     ],
-    forecastingProcess: {
-      title: "Voorspellingsproces",
-      steps: [
-        "Diagnostiek - Verzamelen en analyseren van statistische gegevens, bestuderen van bedrijfsmiddelen",
-        "Doelen vormen (hypothese) - Selectie van driverindicatoren",
-        "Coördinatie - Voorspellingen voorbereiden, interactieve rapporten, resultaten presenteren, bedrijf adviseren",
-      ],
-    },
+    introduction:
+      "Ik heb een sterke achtergrond in financiën en analytics, met ervaring in verschillende sectoren. Ik ben bedreven in SQL, Python en Excel, en heb een solide begrip van gegevensanalyse en visualisatie.",
   },
   about: {
     title: "Over Mij",
