@@ -27,14 +27,20 @@ export function SummarySection() {
   ) => (
     <Card key={`summary-${index}`} className="overflow-y-auto">
       <CardHeader>
-        <div className="flex flex-row w-full md:items-center md:justify-between gap-4">
+        <div className="flex flex-row w-full items-start md:justify-between gap-4">
           <div className="w-full">
             <CardTitle>{experience.company}</CardTitle>
             <CardDescription>{experience.position}</CardDescription>
           </div>
-          <Badge variant="outline" className="w-fit h-fit">
-            {experience.period}
-          </Badge>
+          <div className="flex gap-2 flex-col sm:flex-row md:flex-col lg:flex-row">
+            <Badge variant="outline" className="w-fit h-fit">
+              {experience.period.split(" - ")[0]}
+            </Badge>
+            <p className="hidden sm:block md:hidden lg:block">-</p>
+            <Badge variant="outline" className="w-fit h-fit">
+              {experience.period.split(" - ")[1]}
+            </Badge>
+          </div>
         </div>
       </CardHeader>
       <CardContent className="overflow-y-auto max-h-full px-4">
