@@ -20,7 +20,6 @@ export interface SectionProps {
   description?: string;
   children: ReactNode;
   className?: string;
-  fullHeight?: boolean;
   // Carousel options
   useCarouselOnMobile?: boolean;
   carouselChildrenFilter?: (children: ReactNode) => ReactNode[];
@@ -32,7 +31,6 @@ export function Section({
   description,
   children,
   className = "",
-  fullHeight = true,
   useCarouselOnMobile = false,
   carouselChildrenFilter,
 }: SectionProps) {
@@ -103,12 +101,10 @@ export function Section({
   return (
     <section
       id={id}
-      className={`${
-        fullHeight ? "h-screen" : "min-h-[80vh]"
-      } flex flex-col page-container snap-start snap-always ${className}`}
+      className={`flex flex-col snap-start snap-always overflow-hidden ${className}`}
     >
-      <div className="flex-1 flex flex-col justify-center items-center mt-4">
-        <div className="space-y-2 text-center">
+      <div className="page-container section-container flex-1 flex flex-col justify-center items-center">
+        <div className="space-y-2 text-center mt-4">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             {title}
           </h2>

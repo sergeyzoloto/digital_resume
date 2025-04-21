@@ -24,7 +24,7 @@ export function ExperienceSection() {
   ) => (
     <Card
       key={`experience-${index}`}
-      className="sm:h-[calc(100vh-20rem)] h-[calc(100vh-17rem)] overflow-y-auto flex-[3_1_300px]" // Adjust height for mobile
+      className="overflow-y-auto flex-[3_1_300px]" // Adjust height for mobile
     >
       <CardHeader>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">

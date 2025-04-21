@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-22
+
+- Improved `SummarySection` layout
+- Refactored `Card` component for better scroll handling and spacing
+- Simplified `Section` component layout logic
+- Unified styles across `SkillsSection`, `EducationSection`, `ExperienceSection`, and `AboutSection`
+- Consistent card styles and better overflow handling for all sections
+
+## 2025-04-21
+
 ## 2025-04-20
 
 - Added SummarySection component and update translations for summary data
