@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-23
+
+- Add stories with color palette
+
 ## 2025-04-21
 
 - Improved `SummarySection` layout

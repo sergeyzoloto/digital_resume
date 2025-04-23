@@ -1,0 +1,68 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+import "../index.css";
+
+<Meta title="Colors" />
+
+<ColorPalette>
+  <ColorItem
+    title="Background Colors"
+    colors={{
+      Background: "hsl(var(--background))",
+      Foreground: "hsl(var(--foreground))",
+      Card: "hsl(var(--card))",
+      "Card Foreground": "hsl(var(--card-foreground))",
+      Popover: "hsl(var(--popover))",
+      "Popover Foreground": "hsl(var(--popover-foreground))",
+    }}
+  />
+  <ColorItem
+    title="Primary Colors"
+    colors={{
+      Primary: "hsl(var(--primary))",
+      "Primary Foreground": "hsl(var(--primary-foreground))",
+    }}
+  />
+  <ColorItem
+    title="Secondary Colors"
+    colors={{
+      Secondary: "hsl(var(--secondary))",
+      "Secondary Foreground": "hsl(var(--secondary-foreground))",
+    }}
+  />
+  <ColorItem
+    title="Muted Colors"
+    colors={{
+      Muted: "hsl(var(--muted))",
+      "Muted Foreground": "hsl(var(--muted-foreground))",
+    }}
+  />
+  <ColorItem
+    title="Accent Colors"
+    colors={{
+      Accent: "hsl(var(--accent))",
+      "Accent Foreground": "hsl(var(--accent-foreground))",
+    }}
+  />
+  <ColorItem
+    title="Destructive Colors"
+    colors={{
+      Destructive: "hsl(var(--destructive))",
+      "Destructive Foreground": "hsl(var(--destructive-foreground))",
+    }}
+  />
+  <ColorItem
+    title="Utility Colors"
+    colors={{
+      Border: "hsl(var(--border))",
+      Input: "hsl(var(--input))",
+      Ring: "hsl(var(--ring))",
+    }}
+  />
+  <ColorItem
+    title="Gradients"
+    colors={{
+      Gradient:
+        "linear-gradient(to right, hsl(var(--background)), hsl(var(--foreground)))",
+    }}
+  />
+</ColorPalette>
