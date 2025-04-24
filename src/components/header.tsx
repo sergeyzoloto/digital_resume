@@ -51,6 +51,11 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-48 bg-background/95 backdrop-blur-3xl supports-[backdrop-filter]:bg-background/60">
               <DropdownMenuItem asChild>
+                <a href="#summary" onClick={() => setIsMobileMenuOpen(false)}>
+                  {t.navigation.summary}
+                </a>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
                 <a
                   href="#experience"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -84,6 +89,12 @@ export function Header() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-6">
+          <a
+            href="#summary"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {t.navigation.summary}
+          </a>{" "}
           <a
             href="#experience"
             className="text-muted-foreground hover:text-foreground transition-colors"

@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-04-24
 
--- Refactor variables to correctly apply them using Tailwind standard approach to colors
+- Refactor variables to correctly apply them using Tailwind standard approach to colors
+- Add summary link to mobile dropdown menu and desktop navigation
 
 ## 2025-04-23
 
