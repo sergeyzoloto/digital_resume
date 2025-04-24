@@ -28,7 +28,7 @@ export function SummarySection() {
     <Card key={`summary-${index}`} className="overflow-y-auto">
       <CardHeader>
         <div className="flex flex-row w-full items-start md:justify-between gap-4">
-          <div className="w-full">
+          <div className="flex flex-col gap-2 w-full">
             <CardTitle>{experience.company}</CardTitle>
             <CardDescription>{experience.position}</CardDescription>
           </div>
@@ -45,7 +45,7 @@ export function SummarySection() {
       </CardHeader>
       <CardContent className="overflow-y-auto max-h-full px-4">
         {/* Scrollable content */}
-        <div className="px-2 space-y-4">
+        <div className="space-y-4">
           <p className="text-sm mb-0">{experience.shortResponsibilities}</p>
           <p className="text-sm">{experience.shortAchievements}</p>
         </div>
@@ -55,45 +55,58 @@ export function SummarySection() {
 
   // Render brief intro card
   const renderBriefIntroCard = () => (
-    <Card className="row-span-1 col-span-8 md:row-span-2 md:col-span-6">
-      <CardHeader>
-        <CardTitle>{summaryData.title}</CardTitle>
-      </CardHeader>
+    <Card className="flex-[1_0_16rem]">
       <CardContent>
-        <p className="text-sm">{summaryData.briefIntro}</p>
+        <p className="text-base sm:text-lg">{summaryData.briefIntro}</p>
       </CardContent>
     </Card>
   );
 
   // Render skills card
   const renderSkillsCard = () => (
-    <Card className="row-span-2 col-span-4 md:col-span-3 max-h-full">
+    <Card className="flex-[1_0_16rem]">
       <CardHeader>
         <CardTitle>{skillsData.title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <ul className="list-disc pl-4 space-y-1">
-          {skillsData.skillSet.slice(0, 5).map((skill, index) => (
-            <li key={`summary-skill-${index}`} className="text-sm">
-              {skill}
-            </li>
-          ))}
-        </ul>
+        {skillsData.skillSet.map((skill, index) => (
+          <Badge
+            key={`summary-skill-${index}`}
+            variant="outline"
+            className="w-fit h-fit mb-2 mr-2 last:mb-0 last:mr-0"
+          >
+            {skill}
+          </Badge>
+        ))}
       </CardContent>
     </Card>
   );
 
   // Render education card
   const renderEducationCard = () => (
-    <Card className="row-span-1 col-span-8 md:row-span-2 md:col-span-3">
+    <Card className="flex-[2_0_16rem]">
       <CardHeader>
         <CardTitle>{educationData.title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <ul className="list-disc pl-4 space-y-1">
+        <ul className="space-y-1">
           {educationData.education.map((edu, index) => (
-            <li key={`summary-edu-${index}`} className="text-sm">
-              {edu.shortDescription}
+            <li
+              key={`summary-edu-${index}`}
+              className="text-sm flex flex-col gap-2 mb-8 last:mb-0"
+            >
+              <div className="flex flex-row justify-between gap-2">
+                <p className="font-bold">{edu.degree}</p>
+                <div className="flex gap-2 flex-col ">
+                  <Badge variant="outline" className="w-fit h-fit">
+                    {edu.period.split(" - ")[0]}
+                  </Badge>
+                  <Badge variant="outline" className="w-fit h-fit">
+                    {edu.period.split(" - ")[1]}
+                  </Badge>
+                </div>
+              </div>
+              <p>{edu.shortDescription}</p>
             </li>
           ))}
         </ul>
@@ -105,15 +118,16 @@ export function SummarySection() {
     <Section
       id="summary"
       title={summaryData.title}
-      description={""}
       className="h-full overflow-y-auto"
     >
       <div className="flex flex-col justify-center overflow-x-hidden">
         {/* Top row with Brief Intro, Skills, and Education cards */}
-        <div className="grid grid-rows-2 grid-cols-12 gap-4 mb-4 ">
+        <div className="flex flex-row flex-wrap gap-4 mb-4">
           {renderBriefIntroCard()}
-          {renderSkillsCard()}
-          {renderEducationCard()}
+          <div className="flex-[1_0_16rem] flex flex-row flex-wrap gap-4">
+            {renderEducationCard()}
+            {renderSkillsCard()}
+          </div>
         </div>
         {/* Render the first three experience cards in a row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
