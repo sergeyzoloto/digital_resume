@@ -13,7 +13,11 @@ export function AboutSection() {
   const aboutCards = aboutData.cards.map((card, index) => (
     <Card
       key={`about-card-${index}`}
-      className="overflow-y-auto flex-[1_1_300px] max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-20rem)]" // Adjust height for mobile
+      className={`overflow-y-auto max-h-[calc(100vh-21rem)] first:text-2xl ${
+        index >= aboutData.cards.length - 2
+          ? "flex-[1_1_auto] lg:flex-[1_1_48%]"
+          : "flex-[1_1_auto]"
+      }`} // Adjust width for the last two cards
     >
       <CardHeader>
         <CardTitle>{card.title}</CardTitle>
@@ -50,10 +54,10 @@ export function AboutSection() {
       id="about"
       title={aboutData.title}
       description={aboutData.description}
-      useCarouselOnMobile={true}
-      carouselChildrenFilter={() => aboutCards}
     >
-      <div className="flex lg:gap-4 xl:gap-8">{aboutCards}</div>
+      <div className="flex flex-row flex-wrap gap-2 lg:gap-4 xl:gap-8 mb-4">
+        {aboutCards}
+      </div>
     </Section>
   );
 }

@@ -22,7 +22,7 @@ export function Header() {
   return (
     <header className="fixed min-w-screen top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-10 md:h-16 items-center justify-between width-container mx-auto">
-        <a href="/" className="font-bold">
+        <a href="/" className="font-bold mr-6">
           {t.profile.name}
         </a>
 

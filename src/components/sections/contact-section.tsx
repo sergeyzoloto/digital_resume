@@ -22,7 +22,7 @@ export function ContactSection() {
   const contactInfoCard = (
     <Card
       key="contact-info"
-      className="overflow-y-auto max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-20rem)]" // Adjust height for mobile
+      className="overflow-y-auto h-full max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-20rem)]" // Adjust height for mobile
     >
       <CardHeader>
         <CardTitle>{contactData.contactInfoTitle}</CardTitle>
@@ -170,7 +170,7 @@ export function ContactSection() {
       useCarouselOnMobile={true}
       carouselChildrenFilter={() => [contactInfoCard, contactFormCard]}
     >
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-4 xl:gap-8">
+      <div className="w-full grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-4 xl:gap-8">
         <div>
           {contactInfoCard}
           <div className="mt-6"></div>

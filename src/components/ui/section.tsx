@@ -114,7 +114,7 @@ export function Section({
             </p>
           )}
         </div>
-        <div className="w-full pt-4 md:pt-6 overflow-x-auto">
+        <div className="w-full mt-4 md:mt-6 overflow-x-auto">
           {renderContent()}
         </div>
       </div>

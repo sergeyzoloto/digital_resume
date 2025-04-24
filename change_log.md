@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Refactor summary section layout and enhance card components: get rid of grid, got back to flex
 - Fix adaptive height adjustments for mobile and desktop views on card components
 - Adjust leading in card title and fixed aspect ratio for svg education icons
+- Check and adjust layout across sections
 
 ## 2025-04-23
 
