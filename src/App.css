@@ -21,22 +21,22 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background)); /* Track color */
+  background: var(--background); /* Track color */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground)); /* Thumb color */
+  background: var(--muted-foreground); /* Thumb color */
   border-radius: var(--radius); /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--popover-foreground)); /* Thumb color on hover */
+  background: var(--popover-foreground); /* Thumb color on hover */
 }
 
 /* Styling for Firefox */
 * {
   scrollbar-width: thin; /* Thin scrollbar */
-  scrollbar-color: hsl(var(--muted-foreground)) hsl(var(--background)); /* Thumb and track colors */
+  scrollbar-color: var(--muted-foreground) var(--background); /* Thumb and track colors */
 }
 
 .width-container {

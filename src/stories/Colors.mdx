@@ -7,62 +7,64 @@ import "../index.css";
   <ColorItem
     title="Background Colors"
     colors={{
-      Background: "hsl(var(--background))",
-      Foreground: "hsl(var(--foreground))",
-      Card: "hsl(var(--card))",
-      "Card Foreground": "hsl(var(--card-foreground))",
-      Popover: "hsl(var(--popover))",
-      "Popover Foreground": "hsl(var(--popover-foreground))",
+      Background: "var(--color-background)",
+      Foreground: "var(--color-foreground)",
+      Card: "var(--color-card)",
+      "Card Foreground": "var(--color-card-foreground)",
+      Popover: "var(--color-popover)",
+      "Popover Foreground": "var(--color-popover-foreground)",
     }}
   />
   <ColorItem
     title="Primary Colors"
     colors={{
-      Primary: "hsl(var(--primary))",
-      "Primary Foreground": "hsl(var(--primary-foreground))",
+      Primary: "var(--color-primary)",
+      "Primary Foreground": "var(--color-primary-foreground)",
     }}
   />
   <ColorItem
     title="Secondary Colors"
     colors={{
-      Secondary: "hsl(var(--secondary))",
-      "Secondary Foreground": "hsl(var(--secondary-foreground))",
+      Secondary: "var(--color-secondary)",
+      "Secondary Foreground": "var(--color-secondary-foreground)",
     }}
   />
   <ColorItem
     title="Muted Colors"
     colors={{
-      Muted: "hsl(var(--muted))",
-      "Muted Foreground": "hsl(var(--muted-foreground))",
+      Muted: "var(--color-muted)",
+      "Muted Foreground": "var(--color-muted-foreground)",
     }}
   />
   <ColorItem
     title="Accent Colors"
     colors={{
-      Accent: "hsl(var(--accent))",
-      "Accent Foreground": "hsl(var(--accent-foreground))",
+      Accent: "var(--color-accent)",
+      "Accent Foreground": "var(--color-accent-foreground)",
     }}
   />
   <ColorItem
     title="Destructive Colors"
     colors={{
-      Destructive: "hsl(var(--destructive))",
-      "Destructive Foreground": "hsl(var(--destructive-foreground))",
+      Destructive: "var(--color-destructive)",
+      "Destructive Foreground": "var(--color-destructive-foreground)",
     }}
   />
   <ColorItem
     title="Utility Colors"
     colors={{
-      Border: "hsl(var(--border))",
-      Input: "hsl(var(--input))",
-      Ring: "hsl(var(--ring))",
+      Border: "var(--color-border)",
+      Input: "var(--color-input)",
+      Ring: "var(--color-ring)",
     }}
   />
   <ColorItem
     title="Gradients"
     colors={{
       Gradient:
-        "linear-gradient(to right, hsl(var(--background)), hsl(var(--foreground)))",
+        "linear-gradient(to right, var(--color-background), var(--color-foreground))",
+      GradientPrimaryDestructive:
+        "linear-gradient(to right, var(--color-primary), var(--color-destructive))",
     }}
   />
 </ColorPalette>
