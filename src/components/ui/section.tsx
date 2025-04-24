@@ -95,7 +95,7 @@ export function Section({
       );
     }
 
-    return <div>{children}</div>;
+    return <div className="flex flex-row">{children}</div>;
   };
 
   return (

@@ -22,7 +22,7 @@ export function ContactSection() {
   const contactInfoCard = (
     <Card
       key="contact-info"
-      className="overflow-y-auto" // Adjust height for mobile
+      className="overflow-y-auto max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-20rem)]" // Adjust height for mobile
     >
       <CardHeader>
         <CardTitle>{contactData.contactInfoTitle}</CardTitle>

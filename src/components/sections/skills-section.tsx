@@ -15,7 +15,7 @@ export function SkillsSection() {
   const technicalSkillsCard = (
     <Card
       key="technical-skills"
-      className="overflow-y-auto flex-[3_1_300px]" // Adjust height for mobile
+      className="overflow-y-auto flex-[3_1_300px] max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-20rem)]" // Adjust height for mobile
     >
       <CardHeader>
         <CardTitle>{skillsData.technicalSkillsTitle}</CardTitle>
@@ -27,7 +27,7 @@ export function SkillsSection() {
               <h4 className="font-medium">{skill.name}</h4>
               <span>{skill.level}</span>
             </div>
-            <Progress value={skill.proficiency} className="h-2" />
+            <Progress value={skill.proficiency || 50} />
             {skill.description && (
               <p className="text-sm text-muted-foreground">
                 {skill.description}

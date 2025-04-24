@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 - Refactor variables to correctly apply them using Tailwind standard approach to colors
 - Add summary link to mobile dropdown menu and desktop navigation
 - Refactor summary section layout and enhance card components: get rid of grid, got back to flex
+- Fix adaptive height adjustments for mobile and desktop views on card components
 
 ## 2025-04-23
 

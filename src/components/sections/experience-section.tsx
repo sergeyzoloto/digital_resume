@@ -24,15 +24,15 @@ export function ExperienceSection() {
   ) => (
     <Card
       key={`experience-${index}`}
-      className="overflow-y-auto flex-[3_1_300px]" // Adjust height for mobile
+      className="overflow-y-auto flex-[3_1_300px] h-full max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-20rem)]" // Adjust height for mobile
     >
       <CardHeader>
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
+        <div className="flex flex-row justify-between gap-4">
+          <div className="flex flex-col gap-4">
             <CardTitle>{experience.company}</CardTitle>
             <CardDescription>{experience.position}</CardDescription>
           </div>
-          <Badge variant="outline" className="w-fit">
+          <Badge variant="outline" className="w-fit h-fit">
             {experience.period}
           </Badge>
         </div>

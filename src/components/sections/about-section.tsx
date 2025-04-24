@@ -13,7 +13,7 @@ export function AboutSection() {
   const aboutCards = aboutData.cards.map((card, index) => (
     <Card
       key={`about-card-${index}`}
-      className="overflow-y-auto flex-[1_1_300px]" // Adjust height for mobile
+      className="overflow-y-auto flex-[1_1_300px] max-h-[calc(100vh-18rem)] md:max-h-[calc(100vh-20rem)]" // Adjust height for mobile
     >
       <CardHeader>
         <CardTitle>{card.title}</CardTitle>
