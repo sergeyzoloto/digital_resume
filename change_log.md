@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-25
+
+- Refactor navigation structure
+- Update media queries for container padding
+- Implement navigation links from a dedicated file
+
 ## 2025-04-24
 
 - Refactor variables to correctly apply them using Tailwind standard approach to colors

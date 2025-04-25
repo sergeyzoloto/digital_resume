@@ -3,42 +3,44 @@ import { useState } from "react";
 
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/data/translations";
+import navigationLinks from "@/data/links";
+
+type NavigationKeys = keyof typeof navigationLinks; // Define type for navigation keys
 
 export function NavigationBar() {
   const { language } = useLanguage();
   const t = translations[language];
-  const navigationObject = t.navigation;
   // From object to array
-  const navItems = Object.entries(navigationObject).map(([key, value]) => ({
-    key: key,
-    name: value,
+  const navItems = Object.entries(navigationLinks).map(([key, link]) => ({
+    key: key as NavigationKeys, // Explicitly cast key to NavigationKeys
+    name: t.navigation[key as NavigationKeys], // Use translation for the name
+    link, // Use the link directly
   }));
-  console.log(navItems);
 
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div
-      className="relative flex flex-col items-center bg-gray-800 text-white max-w-min"
+      className="z-100 fixed right-4 bottom-12 md:bottom-18 lg:bottom-1/2 lg:translate-y-1/2 flex flex-col items-center text-white max-w-min rounded-lg"
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
     >
       {isExpanded ? (
-        <div className="flex flex-col items-start p-4 bg-gray-800 shadow-lg">
+        <div className="flex flex-col items-start w-64 p-4 rounded-lg bg-background">
           {navItems.map((item) => (
             <a
               key={item.name}
-              href="#"
-              className="my-1 text-lg hover:text-gray-400"
+              href={item.link}
+              className="px-2 m-1 w-full rounded-sm text-sm hover:bg-muted-foreground text-primary"
             >
               {item.name}
             </a>
           ))}
         </div>
       ) : (
-        <div className="flex flex-col items-center p-2 space-y-1">
+        <div className="flex flex-col items-center p-4 space-y-1 bg-background">
           {navItems.map((_, index) => (
-            <div key={index} className="w-8 h-1 bg-white rounded-sm"></div>
+            <div key={index} className="w-8 h-1 bg-primary/50 rounded-sm"></div>
           ))}
         </div>
       )}
