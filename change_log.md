@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 - Updated the data, content for the actual resume
 - Add button to scroll to the next section in footer component
 - Adjust hero section layout for extremely narrow mobile screens
+- Enhance footer button styling, improve navigation bar opacity transition and position, and adjust margins in about, skills, and summary sections for better layout consistency
 
 ## 2025-04-25
 

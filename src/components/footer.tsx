@@ -91,7 +91,12 @@ export function Footer() {
         </div>
         <div className="flex gap-4 md:pr-4">
           {getNextSectionName() && (
-            <Button onClick={scrollToNextSection} variant="outline">
+            <Button
+              onClick={scrollToNextSection}
+              variant="outline"
+              size="sm"
+              className="text-muted-foreground"
+            >
               {getNextSectionName()}
             </Button>
           )}

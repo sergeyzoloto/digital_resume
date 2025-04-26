@@ -22,11 +22,10 @@ export function HeroSection() {
           <div className="flex flex-col justify-between h-full items-center md:w-3/5 w-content md:items-start">
             {/* Title at the top left */}
             <div className="space-y-2">
-              <div className="flex items-center md:items-start gap-2">
-                <p className="font-bold tracking-tighter leading-none text-center md:text-left title">
-                  {profile.name}
-                </p>
-              </div>
+              <p className="font-bold tracking-tighter leading-none text-center md:text-left title">
+                {profile.name}
+              </p>
+
               <p className="text-muted-foreground pt-4 text-center md:text-left subtitle">
                 {profile.title}
               </p>

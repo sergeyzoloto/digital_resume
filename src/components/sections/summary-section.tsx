@@ -57,7 +57,9 @@ export function SummarySection() {
   const renderBriefIntroCard = () => (
     <Card className="flex-[1_0_16rem]">
       <CardContent>
-        <p className="text-base sm:text-lg">{summaryData.briefIntro}</p>
+        <p className="text-base xs:text-lg sm:text-xl">
+          {summaryData.briefIntro}
+        </p>
       </CardContent>
     </Card>
   );
@@ -120,7 +122,7 @@ export function SummarySection() {
       title={summaryData.title}
       className="h-full overflow-y-auto"
     >
-      <div className="flex flex-col justify-center overflow-x-hidden mb-4">
+      <div className="flex flex-col justify-center overflow-x-hidden mb-24 lg:mb-4">
         {/* Top row with Brief Intro, Skills, and Education cards */}
         <div className="flex flex-row flex-wrap gap-4 mb-4">
           {renderBriefIntroCard()}
