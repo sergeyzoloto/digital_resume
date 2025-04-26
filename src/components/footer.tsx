@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/data/translations";
 import { useScrollContext } from "@/context/scroll-context";
+import { Button } from "./ui/button";
 
 export function Footer() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,6 +47,32 @@ export function Footer() {
     };
   }, []);
 
+  const getNextSectionName = () => {
+    const sections = document.querySelectorAll("section[id]");
+    const currentIndex = Array.from(sections).findIndex(
+      (section) => section.id === activeSection
+    );
+    if (currentIndex !== -1 && currentIndex < sections.length - 1) {
+      const nextSection = sections[currentIndex + 1];
+      const nextSectionId = nextSection.getAttribute(
+        "id"
+      ) as keyof typeof t.navigation;
+      return nextSectionId ? t.navigation[nextSectionId] : t.navigation.contact;
+    }
+    return null; // No next section
+  };
+
+  const scrollToNextSection = () => {
+    const sections = document.querySelectorAll("section[id]");
+    const currentIndex = Array.from(sections).findIndex(
+      (section) => section.id === activeSection
+    );
+    if (currentIndex !== -1 && currentIndex < sections.length - 1) {
+      const nextSection = sections[currentIndex + 1];
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="border-none fixed bottom-0 z-50 min-w-screen border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex items-center justify-between md:h-16 h-10 flex-row width-container mx-auto">
@@ -63,9 +90,11 @@ export function Footer() {
           </a>
         </div>
         <div className="flex gap-4 md:pr-4">
-          <span className="text-sm text-muted-foreground">
-            Current Section: {activeSection || "Null"}
-          </span>
+          {getNextSectionName() && (
+            <Button onClick={scrollToNextSection} variant="outline">
+              {getNextSectionName()}
+            </Button>
+          )}
         </div>
       </div>
     </footer>
