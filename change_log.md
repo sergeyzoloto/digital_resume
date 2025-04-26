@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 ## 2025-04-26
 
 - Hide borders on header and footer components
+- Updated the data, content for the actual resume
 
 ## 2025-04-25
 

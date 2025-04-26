@@ -3,89 +3,116 @@ import type { TranslationData } from "./types";
 export const nl: TranslationData = {
   profile: {
     name: "Sergey\u00A0Zolotko",
-    title: "Analist-Ontwikkelaar in\u00A0Nederland",
+    title: "Analist-ontwikkelaar gevestigd in\u00A0Nederland",
     profileImage: "/profile-pic.jpg",
     contactButton: "Neem contact op",
-    downloadButton: "CV downloaden",
+    downloadButton: "Download CV",
   },
   summary: {
     title: "Samenvatting",
     briefIntro:
-      "Ervaren analist-ontwikkelaar met een sterke achtergrond in financiën, gegevensanalyse en programmeren.",
+      "Opgeleide bedrijfsanalist die zich nu omschoolt naar webontwikkeling. Verantwoordelijk, gericht op teamwork, nauwkeurig maar flexibel. Vijf+ jaar ervaring als analist in kleine bedrijven en grote ondernemingen, met vaardigheden in budgetplanning en het maken van complexe financiële en marketingmodellen. Dankzij een sterke technische achtergrond als ingenieur en een intensieve codeeropleiding ben ik klaar om in een team te werken als junior ontwikkelaar.",
   },
   experience: {
     title: "Werkervaring",
-    description: "Mijn professionele reis in analyse en ontwikkeling.",
+    description: "Mijn professionele reis in analyse en ontwikkeling",
     items: [
       {
-        company: "Alfa Bank",
-        position: "Hoofdanalist bij de Financiële Afdeling",
-        period: "Aug 2018 - Aug 2019",
+        company: "HackYourFuture, Amsterdam, Nederland",
+        position: "Full Stack Web Developer Trainee",
+        description:
+          "Opleiding ontworpen om alle aspecten van full-stack ontwikkeling te behandelen",
+        period: "09/2022 - Heden",
         responsibilities: [
-          "Verantwoordelijk voor analyse en planning van de leningportefeuille van het zakelijke segment",
-          "Plannen opgesteld per product, stad, segment en kanaal",
-          "Deelgenomen aan het voorbereiden van dashboards voor het bedrijf, interactieve rapporten en presentatiemateriaal",
-          "Resultaten gecoördineerd met zakelijke klanten",
+          "Samen met een team een eenvoudige sociale netwerksite gebouwd met online chatfunctie",
         ],
         achievements: [
-          "De vereiste huidige leningplannen voor 2019 opgesteld",
-          "Budgetgoedkeuring verkregen van klanten en uitvoerders",
-          "Voortdurend het transactie-per-transactie berekeningsmodel van de leningportefeuille verbeterd (SQL-model)",
+          "Webtechnologieën geleerd, evenals SCRUM-methoden, samenwerkingstools en presentatievaardigheden",
+          "Een single-page app ontwikkeld om snel cocktailrecepten te vinden via een openbare API",
         ],
-        technologies: ["Excel", "SQL", "PowerPoint", "Oracle"],
+        technologies: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "NodeJS",
+          "ExpressJS",
+          "MySQL",
+          "ReactJS",
+        ],
         shortResponsibilities:
-          "Verantwoordelijk voor analyse en planning van de leningportefeuille van het zakelijke segment",
-
-        shortAchievements:
-          "De vereiste huidige leningplannen voor 2019 opgesteld",
+          "Samen in een team een eenvoudige sociale netwerksite gebouwd",
+        shortAchievements: "Mijn carrière in webontwikkeling gestart",
       },
       {
-        company: "MTS",
-        position: "Senior Analist",
-        period: "Mrt 2017 - Aug 2018",
+        company: "Mobile TeleSystems (MTS), Moskou, Rusland",
+        position: "SQL Data Analist",
+        period: "02/2020 - 10/2020",
+        description:
+          "Grootste mobiele operator van Rusland, beursgenoteerd bedrijf",
         responsibilities: [
-          "Regelmatige item-per-item voorspelling en seizoensgebonden budgettering van inkomsten en uitgaven in regionale vestigingen",
-          "Interactie met functionele blokken over operationele voorspellingskwesties",
-          "Plan-feit analyse per balans-eenheid, voorbereiding van commentaar en advisering van het bedrijf over prognose- en budgetuitvoeringskwesties",
-          "Analyse van de verdeling van doeluitgaven, interactie met functionele blokken, aanpassingen aan doelplannen",
-          "Consolidatie van het PL-plan per bedrijfstype en verantwoordelijkheidscentrum",
-          "Coördinatie van doelen met regio's, onderhandelingen voeren, antwoorden voorbereiden op vragen, wijzigingen aanbrengen in doelen",
+          "Werken in een drukke database en optimaliseren van zoekopdrachten",
+          "Data verzamelen en ad-hocrapportages maken op grote datasets",
+          "Regelmatige rapportages maken over de klantenbasis voor het senior management",
         ],
         achievements: [
-          "Succesvol en tijdig de budgetcyclus 2017 afgerond, doelgoedkeuringen ontvangen van vestigingen",
-          "Tientallen operationele prognosereleases voorbereid voor toegewezen regio's met naleving van doelnauwkeurigheid per KPI",
-          "Financiële modellen in Excel gemaakt en onderhouden",
-          "Macro's geschreven in VBA en gegevens verwerkt met Python",
+          "De impact van COVID-19 op klantgedrag gemeten en gepresenteerd",
         ],
-        technologies: ["VBA", "Excel", "Python"],
+        technologies: ["Teradata", "SQL", "Excel", "PowerPoint"],
         shortResponsibilities:
-          "Regelmatige item-per-item voorspelling en seizoensgebonden budgettering van inkomsten en uitgaven in regionale vestigingen",
+          "Werken met grote databases voor reguliere en ad-hoc rapportages",
         shortAchievements:
-          "Succesvol en tijdig de budgetcyclus 2017 afgerond, doelgoedkeuringen ontvangen van vestigingen",
+          "Optimaliseren van zoekopdrachten onder de knie gekregen",
       },
       {
-        company: "Why Not Wine",
-        position: "Hoofd Marketing Afdeling",
-        period: "Aug 2014 - Aug 2016",
+        company: "Alfa Bank, Moskou, Rusland",
+        position: "Lead Financial Analyst",
+        description: "De grootste particuliere bank van Rusland",
+        period: "08/2018 - 08/2019",
         responsibilities: [
-          "Deelname aan de lancering van het project",
-          "Marketing, PR, SMM, e-mailmarketing",
-          "Financiële analyse",
-          "Management accounting, deelname aan de voorbereiding van bedrijfsplannen",
+          "Onderhandelen met belanghebbenden om jaarlijkse plannen goed te keuren",
         ],
         achievements: [
-          "Ervaring opgedaan met het opstarten van een bedrijf vanaf nul",
-          "Deelgenomen aan het verkrijgen van vergunningen van relevante autoriteiten",
-          "Instructies en rapportageformulieren voorbereid voor medewerkers om werkprocessen op te zetten",
-          "Marketingondersteuning voor het bedrijf georganiseerd, inclusief onderzoek en maatregelen om positionering, assortiment en prijsbeleid aan te passen",
-          "Sociale netwerken, bedrijfsaccounts, e-mailmarketing, klantenenquêtes, klantendatabase beheerd",
-          "De reputatie van het bedrijf op internet geanalyseerd, concurrenten en markttrends bestudeerd",
-          "Management accounting in het bedrijf georganiseerd, belangrijkste financiële rapporten voorbereid voor management en externe gebruikers",
+          "Snel SQL geleerd en gebruikt om analyse- en planningsprocessen te verbeteren",
+          "Planningsmodellen gemaakt en jaarlijkse budgetplannen opgesteld tijdens reorganisatie",
         ],
+        technologies: ["Transact SQL", "Oracle", "PowerPoint", "Excel"],
         shortResponsibilities:
-          "Deelname aan de lancering van het project, marketing, PR, SMM, e-mailmarketing",
-        shortAchievements:
-          "Ervaring opgedaan met het opstarten van een bedrijf vanaf nul",
+          "Verantwoordelijk voor budgetplanning van de kredietportefeuille",
+        shortAchievements: "Jaarplannen opgesteld voor tienduizenden collega’s",
+      },
+      {
+        company: "Mobile TeleSystems (MTS), Moskou, Rusland",
+        position: "SQL Data Analist",
+        period: "03/2017 - 08/2018",
+        description:
+          "Grootste mobiele operator van Rusland, beursgenoteerd bedrijf",
+        responsibilities: [
+          "Gebruik van MS Excel voor financiële data-analyse en modellering, inclusief VBA-macro's",
+          "Statistische analyses en plan-versus-werkelijkheid-analyses uitvoeren",
+          "Financiële modellen onderhouden en actualiseren voor nauwkeurige prognoses",
+        ],
+        achievements: ["Samenwerken met teams en jaarbudgetten consolideren"],
+        technologies: ["Excel"],
+        shortResponsibilities:
+          "Onderhouden en bijwerken van tientallen financiële modellen",
+        shortAchievements: "Jaarbudgetten per bedrijfsunit geconsolideerd",
+      },
+      {
+        company: "Why Not Wine Bar, Moskou, Rusland",
+        position: "Hoofd Marketing",
+        period: "08/2014 - 08/2016",
+        description:
+          "Kleine wijnbar in Moskou, opgezet met externe investeerders",
+        responsibilities: [
+          "Leidinggeven aan een team van twee en verantwoordelijk voor marketing, PR, SMM en e-mail",
+          "Ook technische ondersteuning en administratie verzorgd",
+        ],
+        achievements: [
+          "Een bedrijf vanaf het begin helpen opbouwen",
+          "Marketing-, verkoop- en financiële rapportages gemaakt",
+        ],
+        shortResponsibilities: "",
+        shortAchievements: "",
       },
     ],
     responsibilitiesLabel: "Verantwoordelijkheden:",
@@ -94,151 +121,154 @@ export const nl: TranslationData = {
   },
   education: {
     title: "Opleiding",
-    description: "Mijn academische achtergrond en kwalificaties.",
+    description: "Academische achtergrond en kwalificaties",
     education: [
       {
-        degree: "Master in Bedrijfseconomie",
-        institution:
-          "Financiële Universiteit onder de regering van de Russische Federatie",
-        period: "2014 - 2016",
+        degree: "Diploma Ingenieur Transportmachines",
+        institution: "Bauman Moscow State Technical University",
+        period: "09/2007 - 07/2013",
         description: [
-          "Specialisatie in financiële analyse en bedrijfsplanning.",
-          "Afgestudeerd met een diploma met onderscheiding.",
+          "5 jaar en 10 maanden opleiding",
+          "Sterke basis in wiskunde, werktuigbouwkunde, C-programmering en CAD-systemen",
+          "Training in transportoplossingen en ontwerp van transportmachines",
         ],
         shortDescription:
-          "Specialisatie in financiële analyse en bedrijfsplanning.",
+          "5 jaar en 10 maanden opleiding, gelijkwaardig aan een masterdiploma, sterke basis in techniek en programmeren",
       },
       {
-        degree: "Bachelor in Bedrijfseconomie",
-        institution:
-          "Financiële Universiteit onder de regering van de Russische Federatie",
-        period: "2010 - 2014",
+        degree: "Diploma Bedrijfsbeheer en Economie",
+        institution: "Bauman Moscow State Technical University",
+        period: "09/2007 - 07/2013",
         description: [
-          "Specialisatie in financiële analyse en bedrijfsplanning.",
-          "Afgestudeerd met een diploma met onderscheiding.",
+          "5 jaar opleiding",
+          "Financiële, marketing- en technische analyse geleerd, bedrijfseconomie en management",
+          "Training in management van industriële en technologische bedrijven",
         ],
         shortDescription:
-          "Specialisatie in financiële analyse en bedrijfsplanning.",
+          "5 jaar opleiding in management en economie van industriële bedrijven",
       },
     ],
   },
   skills: {
     title: "Vaardigheden",
-    description: "Mijn technische en soft skills.",
+    description: "Mijn technische en soft skills",
     technicalSkillsTitle: "Technische Vaardigheden",
     softSkillsTitle: "Soft Skills",
-    skillSet: ["SQL", "Python", "Excel", "Analytics", "VBA"],
+    skillSet: [
+      "HTML, CSS, JS",
+      "MongoDB, Express, React, Node",
+      "SQL, Python (pandas)",
+      "Budgetplanning",
+      "Zelfstandig",
+      "Snel lerend",
+      "Aanpassingsvermogen",
+    ],
     technicalSkills: [
       {
-        name: "Excel",
+        name: "MERN Stack",
         level: "Gevorderd",
-        proficiency: 90,
+        proficiency: 80,
         description:
-          "Complexe formules, draaitabellen, modellen, datavisualisatie, externe bronverbindingen, macro's.",
+          "Ervaring met bouwen van webapplicaties met MongoDB, Express, React en Node.js. Kennis van REST API’s en authenticatie.",
       },
       {
-        name: "SQL",
-        level: "Gemiddeld",
-        proficiency: 75,
+        name: "Databases",
+        level: "Uitstekend",
+        proficiency: 95,
         description:
-          "Maken en configureren van tabellen, schema's, weergaven. Ervaring met OLAP-kubussen, vensterfuncties. Complexe scripts en procedures.",
+          "Veel ervaring met relationele databases. Complexe SQL-query’s schrijven en prestaties optimaliseren. Bekend met MongoDB, TransactSQL en Teradata.",
       },
       {
-        name: "Python",
+        name: "Programmeren",
         level: "Gemiddeld",
         proficiency: 65,
         description:
-          "Bekend met contextbeheer, uitzonderingsafhandeling, functiedecorateurs, parallelle threads, generators. Ervaring met NumPy, Pandas, Matplotlib.",
-      },
-      {
-        name: "Analytics",
-        level: "Gevorderd",
-        proficiency: 85,
-        description:
-          "Voorspelling, statistische gegevensverzameling en -analyse, selectie van driverindicatoren, bedrijfsmiddelenonderzoek, budgetvoorbereiding.",
+          "Technische achtergrond in verschillende talen zoals Pascal, C, VBA en Python. Huidige interesse in fintech en Java.",
       },
       {
         name: "Engels",
-        level: "B1 (Gemiddeld)",
-        proficiency: 60,
-        description: "",
+        level: "Gevorderd (C1)",
+        proficiency: 80,
+        description: "Vloeiend in lezen, schrijven en spreken.",
       },
     ],
     softSkills: [
       {
-        name: "Communicatie",
-        description: "Geletterde mondelinge en schriftelijke taal",
+        name: "Analytisch vermogen",
+        description:
+          "Systematisch denken, probleemoplossend werken, aandacht voor details, ervaring met datamodellering.",
       },
       {
-        name: "Aanpassingsvermogen",
-        description: "Snelle aanpassing aan nieuwe omgevingen",
+        name: "Mensgericht",
+        description:
+          "Focus op de behoeften van mensen, klanten en belanghebbenden bij ontwerp en werkprocessen.",
       },
       {
-        name: "Continu Leren",
-        description: "Altijd vaardigheden verbeteren",
+        name: "Generalist",
+        description:
+          "Snel lerend, flexibel en nieuwsgierig naar verschillende rollen en processen binnen bedrijven.",
       },
       {
-        name: "Kritisch Denken",
-        description: "Systematische en analytische benadering",
+        name: "Goede collega",
+        description:
+          "Gevoelig, empathisch, nauwkeurig, met humor. Flexibele samenwerking met collega's.",
       },
       {
-        name: "Organisatie",
-        description: "Gestructureerde aanpak van taken",
+        name: "Procesgericht",
+        description:
+          "Sterk in betrouwbare resultaten leveren, met focus op procesoptimalisatie.",
       },
       {
-        name: "Samenwerking",
-        description: "Teamgerichte mindset",
+        name: "Financiële expertise",
+        description:
+          "Financiële kennis als basis voor efficiënte werkprocessen en bedrijfsstructuren.",
       },
     ],
     introduction:
-      "Ik heb een sterke achtergrond in financiën en analytics, met ervaring in verschillende sectoren. Ik ben bedreven in SQL, Python en Excel, en heb een solide begrip van gegevensanalyse en visualisatie.",
+      "Financiële planning en ad-hoc analyses vereisen goede communicatie, zowel telefonisch als per e-mail.",
   },
   about: {
     title: "Over Mij",
-    description:
-      "Ervaren analist-ontwikkelaar met een sterke achtergrond in financiën, gegevensanalyse en programmeren.",
+    description: "",
     cards: [
       {
         title: "Carrièredoel",
         content:
-          "Mijn carrière als analist voortzetten en in de nabije toekomst uitgroeien tot expertniveau.",
+          "Ik zoek een positie als junior ontwikkelaar binnen een professioneel team. Ik wil leren en groeien binnen uitdagende projecten.",
       },
       {
-        title: "Wat Ik Bied",
+        title: "Wat ik bied",
         content: [
-          "Kennis van SQL, Python en analytics",
-          "Bedrijfsgerichte benadering van gegevensanalyse",
-          "Georganiseerde, procesgerichte en resultaatgerichte mindset",
+          "betrokkenheid bij bedrijfsbehoeften",
+          "technisch inzicht en brede visie",
+          "klantgerichtheid en bewezen probleemoplossend vermogen",
         ],
         isListContent: true,
       },
       {
-        title: "Waar Ik Naar Zoek",
+        title: "Wat ik zoek",
         content: [
-          "Scripts schrijven in Python en SQL",
-          "Communicatie met gegevenseigenaren en analytics-belanghebbenden",
-          "Ad-hoc taken oplossen of langetermijnmodellen implementeren",
-          "Gegevensvisualisatie via dashboards",
-          "Standaardisatie en optimalisatie van routinetaken",
-          "Mogelijkheid om diverse ervaring op te doen in analytics en ontwikkeling",
+          "uitdagende projecten en doelen",
+          "balans tussen zelfstandig werken en samenwerken",
+          "organisatie die groei en leren stimuleert",
         ],
         isListContent: true,
       },
       {
-        title: "Persoonlijke Interesses",
+        title: "Persoonlijke interesses",
         content:
-          "Ik houd gedetailleerde gezinsfinanciën bij, gebruik To Do en Trello voor persoonlijke organisatie en beoefen sinds 2016 gymnastiek. Ik geniet van fietsen, reizen, films, muziek, bordspellen en cocktailcultuur.",
+          "Gedetailleerde gezinsfinanciën beheren, werken met To Do en Trello, gymnastiek sinds 2016, fietsen, reizen, films, muziek, bordspellen en cocktailcultuur.",
       },
     ],
     interests: [
       { tag: "#workout" },
-      { tag: "#fietsen" },
-      { tag: "#reizen" },
-      { tag: "#bordspellen" },
+      { tag: "#cycling" },
+      { tag: "#travel" },
+      { tag: "#boardgames" },
     ],
   },
   contact: {
-    title: "Neem Contact Op",
+    title: "Contact",
     description: "Neem contact op om mogelijkheden te bespreken.",
     contactInfo: [
       {
@@ -254,13 +284,13 @@ export const nl: TranslationData = {
       {
         icon: "phone",
         title: "Telefoon",
-        value: "Beschikbaar op aanvraag",
+        value: "Op aanvraag beschikbaar",
       },
     ],
-    contactInfoTitle: "Contactgegevens",
+    contactInfoTitle: "Contactinformatie",
     contactInfoDescription:
       "Voel je vrij om contact op te nemen via een van deze kanalen.",
-    formTitle: "Stuur Mij een Bericht",
+    formTitle: "Stuur mij een bericht",
     formDescription:
       "Vul het onderstaande formulier in en ik neem zo snel mogelijk contact met je op.",
     formLabels: {
@@ -268,7 +298,7 @@ export const nl: TranslationData = {
       email: "Email",
       subject: "Onderwerp",
       message: "Bericht",
-      submit: "Bericht Versturen",
+      submit: "Verstuur Bericht",
       namePlaceholder: "Jouw naam",
       emailPlaceholder: "Jouw email",
       subjectPlaceholder: "Onderwerp van je bericht",
@@ -277,10 +307,10 @@ export const nl: TranslationData = {
   },
   navigation: {
     summary: "Samenvatting",
-    experience: "Ervaring",
+    experience: "Werkervaring",
     education: "Opleiding",
     skills: "Vaardigheden",
-    about: "Over\u00A0mij",
+    about: "Over",
     contact: "Contact",
     backToTop: "Terug naar boven",
   },

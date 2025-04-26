@@ -9,6 +9,7 @@ export interface ProfileTranslation {
 export interface ExperienceItemTranslation {
   company: string;
   position: string;
+  description?: string;
   period: string;
   responsibilities: string[];
   achievements: string[];
