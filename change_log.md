@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-26
+
+- Hide borders on header and footer components
+
 ## 2025-04-25
 
 - Refactor navigation structure
