@@ -43,6 +43,7 @@
 }
 
 @theme {
+  --breakpoint-xs: 25rem;
   --radius: 0.5rem;
   --color-background: rgba(255, 255, 255, 1);
   --color-foreground: rgba(12, 14, 28, 1);

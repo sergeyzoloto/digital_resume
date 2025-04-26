@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 - Hide borders on header and footer components
 - Updated the data, content for the actual resume
 - Add button to scroll to the next section in footer component
+- Adjust hero section layout for extremely narrow mobile screens
 
 ## 2025-04-25
 
