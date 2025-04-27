@@ -311,7 +311,7 @@ export const en: TranslationData = {
     },
   },
   navigation: {
-    hero: "Hero",
+    hero: "Start",
     summary: "Summary",
     experience: "Experience",
     education: "Education",

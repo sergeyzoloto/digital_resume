@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "../ui/button";
 import {
   Card,
   CardContent,
@@ -8,8 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
 import { Section } from "../ui/section";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/data/translations";
@@ -94,88 +91,17 @@ export function ContactSection() {
     </Card>
   );
 
-  const contactFormCard = (
-    <Card key="contact-form">
-      <CardHeader>
-        <CardTitle>{contactData.formTitle}</CardTitle>
-        <CardDescription>{contactData.formDescription}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form className="space-y-4">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="space-y-2">
-              <label
-                htmlFor="name"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                {contactData.formLabels.name}
-              </label>
-              <Input
-                id="name"
-                placeholder={contactData.formLabels.namePlaceholder}
-              />
-            </div>
-            <div className="space-y-2">
-              <label
-                htmlFor="email"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                {contactData.formLabels.email}
-              </label>
-              <Input
-                id="email"
-                type="email"
-                placeholder={contactData.formLabels.emailPlaceholder}
-              />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <label
-              htmlFor="subject"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              {contactData.formLabels.subject}
-            </label>
-            <Input
-              id="subject"
-              placeholder={contactData.formLabels.subjectPlaceholder}
-            />
-          </div>
-          <div className="space-y-2">
-            <label
-              htmlFor="message"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              {contactData.formLabels.message}
-            </label>
-            <Textarea
-              id="message"
-              placeholder={contactData.formLabels.messagePlaceholder}
-              className="min-h-32"
-            />
-          </div>
-          <Button type="submit" className="w-full">
-            {contactData.formLabels.submit}
-          </Button>
-        </form>
-      </CardContent>
-    </Card>
-  );
-
   return (
     <Section
       id="contact"
       title={contactData.title}
       description={contactData.description}
-      useCarouselOnMobile={true}
-      carouselChildrenFilter={() => [contactInfoCard, contactFormCard]}
     >
-      <div className="w-full grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-4 xl:gap-8">
+      <div className="w-full">
         <div>
           {contactInfoCard}
           <div className="mt-6"></div>
         </div>
-        {contactFormCard}
       </div>
     </Section>
   );

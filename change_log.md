@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file.
 ## 2025-04-27
 
 - Refactor navigation bar to reflect the current section visually
+- Update english translation (tone of voice in contact section)
+- Got rid of the contact form and updated the task list
 
 ## 2025-04-26
 
