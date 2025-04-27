@@ -306,6 +306,7 @@ export const ru: TranslationData = {
     },
   },
   navigation: {
+    hero: "Главная",
     summary: "Обзор",
     experience: "Опыт",
     education: "Образование",

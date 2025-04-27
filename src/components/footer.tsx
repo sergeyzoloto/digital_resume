@@ -5,6 +5,7 @@ import { useLanguage } from "@/context/language-context";
 import { translations } from "@/data/translations";
 import { useScrollContext } from "@/context/scroll-context";
 import { Button } from "./ui/button";
+import links from "@/data/links";
 
 export function Footer() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,7 @@ export function Footer() {
     );
 
     // Target the hero section (top of the page)
-    const heroSection = document.getElementById("top");
+    const heroSection = document.getElementById(`${links.hero.slice(1)}`);
 
     if (heroSection) {
       observerRef.current.observe(heroSection);
@@ -78,7 +79,7 @@ export function Footer() {
       <div className="flex items-center justify-between md:h-16 h-10 flex-row width-container mx-auto">
         <div className="flex items-center flex-row gap-2 px-0 pt-0">
           <a
-            href="#top"
+            href={links.hero}
             className={`text-sm font-medium text-muted-foreground hover:text-primary underline transition-all duration-300 ${
               isScrolled
                 ? "opacity-100 pointer-events-auto"

@@ -1,7 +1,7 @@
 // Constants for navigation bar items
 
 const links: Record<
-  | "backToTop"
+  | "hero"
   | "summary"
   | "experience"
   | "education"
@@ -10,7 +10,7 @@ const links: Record<
   | "contact",
   string
 > = {
-  backToTop: "#top",
+  hero: "#hero",
   summary: "#summary",
   experience: "#experience",
   education: "#education",

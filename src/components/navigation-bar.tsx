@@ -1,28 +1,29 @@
 "use client";
 import { useState } from "react";
-
+import { useScrollContext } from "@/context/scroll-context"; // Import ScrollContext
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/data/translations";
 import navigationLinks from "@/data/links";
 
-type NavigationKeys = keyof typeof navigationLinks; // Define type for navigation keys
+type NavigationKeys = keyof typeof navigationLinks;
 
 export function NavigationBar() {
   const { language } = useLanguage();
   const t = translations[language];
-  // From object to array
+  const { activeSection } = useScrollContext(); // Get active section from context
+
   const navItems = Object.entries(navigationLinks).map(([key, link]) => ({
-    key: key as NavigationKeys, // Explicitly cast key to NavigationKeys
-    name: t.navigation[key as NavigationKeys], // Use translation for the name
-    link, // Use the link directly
+    key: key as NavigationKeys,
+    name: t.navigation[key as NavigationKeys],
+    link,
   }));
 
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div
-      className={`z-100 fixed right-2 bottom-12 md:bottom-18 lg:bottom-1/2 lg:translate-y-1/2 flex flex-col items-center text-white max-w-min rounded-lg ${
-        isExpanded ? "opacity-100" : "opacity-50"
+      className={`z-100 fixed right-6 bottom-12 md:bottom-18 lg:bottom-1/2 lg:translate-y-1/2 flex flex-col items-center text-white max-w-min rounded-lg ${
+        isExpanded ? "opacity-100" : "opacity-70"
       } transition-opacity duration-300`}
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
@@ -33,7 +34,7 @@ export function NavigationBar() {
             <a
               key={item.name}
               href={item.link}
-              className="px-2 m-1 w-full rounded-sm text-sm hover:bg-muted-foreground text-primary"
+              className="px-2 m-1 w-full rounded-sm text-sm hover:font-bold text-primary transition-all duration-300"
             >
               {item.name}
             </a>
@@ -41,8 +42,13 @@ export function NavigationBar() {
         </div>
       ) : (
         <div className="flex flex-col items-center p-4 space-y-1 bg-background rounded-lg">
-          {navItems.map((_, index) => (
-            <div key={index} className="w-8 h-1 bg-primary/50 rounded-sm"></div>
+          {navItems.map((item) => (
+            <div
+              key={item.key} // Changed from index to item.key
+              className={`w-2 rounded-sm bg-primary ${
+                activeSection === item.key ? "h-2 lg:h-6" : "h-2 opacity-50"
+              } transition-all duration-300`}
+            ></div>
           ))}
         </div>
       )}

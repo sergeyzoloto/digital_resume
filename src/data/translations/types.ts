@@ -116,6 +116,7 @@ export interface ContactTranslation {
 }
 
 export interface NavigationTranslation {
+  hero: string;
   summary: string;
   experience: string;
   education: string;

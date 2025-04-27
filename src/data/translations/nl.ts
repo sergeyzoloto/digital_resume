@@ -306,6 +306,7 @@ export const nl: TranslationData = {
     },
   },
   navigation: {
+    hero: "Start",
     summary: "Samenvatting",
     experience: "Werkervaring",
     education: "Opleiding",
