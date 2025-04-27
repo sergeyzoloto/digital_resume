@@ -273,8 +273,8 @@ export const en: TranslationData = {
     ],
   },
   contact: {
-    title: "Contact Me",
-    description: "Get in touch to discuss opportunities.",
+    title: "In Touch",
+    description: "Feel free to contact me",
     contactInfo: [
       {
         icon: "map-pin",
