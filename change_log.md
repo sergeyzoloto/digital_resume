@@ -5,8 +5,10 @@ All notable changes to this project will be documented in this file.
 ## 2025-04-27
 
 - Refactor navigation bar to reflect the current section visually
-- Update english translation (tone of voice in contact section)
+- Update english translation (tone of voice)
 - Got rid of the contact form and updated the task list
+- Added tooltip for Download Resume button in hero section to provide additional information about the file size
+- Updated the download link to point to the correct resume file path
 
 ## 2025-04-26
 

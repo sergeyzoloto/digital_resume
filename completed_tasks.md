@@ -125,3 +125,16 @@
 
    - Replace existing layouts with the updated `Section.tsx` component
    - Test each section to ensure proper rendering and responsiveness
+
+### Task 15: Implement pdf-file download CV button functionality ✅
+
+**Goal**: Allow users to download the resume file when clicking the "Download Resume" button.
+
+1. Add the resume file to the project:
+
+   - Place the resume file (`resume.pdf`) in the `public` directory for easy access.
+
+2. Implement download functionality:
+
+   - Link the "Download Resume" button to the resume file using an `<a>` tag with the `href` attribute pointing to `/SergeyZolotkoResume.pdf`.
+   - Add the `download` attribute to ensure the file is downloaded instead of opened in the browser.
