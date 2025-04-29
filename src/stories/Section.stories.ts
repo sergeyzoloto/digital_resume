@@ -12,7 +12,6 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    fullHeight: { control: "boolean" },
     useCarouselOnMobile: { control: "boolean" },
   },
 } satisfies Meta<typeof Section>;
@@ -49,7 +48,6 @@ export const NoFullHeight: Story = {
   args: {
     id: "minheight-section",
     title: "Min Height Section",
-    fullHeight: false,
     children: sampleChildren,
   },
 };

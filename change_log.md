@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-04-29
+
+- Small Typescript build fixes: Remove unused fullHeight prop from Section stories and update StoryButton import
+
 ## 2025-04-27
 
 - Refactor navigation bar to reflect the current section visually

@@ -2,6 +2,8 @@
 
 ## Suggestions for Future Tasks
 
+### Update README.md
+
 ### Task 8: Implement SEO Optimization
 
 **Goal**: Improve search engine visibility and indexing.
