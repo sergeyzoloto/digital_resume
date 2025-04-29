@@ -8,66 +8,115 @@ export const en: TranslationData = {
     contactButton: "Contact Me",
     downloadButton: "Download CV",
   },
+  summary: {
+    title: "Summary",
+    briefIntro:
+      "Educated business analyst now reconverting in web development. Responsible, teamwork-oriented, meticulous but flexible. Five+ years of experience working as an analyst in both small businesses and major corporations equipped me with skills in budget planning, building complex financial and marketing models. Paired with strong technical skills rooted in an engineer education and an intensive coding boot camp, I'm ready to start working in a team as a junior developer.",
+  },
   experience: {
     title: "Work Experience",
-    description: "My professional journey in analytics and development.",
+    description: "My professional journey in analytics and development",
     items: [
       {
-        company: "Alfa Bank",
-        position: "Leading Analyst in Finance Department",
-        period: "Aug 2018 - Aug 2019",
+        company: "HackYourFuture, Amsterdam, Netherlands",
+        position: "Full Stack Web Developer Trainee",
+        description:
+          "Course designed to cover all aspects of full-stack development",
+        period: "09/2022 - Present",
         responsibilities: [
-          "Responsible for analysis and planning of the loan portfolio of the corporate business segment",
-          "Formed plans by products, cities, segments, and channels",
-          "Participated in preparing dashboards for business, interactive reports, and presentation materials",
-          "Coordinated results with business customers",
+          "Working in a team, built a simple social networking site with an online chat function",
         ],
         achievements: [
-          "Formed the required current lending plans for 2019",
-          "Achieved budget approval from customers and executors",
-          "Continuously improved the transaction-by-transaction calculation model of the loan portfolio (SQL model)",
+          "Learned web technologies, as well as SCRUM methods, teamwork tools, and presentation",
+          "Developed a single-page app to quickly find cocktail recipes via public API",
         ],
-        technologies: ["Excel", "SQL", "PowerPoint", "Oracle"],
+        technologies: [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "NodeJS",
+          "ExpressJS",
+          "MySQL",
+          "ReactJS",
+        ],
+        shortResponsibilities:
+          "Worked in a team, built a simple social networking site with an online chat function",
+        shortAchievements: "Started my career in web development",
       },
       {
-        company: "MTS",
-        position: "Senior Analyst",
-        period: "Mar 2017 - Aug 2018",
+        company: "Mobile TeleSystems (MTS), Moscow, Russia",
+        position: "SQL Data Analyst",
+        period: "02/2020 - 10/2020",
+        description:
+          "Russia’s largest mobile operator, Public Joint Stock Company",
         responsibilities: [
-          "Regular item-by-item forecasting and seasonal budgeting of income and expenses in regional branches",
-          "Interaction with functional blocks on operational forecasting issues",
-          "Plan-fact analysis by balance units, preparation of comments and consulting business on forecast and budget execution issues",
-          "Analysis of the distribution of target expenses, interaction with functional blocks, making adjustments to target plans",
-          "Consolidation of the PL plan by types of business and responsibility centers",
-          "Coordination of targets with regions, conducting negotiations, preparing answers to questions, making changes to targets",
+          "Worked in a loaded database, mastered query optimization",
+          "Collected data and built ad hoc reports on large data sets",
+          "Prepared regular reports on the company customer base for senior management.",
         ],
         achievements: [
-          "Successfully and timely completed the 2017 budget cycle, received target approvals from branches",
-          "Prepared dozens of operational forecast releases for assigned regions with compliance with target accuracy by KPI",
-          "Created and maintained financial models in Excel",
-          "Wrote macros in VBA and processed data using Python",
+          "Measured and demonstrated the COVID-19 impact on the company base behavior",
         ],
-        technologies: ["VBA", "Excel", "Python"],
+        technologies: ["Teradata", "SQL", "Excel", "PowerPoint"],
+        shortResponsibilities:
+          "Worked in a loaded database for regular and ad hoc reports",
+        shortAchievements: "Mastered query optimization",
       },
       {
-        company: "Why Not Wine",
-        position: "Marketing Department Head",
-        period: "Aug 2014 - Aug 2016",
+        company: "Alfa Bank, Moscow, Russia",
+        position: "Lead Financial Analyst",
+        description: "The largest private bank in Russia",
+        period: "08/2018 - 08/2019",
         responsibilities: [
-          "Participation in the launch of the project",
-          "Marketing, PR, SMM, email marketing",
-          "Financial analytics",
-          "Management accounting, participation in the preparation of business plans",
+          "Negotiated with stakeholders, including sales departments, regional managers, BI, and external contractors to approve annual plans",
         ],
         achievements: [
-          "Gained experience in launching a business from scratch",
-          "Participated in obtaining permits from relevant authorities",
-          "Prepared instructions and report forms for employees to establish work processes",
-          "Organized marketing support for the business, including research and measures to adjust positioning, assortment and pricing policies",
-          "Managed social networks, corporate accounts, email marketing, customer surveys, customer database",
-          "Analyzed the company's reputation on the Internet, studied competitors and market trends",
-          "Organized management accounting at the enterprise, prepared main financial reports for management and external users",
+          "Quickly adapted and mastered SQL to optimize data analysis and planning process",
+          "Built planning models and prepared annual budget plans and reports on the bank's corporate loan portfolio, all in the process of business reorganization and structural changes in the company",
         ],
+        technologies: ["Transact SQL", "Oracle", "Power Point", "Excel"],
+        shortResponsibilities:
+          "Responsible for credit portfolio budget planning",
+        shortAchievements:
+          "Prepared annual plans for dozens of thousands of colleagues",
+      },
+      {
+        company: "Mobile TeleSystems (MTS), Moscow, Russia",
+        position: "SQL Data Analyst",
+        period: "03/2017 - 08/2018",
+        description:
+          "Russia’s largest mobile operator, Public Joint Stock Company",
+        responsibilities: [
+          "Used MS Excel for financial data intelligence and modeling, including writing macros in VBA",
+          "Performed statistical and plan-fact-analysis",
+          "Maintained and updated dozens of financial models, ensuring the required accuracy in PL forecasting",
+        ],
+        achievements: [
+          "Collaborated with cross-functional teams, coordinated with plans contractors, processed feedback, and corrected budget plans",
+          "Consolidated annual detailed budget plans by business units",
+        ],
+        technologies: ["Excel", "Excel again", "one more time Excel"],
+        shortResponsibilities:
+          "Maintained and updated dozens of financial models",
+        shortAchievements:
+          "Consolidated annual detailed budget plans by business units",
+      },
+      {
+        company: "Why Not Wine Bar, Moscow, Russia",
+        position: "Head of Marketing",
+        period: "08/2014 - 08/2016",
+        description:
+          "Small bar in Moscow, opened by friends with an outside investor involved and focused on wine",
+        responsibilities: [
+          "Led a team of 2 colleagues and oversaw marketing, PR, SMM, and email",
+          "Took various side responsibilities, such as technical support, administration, etc.",
+        ],
+        achievements: [
+          "Participated in starting a business from scratch",
+          "Created marketing, sales, and financial reports performing regular analysis",
+        ],
+        shortResponsibilities: "",
+        shortAchievements: "",
       },
     ],
     responsibilitiesLabel: "Responsibilities:",
@@ -76,135 +125,137 @@ export const en: TranslationData = {
   },
   education: {
     title: "Education",
-    description: "My academic background and qualifications.",
+    description: "Academic background and qualifications",
     education: [
       {
+        degree: "Specialist Diploma in Transport Machines Engineering",
         institution: "Bauman Moscow State Technical University",
-        year: "2013",
-        degrees: [
-          {
-            name: "Engineering Degree",
-            field: "Lifting and Transport Systems",
-            year: "2013",
-          },
-          {
-            name: "Economics and Management Degree",
-            field: "Organization of Entrepreneurial Activity",
-            year: "2013",
-          },
+        period: "09/2007 - 07/2013",
+        description: [
+          "5 year and 10 month Programme",
+          "Gained a solid mathematical and general engineering foundation, machine design skills, mastered C programming, computer-aided design systems",
+          "Trained in transportation infrastructure solutions, material handling machines and continuous transportation machines design",
         ],
+        shortDescription:
+          "5 year and 10 month Programme, equivalent to a Master's degree, solid foundation in engineering and programming",
+      },
+      {
+        degree: "Specialist Diploma in Enterprise Management and Economics",
+        institution: "Bauman Moscow State Technical University",
+        period: "09/2007 - 07/2013",
+        description: [
+          "5 year Programme",
+          "Studied financial, marketing and technical analysis, organizational and economic modeling and business projection",
+          "Trained in management of industrial and tech enterprises",
+        ],
+        shortDescription:
+          "5 year Programme, training in management and economics of industrial and tech enterprises",
       },
     ],
-    continuousEducation: {
-      title: "Continuous Education",
-      description:
-        'Currently reading "Web Scraping using Python" and studying regular expressions. Also learning JavaScript from "Eloquent JavaScript" for front-end development. Planning to study APIs, Git, distributed data storage and processing systems, and start using Linux.',
-    },
   },
   skills: {
     title: "Skills",
-    description: "My technical and soft skills.",
+    description: "My technical and soft skills",
     technicalSkillsTitle: "Technical Skills",
     softSkillsTitle: "Soft Skills",
+    skillSet: [
+      "HTML, CSS, JS",
+      "MongoDB, Express, React, Node",
+      "SQL, Python (pandas)",
+      "Budget Planning",
+      "Independent",
+      "Fast learner",
+      "Adaptive",
+    ],
     technicalSkills: [
       {
-        name: "Excel",
+        name: "MERN Stack",
         level: "Advanced",
-        proficiency: 90,
+        proficiency: 80,
         description:
-          "Complex formulas, pivot tables, models, data visualization, external source connections, macros.",
+          "My main stack was MERN, so I understand the JavaScript design best. Built web applications using MongoDB, Express, React, and Node.js. Experience with RESTful APIs and authentication.",
       },
       {
-        name: "SQL",
-        level: "Intermediate",
-        proficiency: 75,
+        name: "Databases",
+        level: "Excellent",
+        proficiency: 95,
         description:
-          "Creating and configuring tables, schemas, views. Experience with OLAP cubes, window functions. Complex scripts and procedures.",
+          "My major advantage is my long experience with relational databases. I have written financial models using sequel alone, for which I have earned a reputation as a master of SQL among my colleagues. Experience with MongoDB, TransactSQL, and Teradata. Skilled in writing complex queries and optimizing performance.",
       },
       {
-        name: "Python",
+        name: "Programming",
         level: "Intermediate",
         proficiency: 65,
         description:
-          "Familiar with context management, exception handling, function decorators, parallel threads, generators. Experience with NumPy, Pandas, Matplotlib.",
-      },
-      {
-        name: "Analytics",
-        level: "Advanced",
-        proficiency: 85,
-        description:
-          "Forecasting, statistical data collection and analysis, selection of driver indicators, business resource study, budget preparation.",
+          "Not just another newbie in the IT world, I am a real tech guy. I have experience with several programming languages. Pascal in school and C in university. In my job, I have used VBA and Python to automate processes and SQL scripting to handle data. I have a great interest in fintech, so I am mastering Java. I don't need to be taught from scratch, I am proficient in git, GitHub. Docker, Linux, etc. I always manage to master new technology, just tell me what you need.",
       },
       {
         name: "English",
-        level: "B1 (Intermediate)",
-        proficiency: 60,
-        description: "",
+        level: "Advanced (C1)",
+        proficiency: 80,
+        description: "Fluent in reading, writing, and speaking.",
       },
     ],
     softSkills: [
       {
-        name: "Communication",
-        description: "Literate oral and written speech",
+        name: "Analytical approach",
+        description:
+          "Systematic, analytical and critical thinking, problem-solving skills, data based modeling. Special attention to details as I know the importance of checking, testing, and validating data.",
       },
       {
-        name: "Adaptability",
-        description: "Quick adjustment to new environments",
+        name: "Human-oriented",
+        description:
+          "At the heart of my approach are the principles and practices of human-centered design, which shifts the focus from technology to the needs of people, stakeholders and customers.",
+      },
+
+      {
+        name: "Generalist",
+        description:
+          "I am a fast learner, a generalist, and an experimentalist. I enjoy trying out different roles and gradually gaining a better understanding of how businesses operate.",
       },
       {
-        name: "Continuous Learning",
-        description: "Always improving skills",
+        name: "Real comrade",
+        description:
+          "I'm sensitive, empathic, meticulous but humorous. My approach gives me more flexibility and makes it easier for me to find a common language with colleagues.",
       },
       {
-        name: "Critical Thinking",
-        description: "Systematic and analytical approach",
+        name: "Process-oriented",
+        description:
+          "My rational focus on results, reliability, and responsible attitude towards work says a lot about my productivity skills.",
       },
       {
-        name: "Organization",
-        description: "Structured approach to tasks",
-      },
-      {
-        name: "Collaboration",
-        description: "Team-oriented mindset",
+        name: "Financial expertise",
+        description:
+          "Experience in finance is not just a set of skills, it is a specific perspective and mindset aimed at building efficient processes. Amen.",
       },
     ],
-    forecastingProcess: {
-      title: "Forecasting Process",
-      steps: [
-        "Diagnostics - Collecting and analyzing statistical data, studying business resources",
-        "Forming goals (hypothesis) - Selection of driver indicators",
-        "Coordination - Preparing forecasts, interactive reports, presenting results, consulting business",
-      ],
-    },
+    introduction:
+      "Making financial plans and conducting ad-hoc analytics requires a lot more communication than you first think it should. I had to learn how to use the phone to diagnose problems firsthand and how to confirm agreements by email.",
   },
   about: {
     title: "About Me",
-    description:
-      "Experienced analyst-developer with a strong background in finance, data analysis, and programming.",
+    description: "",
     cards: [
       {
         title: "Career Goal",
         content:
-          "Continue my career as an analyst and grow to an expert level in the foreseeable future.",
+          "I am looking for a position as a junior developer in a team of professionals. I want to work on interesting projects, learn from my colleagues, and grow as a developer.",
       },
       {
         title: "What I Offer",
         content: [
-          "Knowledge of SQL, Python, and analytics",
-          "Business-oriented approach to data analysis",
-          "Organized, process-oriented, and results-driven mindset",
+          "responsive attitude with business' needs in mind",
+          "excellent balance of technical intelligence and broad mindset",
+          "customer focus, a proven track record of problem solving and conflict management",
         ],
         isListContent: true,
       },
       {
         title: "What I'm Looking For",
         content: [
-          "Writing scripts in Python and SQL",
-          "Communication with data owners and analytics stakeholders",
-          "Solving ad hoc tasks or implementing long-term models",
-          "Data visualization through dashboards",
-          "Standardization and optimization of routine tasks",
-          "Opportunity to gain diverse experience in analytics and development",
+          "challenging projects, ambitious goals, collaborative environment",
+          "balance between autonomous work, team-, and cross-functional interactions",
+          "organization that encourages a growth mindset and fosters a try-and-fail culture",
         ],
         isListContent: true,
       },
@@ -222,8 +273,8 @@ export const en: TranslationData = {
     ],
   },
   contact: {
-    title: "Contact Me",
-    description: "Get in touch to discuss opportunities.",
+    title: "In Touch",
+    description: "Feel free to contact me",
     contactInfo: [
       {
         icon: "map-pin",
@@ -260,13 +311,13 @@ export const en: TranslationData = {
     },
   },
   navigation: {
+    hero: "Start",
+    summary: "Summary",
     experience: "Experience",
     education: "Education",
     skills: "Skills",
     about: "About",
     contact: "Contact",
     backToTop: "Back to top",
-    linkedin: "LinkedIn",
-    github: "GitHub",
   },
 };

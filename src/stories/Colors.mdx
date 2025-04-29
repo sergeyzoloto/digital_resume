@@ -1,0 +1,70 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+import "../index.css";
+
+<Meta title="Colors" />
+
+<ColorPalette>
+  <ColorItem
+    title="Background Colors"
+    colors={{
+      Background: "var(--color-background)",
+      Foreground: "var(--color-foreground)",
+      Card: "var(--color-card)",
+      "Card Foreground": "var(--color-card-foreground)",
+      Popover: "var(--color-popover)",
+      "Popover Foreground": "var(--color-popover-foreground)",
+    }}
+  />
+  <ColorItem
+    title="Primary Colors"
+    colors={{
+      Primary: "var(--color-primary)",
+      "Primary Foreground": "var(--color-primary-foreground)",
+    }}
+  />
+  <ColorItem
+    title="Secondary Colors"
+    colors={{
+      Secondary: "var(--color-secondary)",
+      "Secondary Foreground": "var(--color-secondary-foreground)",
+    }}
+  />
+  <ColorItem
+    title="Muted Colors"
+    colors={{
+      Muted: "var(--color-muted)",
+      "Muted Foreground": "var(--color-muted-foreground)",
+    }}
+  />
+  <ColorItem
+    title="Accent Colors"
+    colors={{
+      Accent: "var(--color-accent)",
+      "Accent Foreground": "var(--color-accent-foreground)",
+    }}
+  />
+  <ColorItem
+    title="Destructive Colors"
+    colors={{
+      Destructive: "var(--color-destructive)",
+      "Destructive Foreground": "var(--color-destructive-foreground)",
+    }}
+  />
+  <ColorItem
+    title="Utility Colors"
+    colors={{
+      Border: "var(--color-border)",
+      Input: "var(--color-input)",
+      Ring: "var(--color-ring)",
+    }}
+  />
+  <ColorItem
+    title="Gradients"
+    colors={{
+      Gradient:
+        "linear-gradient(to right, var(--color-background), var(--color-foreground))",
+      GradientPrimaryDestructive:
+        "linear-gradient(to right, var(--color-primary), var(--color-destructive))",
+    }}
+  />
+</ColorPalette>

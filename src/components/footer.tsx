@@ -1,64 +1,106 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/data/translations";
+import { useScrollContext } from "@/context/scroll-context";
+import { Button } from "./ui/button";
+import links from "@/data/links";
 
 export function Footer() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { language } = useLanguage();
   const t = translations[language];
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const { activeSection } = useScrollContext();
 
+  // Set up the IntersectionObserver to detect when the hero section is not in view
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
+    // Create a new IntersectionObserver
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        // When the hero section is not intersecting (not visible),
+        // it means we've scrolled down
+        const [entry] = entries;
+        // Update the isScrolled state based on the intersection
+        setIsScrolled(!entry.isIntersecting);
+      },
+      {
+        // Set a threshold that works well with snap scrolling
+        threshold: 0.1,
+        // Use the viewport as the root
+        root: null,
+      }
+    );
 
-    // Attach the scroll event listener
-    window.addEventListener("scroll", handleScroll);
+    // Target the hero section (top of the page)
+    const heroSection = document.getElementById(`${links.hero.slice(1)}`);
 
-    // Cleanup the event listener on component unmount
+    if (heroSection) {
+      observerRef.current.observe(heroSection);
+    }
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      // Clean up the observer
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
     };
   }, []);
 
+  const getNextSectionName = () => {
+    const sections = document.querySelectorAll("section[id]");
+    const currentIndex = Array.from(sections).findIndex(
+      (section) => section.id === activeSection
+    );
+    if (currentIndex !== -1 && currentIndex < sections.length - 1) {
+      const nextSection = sections[currentIndex + 1];
+      const nextSectionId = nextSection.getAttribute(
+        "id"
+      ) as keyof typeof t.navigation;
+      return nextSectionId ? t.navigation[nextSectionId] : t.navigation.contact;
+    }
+    return null; // No next section
+  };
+
+  const scrollToNextSection = () => {
+    const sections = document.querySelectorAll("section[id]");
+    const currentIndex = Array.from(sections).findIndex(
+      (section) => section.id === activeSection
+    );
+    if (currentIndex !== -1 && currentIndex < sections.length - 1) {
+      const nextSection = sections[currentIndex + 1];
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <footer className="fixed bottom-0 z-50 min-w-screen border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 width-container">
-      <div className="flex items-center justify-between md:h-16 h-10 flex-row">
+    <footer className="border-none fixed bottom-0 z-50 min-w-screen border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="flex items-center justify-between md:h-16 h-10 flex-row width-container mx-auto">
         <div className="flex items-center flex-row gap-2 px-0 pt-0">
-          <p
-            className={`text-sm leading-loose text-muted-foreground text-left transition-opacity duration-300 ${
+          <a
+            href={links.hero}
+            className={`text-sm font-medium text-muted-foreground hover:text-primary underline transition-all duration-300 ${
               isScrolled
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
             }`}
+            aria-hidden={!isScrolled}
           >
-            <a
-              href="#top"
-              className="text-sm font-medium text-muted-foreground"
-            >
-              {t.navigation.backToTop}
-            </a>
-          </p>
+            {t.navigation.backToTop}
+          </a>
         </div>
         <div className="flex gap-4 md:pr-4">
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-medium text-muted-foreground underline underline-offset-4"
-          >
-            {t.navigation.linkedin}
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-medium text-muted-foreground underline underline-offset-4"
-          >
-            {t.navigation.github}
-          </a>
+          {getNextSectionName() && (
+            <Button
+              onClick={scrollToNextSection}
+              variant="outline"
+              size="sm"
+              className="text-muted-foreground"
+            >
+              {getNextSectionName()}
+            </Button>
+          )}
         </div>
       </div>
     </footer>

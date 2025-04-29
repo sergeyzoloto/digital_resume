@@ -1,9 +1,15 @@
 .title {
-  font-size: 46px;
+  font-size: 36px;
 }
 
 .subtitle {
   font-size: 18px;
+}
+
+@media screen and (min-width: 400px) {
+  .title {
+    font-size: 46px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -21,33 +27,35 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background)); /* Track color */
+  background: var(--background); /* Track color */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground)); /* Thumb color */
+  background: var(--muted-foreground); /* Thumb color */
   border-radius: var(--radius); /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--popover-foreground)); /* Thumb color on hover */
+  background: var(--popover-foreground); /* Thumb color on hover */
 }
 
 /* Styling for Firefox */
 * {
   scrollbar-width: thin; /* Thin scrollbar */
-  scrollbar-color: hsl(var(--muted-foreground)) hsl(var(--background)); /* Thumb and track colors */
+  scrollbar-color: var(--muted-foreground) var(--background); /* Thumb and track colors */
 }
 
 .width-container {
   padding-left: calc(var(--spacing) * 4);
   padding-right: calc(var(--spacing) * 4);
+  width: 100%;
+  max-width: 100rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .width-container {
-    padding-left: calc(var(--spacing) * 8);
-    padding-right: calc(var(--spacing) * 8);
+    padding-left: calc(var(--spacing) * 20);
+    padding-right: calc(var(--spacing) * 20);
   }
 }
 
@@ -55,18 +63,32 @@
 .page-container {
   padding-left: calc(var(--spacing) * 4);
   padding-right: calc(var(--spacing) * 4);
-  padding-top: 40px; /* Mobile header height */
-  padding-bottom: 40px; /* Mobile footer height */
   width: 100%;
+  max-width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .page-container {
+    padding-left: calc(var(--spacing) * 20);
+    padding-right: calc(var(--spacing) * 20);
+  }
+}
+
+/* These styles handle the sections margin */
+.section-container {
+  margin-top: 40px;
+  margin-bottom: 40px; /* Mobile header height */
+  max-height: calc(100vh - 40px * 2); /* Mobile header height */
+  min-height: calc(100vh - 40px * 2); /* Mobile header height */
 }
 
 @media screen and (min-width: 768px) {
-  .page-container {
-    padding-left: calc(var(--spacing) * 8);
-    padding-right: calc(var(--spacing) * 8);
-    padding-top: 64px; /* Desktop header height */
-    padding-bottom: 64px; /* Desktop footer height */
-    width: 90%;
-    margin: 0 auto; /* Center the container */
+  .section-container {
+    margin-top: 64px;
+    margin-bottom: 64px; /* Desktop header height */
+    max-height: calc(100vh - 64px * 2); /* Desktop header height */
+    min-height: calc(100vh - 64px * 2); /* Desktop header height */
   }
 }

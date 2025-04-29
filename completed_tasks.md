@@ -1,4 +1,4 @@
-# Task Breakdown for Digital Resume Project
+# Archive
 
 ## Completed Tasks
 
@@ -90,9 +90,7 @@
 - Store selected language in localStorage
 - Apply language on page load
 
-## Suggestions for Future Tasks
-
-### Task 7: Improve Hero Section Alignment
+### Task 7: Improve Hero Section Alignment ✅
 
 **Goal**: Create a more structured and visually balanced hero section layout.
 
@@ -114,96 +112,29 @@
    - Better visual balance between text and image
    - Improved overall aesthetic with proper alignment
 
-### Task 8: Implement SEO Optimization
+### Task 14: Standardize Section Layouts ✅
 
-**Goal**: Improve search engine visibility and indexing.
+**Goal**: Use the experience section structure for other sections of the page to maintain consistency.
 
-1. Add metadata components:
+1. Update the `Section.tsx` component:
 
-- Create reusable meta tags component
-- Add proper Open Graph tags
-- Implement structured data (JSON-LD)
+   - Add support for additional layouts or styles if needed
+   - Ensure it can handle content from other sections seamlessly
 
-2. Optimize for search engines:
+2. Refactor other sections:
 
-- Add sitemap.xml generation
-- Implement robots.txt
-- Add canonical URLs
+   - Replace existing layouts with the updated `Section.tsx` component
+   - Test each section to ensure proper rendering and responsiveness
 
-### Task 9: Add Animation and Transitions
+### Task 15: Implement pdf-file download CV button functionality ✅
 
-**Goal**: Enhance user experience with subtle animations.
+**Goal**: Allow users to download the resume file when clicking the "Download Resume" button.
 
-1. Implement scroll animations:
+1. Add the resume file to the project:
 
-- Add reveal animations for sections as they enter viewport
-- Create smooth transitions between sections
+   - Place the resume file (`resume.pdf`) in the `public` directory for easy access.
 
-2. Add micro-interactions:
+2. Implement download functionality:
 
-- Hover effects for interactive elements
-- Loading states and transitions
-- Page transition effects
-
-### Task 10: Implement Contact Form Functionality
-
-**Goal**: Make the contact form functional with validation and submission.
-
-1. Add form validation:
-
-- Implement client-side validation
-- Add error messages and visual feedback
-
-2. Create form submission handler:
-
-- Set up API endpoint for form submission
-- Add success/error states and messages
-- Implement CSRF protection
-
-### Task 11: Improve Accessibility
-
-**Goal**: Ensure the site meets WCAG 2.1 AA standards.
-
-1. Conduct accessibility audit:
-
-- Run automated tests (Lighthouse, axe)
-- Check keyboard navigation
-- Test with screen readers
-
-2. Implement improvements:
-
-- Fix any identified issues
-- Add skip links
-- Enhance focus styles
-- Improve ARIA attributes
-
-### Task 12: Add Print Stylesheet
-
-**Goal**: Create a printer-friendly version of the resume.
-
-1. Design print layout:
-
-- Optimize layout for paper
-- Hide interactive elements
-- Adjust typography for print
-
-2. Implement print styles:
-
-- Create print-specific CSS
-- Add page breaks at appropriate locations
-- Ensure all content is visible when printed
-
-### Task 13: Implement Testing
-
-**Goal**: Add comprehensive testing to ensure reliability.
-
-1. Set up testing framework:
-
-- Configure Jest and React Testing Library
-- Set up test utilities and mocks
-
-2. Write tests:
-
-- Unit tests for utilities and hooks
-- Component tests for UI elements
-- Integration tests for key user flows
+   - Link the "Download Resume" button to the resume file using an `<a>` tag with the `href` attribute pointing to `/SergeyZolotkoResume.pdf`.
+   - Add the `download` attribute to ensure the file is downloaded instead of opened in the browser.

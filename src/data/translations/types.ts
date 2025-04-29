@@ -9,10 +9,13 @@ export interface ProfileTranslation {
 export interface ExperienceItemTranslation {
   company: string;
   position: string;
+  description?: string;
   period: string;
   responsibilities: string[];
   achievements: string[];
   technologies?: string[];
+  shortResponsibilities: string;
+  shortAchievements: string;
 }
 
 export interface ExperienceTranslation {
@@ -25,25 +28,17 @@ export interface ExperienceTranslation {
 }
 
 export interface EducationItemTranslation {
+  degree: string;
   institution: string;
-  year: string;
-  degrees: {
-    name: string;
-    field: string;
-    year: string;
-  }[];
-}
-
-export interface ContinuousEducationTranslation {
-  title: string;
-  description: string;
+  period: string;
+  description: string[];
+  shortDescription: string;
 }
 
 export interface EducationTranslation {
   title: string;
   description: string;
   education: EducationItemTranslation[];
-  continuousEducation: ContinuousEducationTranslation;
 }
 
 export interface TechnicalSkillTranslation {
@@ -66,11 +61,12 @@ export interface ForecastingProcessTranslation {
 export interface SkillsTranslation {
   title: string;
   description: string;
+  introduction: string;
   technicalSkillsTitle: string;
   softSkillsTitle: string;
+  skillSet: string[];
   technicalSkills: TechnicalSkillTranslation[];
   softSkills: SoftSkillTranslation[];
-  forecastingProcess: ForecastingProcessTranslation;
 }
 
 export interface AboutCardTranslation {
@@ -120,18 +116,24 @@ export interface ContactTranslation {
 }
 
 export interface NavigationTranslation {
+  hero: string;
+  summary: string;
   experience: string;
   education: string;
   skills: string;
   about: string;
   contact: string;
   backToTop: string;
-  linkedin: string;
-  github: string;
+}
+
+export interface SummaryTranslation {
+  title: string;
+  briefIntro: string;
 }
 
 export interface TranslationData {
   profile: ProfileTranslation;
+  summary: SummaryTranslation;
   experience: ExperienceTranslation;
   education: EducationTranslation;
   skills: SkillsTranslation;
