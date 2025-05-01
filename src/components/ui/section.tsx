@@ -126,7 +126,7 @@ export function Section({
       id={id}
       className={`flex flex-col snap-start snap-always overflow-y-auto ${className}`}
     >
-      <div className="page-container section-container flex flex-col  sm:items-center h-full">
+      <div className="page-container section-container flex flex-col sm:items-center h-full">
         {isScreenTooShort && (
           <div className="flex items-center justify-center h-screen bg-background text-muted-foreground">
             <p className="text-center text-sm sm:text-base">

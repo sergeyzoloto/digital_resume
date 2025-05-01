@@ -116,7 +116,7 @@ export function SummarySection() {
 
   return (
     <Section id="summary" title={summaryData.title}>
-      <div className="flex flex-col justify-center overflow-x-hidden mb-12 lg:mb-4">
+      <div className="flex flex-col justify-center overflow-x-hidden mb-20 lg:mb-4">
         {/* Top row with Brief Intro, Skills, and Education cards */}
         <div className="flex flex-row flex-wrap gap-4 mb-4">
           {renderBriefIntroCard()}

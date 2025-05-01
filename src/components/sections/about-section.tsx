@@ -55,7 +55,7 @@ export function AboutSection() {
       title={aboutData.title}
       description={aboutData.description}
     >
-      <div className="flex flex-row flex-wrap gap-2 lg:gap-4 xl:gap-8 mb-12 lg:mb-4">
+      <div className="flex flex-row flex-wrap gap-2 lg:gap-4 xl:gap-8 mb-20 lg:mb-4">
         {aboutCards}
       </div>
     </Section>
