@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-05-01
+
+- Changed footer and header to keep consistent layout and style
+
 ## 2025-04-29
 
 - Small Typescript build fixes: Remove unused fullHeight prop from Section stories and update StoryButton import
