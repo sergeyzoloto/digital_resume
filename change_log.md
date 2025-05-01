@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 - Changed interface to keep consistent layout and style
 - Added warning on too little height to render content properly
 - Saved space for mobile rotated screen
+- Replaced min-h-screen Tailwind className to min-h-dvh for mobile browsers
 
 ## 2025-04-29
 

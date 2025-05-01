@@ -8,7 +8,7 @@ import { SummarySection } from "@/components/sections/summary-section";
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-background font-sans antialiased">
+    <div className="min-h-dvh bg-background font-sans antialiased">
       <main className="snap-y snap-mandatory overflow-y-scroll scroll-smooth sm:scroll-smooth h-screen">
         <HeroSection />
         <SummarySection />

@@ -15,7 +15,7 @@ export function SkillsSection() {
   const technicalSkillsCard = (
     <Card
       key="technical-skills"
-      className="overflow-y-auto h-full flex-[3_1_300px] max-h-[calc(100vh-15rem)] md:max-h-[calc(100vh-16rem)] lg:max-h-[calc(100vh-13rem)]" // Adjust height for mobile
+      className="overflow-y-auto h-full flex-[3_1_300px] max-h-[calc(100vh-15rem)]"
     >
       <CardHeader>
         <CardTitle>{skillsData.technicalSkillsTitle}</CardTitle>
@@ -42,7 +42,7 @@ export function SkillsSection() {
   const softSkillsCard = (
     <Card
       key="soft-skills"
-      className="overflow-y-auto h-full flex-[3_1_300px] max-h-[calc(100vh-15rem)] md:max-h-[calc(100vh-16rem)] lg:max-h-[calc(100vh-13rem)]" // Adjust height for mobile
+      className="overflow-y-auto h-full flex-[3_1_300px] max-h-[calc(100vh-15rem)]" // Adjust height for mobile
     >
       <CardHeader>
         <CardTitle>{skillsData.softSkillsTitle}</CardTitle>
@@ -51,7 +51,7 @@ export function SkillsSection() {
         <p className="text-sm text-muted-foreground mb-4">
           {skillsData.introduction}
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-4">
           {skillsData.softSkills.map((skill, index) => (
             <div key={`soft-skill-${index}`} className="space-y-2">
               <Badge className="w-full justify-center py-1.5">

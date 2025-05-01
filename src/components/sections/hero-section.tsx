@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen w-full flex items-center justify-center overflow-hidden snap-start snap-always"
+      className="min-h-dvh w-full flex items-center justify-center overflow-hidden snap-start snap-always"
     >
       {/* Main container with defined width */}
       <div className="h-full items-center justify-center flex w-full page-container section-container">
