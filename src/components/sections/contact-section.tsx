@@ -97,7 +97,9 @@ export function ContactSection() {
       title={contactData.title}
       description={contactData.description}
     >
-      <div className="flex flex-row lg:gap-4 xl:gap-8">{contactInfoCard}</div>
+      <div className="flex flex-row justify-center lg:gap-4 xl:gap-8">
+        {contactInfoCard}
+      </div>
     </Section>
   );
 }

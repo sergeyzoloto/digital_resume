@@ -13,7 +13,7 @@ export function AboutSection() {
   const aboutCards = aboutData.cards.map((card, index) => (
     <Card
       key={`about-card-${index}`}
-      className={`overflow-y-auto max-h-min first:text-base first:xs:text-lg first:2xl:text-2xl ${
+      className={`overflow-y-auto first:text-base first:xs:text-lg first:2xl:text-2xl ${
         index >= aboutData.cards.length - 2
           ? "flex-[1_1_auto] lg:flex-[1_1_48%]"
           : "flex-[1_1_auto]"
