@@ -96,27 +96,12 @@ export interface ContactInfoTranslation {
   value: string;
 }
 
-export interface FormLabelsTranslation {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  submit: string;
-  namePlaceholder: string;
-  emailPlaceholder: string;
-  subjectPlaceholder: string;
-  messagePlaceholder: string;
-}
-
 export interface ContactTranslation {
   title: string;
   description: string;
   contactInfo: ContactInfoTranslation[];
-  contactInfoTitle: string;
-  contactInfoDescription: string;
-  formTitle: string;
-  formDescription: string;
-  formLabels: FormLabelsTranslation;
+  contactInfoTitle?: string;
+  contactInfoDescription?: string;
 }
 
 export interface NavigationTranslation {

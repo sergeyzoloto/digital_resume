@@ -8,6 +8,8 @@ All notable changes to this project will be documented in this file.
 - Added warning on too little height to render content properly
 - Saved space for mobile rotated screen
 - Replaced min-h-screen Tailwind className to min-h-dvh for mobile browsers
+- Enhance contact section with GitHub and LinkedIn links
+- Update translations, and adjust card layouts for better responsiveness
 
 ## 2025-04-29
 

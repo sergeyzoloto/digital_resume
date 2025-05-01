@@ -55,7 +55,7 @@ export function SummarySection() {
 
   // Render brief intro card
   const renderBriefIntroCard = () => (
-    <Card className="flex-[2_0_16rem]">
+    <Card className="flex-[6_0_24rem]">
       <CardContent>
         <p className="text-base xl:text-xl">{summaryData.briefIntro}</p>
       </CardContent>
@@ -64,7 +64,7 @@ export function SummarySection() {
 
   // Render skills card
   const renderSkillsCard = () => (
-    <Card className="flex-[1_0_16rem]">
+    <Card className="flex-[1_0_14rem] overflow-x-hidden">
       <CardHeader>
         <CardTitle>{skillsData.title}</CardTitle>
       </CardHeader>
@@ -84,7 +84,7 @@ export function SummarySection() {
 
   // Render education card
   const renderEducationCard = () => (
-    <Card className="flex-[2_0_16rem]">
+    <Card className="flex-[2_0_14rem]">
       <CardHeader>
         <CardTitle>{educationData.title}</CardTitle>
       </CardHeader>

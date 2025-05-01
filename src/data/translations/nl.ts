@@ -269,41 +269,35 @@ export const nl: TranslationData = {
   },
   contact: {
     title: "Contact",
-    description: "Neem contact op om mogelijkheden te bespreken.",
+    description: "Voel je vrij om contact op te nemen",
     contactInfo: [
       {
         icon: "map-pin",
         title: "Locatie",
-        value: "Nederland",
+        value: "Rotterdam, Nederland",
       },
       {
         icon: "mail",
         title: "Email",
-        value: "s.@.com",
+        value: "s.zolotko@gmail.com",
       },
       {
         icon: "phone",
         title: "Telefoon",
-        value: "Op aanvraag beschikbaar",
+        value: "Op aanvraag",
+      },
+      {
+        icon: "github",
+        title: "GitHub",
+        value: "github.com/sergeyzoloto",
+      },
+      {
+        icon: "linkedin",
+        title: "LinkedIn",
+        value: "linkedin.com/in/sergey-zolotko",
       },
     ],
     contactInfoTitle: "Contactinformatie",
-    contactInfoDescription:
-      "Voel je vrij om contact op te nemen via een van deze kanalen.",
-    formTitle: "Stuur mij een bericht",
-    formDescription:
-      "Vul het onderstaande formulier in en ik neem zo snel mogelijk contact met je op.",
-    formLabels: {
-      name: "Naam",
-      email: "Email",
-      subject: "Onderwerp",
-      message: "Bericht",
-      submit: "Verstuur Bericht",
-      namePlaceholder: "Jouw naam",
-      emailPlaceholder: "Jouw email",
-      subjectPlaceholder: "Onderwerp van je bericht",
-      messagePlaceholder: "Jouw bericht",
-    },
   },
   navigation: {
     hero: "Start",
