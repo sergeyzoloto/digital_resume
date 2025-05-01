@@ -15,7 +15,7 @@ export function SkillsSection() {
   const technicalSkillsCard = (
     <Card
       key="technical-skills"
-      className="overflow-y-auto h-full flex-[3_1_300px] max-h-[calc(100vh-15rem)]"
+      className="overflow-y-auto h-full lg:h-auto flex-[3_1_300px] max-h-[calc(100vh-15rem)]"
     >
       <CardHeader>
         <CardTitle>{skillsData.technicalSkillsTitle}</CardTitle>
@@ -42,7 +42,7 @@ export function SkillsSection() {
   const softSkillsCard = (
     <Card
       key="soft-skills"
-      className="overflow-y-auto h-full flex-[3_1_300px] max-h-[calc(100vh-15rem)]" // Adjust height for mobile
+      className="overflow-y-auto h-full lg:h-auto flex-[3_1_300px] max-h-[calc(100vh-15rem)]"
     >
       <CardHeader>
         <CardTitle>{skillsData.softSkillsTitle}</CardTitle>

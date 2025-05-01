@@ -20,7 +20,7 @@ export function EducationSection() {
   const educationCards = educationData.education.map((edu, index) => (
     <Card
       key={`education-${index}`}
-      className="overflow-y-auto flex-[1_1_300px] h-full max-h-[calc(100vh-15rem)]"
+      className="overflow-y-auto flex-[1_1_300px] h-full lg:h-auto max-h-[calc(100vh-15rem)]"
     >
       <CardHeader className="flex flex-row flex-wrap items-start justify-between gap-4">
         <div className="flex flex-row items-center gap-4 mb-2">

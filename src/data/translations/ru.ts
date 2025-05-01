@@ -269,41 +269,35 @@ export const ru: TranslationData = {
   },
   contact: {
     title: "Свяжитесь со мной",
-    description: "Свяжитесь для обсуждения возможностей.",
+    description: "Обращайтесь через любой из каналов",
     contactInfo: [
       {
         icon: "map-pin",
         title: "Местоположение",
-        value: "Нидерланды",
+        value: "Роттердам, Нидерланды",
       },
       {
         icon: "mail",
         title: "Электронная почта",
-        value: "s.@.com",
+        value: "s.zolotko@gmail.com",
       },
       {
         icon: "phone",
         title: "Телефон",
-        value: "Предоставляется по запросу",
+        value: "по запросу",
+      },
+      {
+        icon: "github",
+        title: "GitHub",
+        value: "github.com/sergeyzoloto",
+      },
+      {
+        icon: "linkedin",
+        title: "LinkedIn",
+        value: "linkedin.com/in/sergey-zolotko",
       },
     ],
     contactInfoTitle: "Контактная информация",
-    contactInfoDescription:
-      "Не стесняйтесь обращаться через любой из этих каналов.",
-    formTitle: "Отправьте мне сообщение",
-    formDescription:
-      "Заполните форму ниже, и я свяжусь с вами как можно скорее.",
-    formLabels: {
-      name: "Имя",
-      email: "Электронная почта",
-      subject: "Тема",
-      message: "Сообщение",
-      submit: "Отправить сообщение",
-      namePlaceholder: "Ваше имя",
-      emailPlaceholder: "Ваш email",
-      subjectPlaceholder: "Тема сообщения",
-      messagePlaceholder: "Ваше сообщение",
-    },
   },
   navigation: {
     hero: "Главная",

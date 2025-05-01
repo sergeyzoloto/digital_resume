@@ -25,7 +25,7 @@ export function SummarySection() {
     experience: (typeof experienceData.items)[0],
     index: number
   ) => (
-    <Card key={`summary-${index}`} className="overflow-y-auto">
+    <Card key={`summary-${index}`}>
       <CardHeader>
         <div className="flex flex-row w-full items-start md:justify-between gap-4">
           <div className="flex flex-col gap-2 w-full">
@@ -55,7 +55,7 @@ export function SummarySection() {
 
   // Render brief intro card
   const renderBriefIntroCard = () => (
-    <Card className="flex-[1_0_16rem]">
+    <Card className="flex-[6_0_24rem]">
       <CardContent>
         <p className="text-base xl:text-xl">{summaryData.briefIntro}</p>
       </CardContent>
@@ -64,7 +64,7 @@ export function SummarySection() {
 
   // Render skills card
   const renderSkillsCard = () => (
-    <Card className="flex-[1_0_16rem]">
+    <Card className="flex-[1_0_14rem] overflow-x-hidden">
       <CardHeader>
         <CardTitle>{skillsData.title}</CardTitle>
       </CardHeader>
@@ -84,7 +84,7 @@ export function SummarySection() {
 
   // Render education card
   const renderEducationCard = () => (
-    <Card className="flex-[2_0_16rem]">
+    <Card className="flex-[2_0_14rem]">
       <CardHeader>
         <CardTitle>{educationData.title}</CardTitle>
       </CardHeader>
@@ -115,19 +115,13 @@ export function SummarySection() {
   );
 
   return (
-    <Section
-      id="summary"
-      title={summaryData.title}
-      className="h-full overflow-y-auto"
-    >
-      <div className="flex flex-col justify-center overflow-x-hidden mb-12 lg:mb-4">
+    <Section id="summary" title={summaryData.title}>
+      <div className="flex flex-col justify-center overflow-x-hidden mb-20 lg:mb-4">
         {/* Top row with Brief Intro, Skills, and Education cards */}
         <div className="flex flex-row flex-wrap gap-4 mb-4">
           {renderBriefIntroCard()}
-          <div className="flex-[1_0_16rem] flex flex-row flex-wrap gap-4">
-            {renderEducationCard()}
-            {renderSkillsCard()}
-          </div>
+          {renderEducationCard()}
+          {renderSkillsCard()}
         </div>
         {/* Render the first three experience cards in a row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

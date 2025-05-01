@@ -274,41 +274,35 @@ export const en: TranslationData = {
   },
   contact: {
     title: "In Touch",
-    description: "Feel free to contact me",
+    description: "Feel free to reach me out",
     contactInfo: [
       {
         icon: "map-pin",
         title: "Location",
-        value: "The Netherlands",
+        value: "Rotterdam, The Netherlands",
       },
       {
         icon: "mail",
         title: "Email",
-        value: "s.@.com",
+        value: "s.zolotko@gmail.com",
       },
       {
         icon: "phone",
         title: "Phone",
         value: "Available upon request",
       },
+      {
+        icon: "github",
+        title: "GitHub",
+        value: "github.com/sergeyzoloto",
+      },
+      {
+        icon: "linkedin",
+        title: "LinkedIn",
+        value: "linkedin.com/in/sergey-zolotko",
+      },
     ],
-    contactInfoTitle: "Contact Information",
-    contactInfoDescription:
-      "Feel free to reach out through any of these channels.",
-    formTitle: "Send Me a Message",
-    formDescription:
-      "Fill out the form below and I'll get back to you as soon as possible.",
-    formLabels: {
-      name: "Name",
-      email: "Email",
-      subject: "Subject",
-      message: "Message",
-      submit: "Send Message",
-      namePlaceholder: "Your name",
-      emailPlaceholder: "Your email",
-      subjectPlaceholder: "Subject of your message",
-      messagePlaceholder: "Your message",
-    },
+    contactInfoTitle: "Contact Info",
   },
   navigation: {
     hero: "Start",
