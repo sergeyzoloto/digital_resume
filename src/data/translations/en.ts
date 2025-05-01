@@ -320,4 +320,8 @@ export const en: TranslationData = {
     contact: "Contact",
     backToTop: "Back to top",
   },
+  interface: {
+    rotateMessage:
+      "Screen height is too short to display the content properly. Please rotate your device to portrait mode.",
+  },
 };

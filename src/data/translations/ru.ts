@@ -315,4 +315,8 @@ export const ru: TranslationData = {
     contact: "Контакты",
     backToTop: "Наверх",
   },
+  interface: {
+    rotateMessage:
+      "Высота экрана недостаточна для корректного отображения содержимого. Поверните устройство вертикально.",
+  },
 };

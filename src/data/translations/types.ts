@@ -6,6 +6,10 @@ export interface ProfileTranslation {
   downloadButton: string;
 }
 
+export interface InterfaceTranslation {
+  rotateMessage: string;
+}
+
 export interface ExperienceItemTranslation {
   company: string;
   position: string;
@@ -140,4 +144,5 @@ export interface TranslationData {
   about: AboutTranslation;
   contact: ContactTranslation;
   navigation: NavigationTranslation;
+  interface: InterfaceTranslation;
 }

@@ -79,16 +79,7 @@
 /* These styles handle the sections margin */
 .section-container {
   margin-top: 40px;
-  margin-bottom: 40px; /* Mobile header height */
-  max-height: calc(100vh - 40px * 2); /* Mobile header height */
-  min-height: calc(100vh - 40px * 2); /* Mobile header height */
-}
-
-@media screen and (min-width: 768px) {
-  .section-container {
-    margin-top: 64px;
-    margin-bottom: 64px; /* Desktop header height */
-    max-height: calc(100vh - 64px * 2); /* Desktop header height */
-    min-height: calc(100vh - 64px * 2); /* Desktop header height */
-  }
+  margin-bottom: 40px;
+  max-height: calc(100vh - 40px * 2);
+  min-height: calc(100vh - 40px * 2);
 }

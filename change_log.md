@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-05-01
+
+- Changed interface to keep consistent layout and style
+- Added warning on too little height to render content properly
+- Saved space for mobile rotated screen
+
 ## 2025-04-29
 
 - Small Typescript build fixes: Remove unused fullHeight prop from Section stories and update StoryButton import

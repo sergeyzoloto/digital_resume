@@ -24,7 +24,7 @@ export function ExperienceSection() {
   ) => (
     <Card
       key={`experience-${index}`}
-      className="overflow-y-auto flex-[3_1_300px] h-full max-h-[calc(100vh-20rem)] md:max-h-[calc(100vh-18rem)]" // Adjust height for mobile
+      className="overflow-y-auto flex-[3_1_300px] h-full max-h-[calc(100vh-15rem)] md:max-h-[calc(100vh-16rem)]" // Adjust height for mobile
     >
       <CardHeader>
         <div className="flex flex-row justify-between gap-4">
@@ -37,7 +37,7 @@ export function ExperienceSection() {
           </Badge>
         </div>
       </CardHeader>
-      <CardContent className="overflow-y-auto max-h-full px-4">
+      <CardContent className="overflow-y-auto max-h-full px-4 text-sm xl:text-base">
         {/* Scrollable content */}
         <div className="px-2 space-y-4">
           <div>
