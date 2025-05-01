@@ -96,10 +96,9 @@ export function Footer() {
               onClick={scrollToNextSection}
               variant="ghost"
               size="sm"
-              className="text-muted-foreground"
+              className="text-muted-foreground underline"
             >
               {getNextSectionName()}
-              {" →"}
             </Button>
           )}
         </div>

@@ -19,7 +19,7 @@ export function ContactSection() {
   const contactInfoCard = (
     <Card
       key="contact-info"
-      className="overflow-y-auto h-full max-h-[calc(100vh-19rem)] md:max-h-[calc(100vh-22rem)]" // Adjust height for mobile
+      className="overflow-y-auto h-full max-h-[calc(100vh-15rem)]" // Adjust height for mobile
     >
       <CardHeader>
         <CardTitle>{contactData.contactInfoTitle}</CardTitle>
@@ -97,12 +97,7 @@ export function ContactSection() {
       title={contactData.title}
       description={contactData.description}
     >
-      <div className="w-full">
-        <div>
-          {contactInfoCard}
-          <div className="mt-6"></div>
-        </div>
-      </div>
+      <div className="flex flex-row lg:gap-4 xl:gap-8">{contactInfoCard}</div>
     </Section>
   );
 }

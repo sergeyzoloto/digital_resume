@@ -81,7 +81,7 @@ export function Section({
   const renderContent = () => {
     if (isMobile && useCarouselOnMobile) {
       return (
-        <div className="w-full">
+        <div className="absolute w-full h-full flex flex-col justify-center items-center">
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
               {carouselItems.map((child, index) => (
@@ -114,7 +114,11 @@ export function Section({
       );
     }
 
-    return <div className="flex flex-row">{children}</div>;
+    return (
+      <div className="absolute top-0 flex flex-col justify-center items-center">
+        {children}
+      </div>
+    );
   };
 
   return (
@@ -122,7 +126,7 @@ export function Section({
       id={id}
       className={`flex flex-col snap-start snap-always overflow-hidden ${className}`}
     >
-      <div className="page-container section-container flex-1 flex flex-col justify-center items-center">
+      <div className="page-container section-container flex flex-col sm:justify-center sm:items-center h-full">
         {isScreenTooShort && (
           <div className="flex items-center justify-center h-screen bg-background text-muted-foreground">
             <p className="text-center text-sm sm:text-base">
@@ -132,7 +136,7 @@ export function Section({
         )}
         {!isScreenTooShort && (
           <>
-            <div className="space-y-2 text-center xl:mt-4">
+            <div className="space-y-2 text-center xl:mt-4 flex-none">
               <h2 className="text-lg sm:text-xl xl:text-3xl font-bold tracking-tighter">
                 {title}
               </h2>
@@ -142,7 +146,7 @@ export function Section({
                 </p>
               )}
             </div>
-            <div className="w-full mt-2 lg:mt-4 xl:mt-6 overflow-x-auto">
+            <div className="relative flex flex-1 flex-col w-full justify-center items-center mt-2 lg:mt-4 xl:mt-6 overflow-x-auto">
               {renderContent()}
             </div>
           </>

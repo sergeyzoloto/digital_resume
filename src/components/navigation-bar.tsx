@@ -22,7 +22,7 @@ export function NavigationBar() {
 
   return (
     <div
-      className={`z-100 fixed right-6 bottom-12 md:bottom-18 lg:bottom-1/2 lg:translate-y-1/2 text-white max-w-min rounded-lg ${
+      className={`z-100 fixed right-1/2 translate-x-1/2 lg:translate-x-0 bottom-0 lg:right-6 lg:bottom-1/2 lg:translate-y-1/2 text-white max-w-min rounded-lg ${
         isExpanded ? "opacity-100" : "opacity-40"
       } transition-opacity duration-300`}
       onMouseEnter={() => setIsExpanded(true)}
@@ -44,7 +44,7 @@ export function NavigationBar() {
         <div className="flex flex-row items-center p-4 space-x-1 lg:space-x-0 lg:space-y-1 lg:flex-col bg-background rounded-lg">
           {navItems.map((item) => (
             <div
-              key={item.key} // Changed from index to item.key
+              key={item.key}
               className={`w-2 rounded-sm bg-primary ${
                 activeSection === item.key ? "h-2 lg:h-6" : "h-2 opacity-50"
               } transition-all duration-300`}
