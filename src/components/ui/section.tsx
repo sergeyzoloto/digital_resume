@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/data/translations";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 import { useMobile } from "@/hooks/use-mobile";
 import {
@@ -38,6 +40,23 @@ export function Section({
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
+  const { language } = useLanguage();
+  const t = translations[language];
+  const interfaceData = t.interface;
+  const [isScreenTooShort, setIsScreenTooShort] = useState(false);
+
+  // Check if the screen height is too short
+  useEffect(() => {
+    const checkScreenHeight = () => {
+      setIsScreenTooShort(window.innerHeight < 400); // Adjust this value as needed
+    };
+
+    checkScreenHeight();
+    window.addEventListener("resize", checkScreenHeight);
+
+    return () => window.removeEventListener("resize", checkScreenHeight);
+  }, []);
+
   // Update current slide when carousel changes
   const onSelect = () => {
     if (!api) return;
@@ -45,13 +64,13 @@ export function Section({
   };
 
   // Set up the carousel API
-  useState(() => {
+  useEffect(() => {
     if (!api) return;
     api.on("select", onSelect);
     return () => {
       api.off("select", onSelect);
     };
-  });
+  }, [api]);
 
   // Extract carousel items if needed
   const carouselItems = carouselChildrenFilter
@@ -104,19 +123,30 @@ export function Section({
       className={`flex flex-col snap-start snap-always overflow-hidden ${className}`}
     >
       <div className="page-container section-container flex-1 flex flex-col justify-center items-center">
-        <div className="space-y-2 text-center mt-4">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            {title}
-          </h2>
-          {description && (
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              {description}
+        {isScreenTooShort && (
+          <div className="flex items-center justify-center h-screen bg-background text-muted-foreground">
+            <p className="text-center text-sm sm:text-base">
+              {interfaceData.rotateMessage}
             </p>
-          )}
-        </div>
-        <div className="w-full mt-4 md:mt-6 overflow-x-auto">
-          {renderContent()}
-        </div>
+          </div>
+        )}
+        {!isScreenTooShort && (
+          <>
+            <div className="space-y-2 text-center xl:mt-4">
+              <h2 className="text-lg sm:text-xl xl:text-3xl font-bold tracking-tighter">
+                {title}
+              </h2>
+              {description && (
+                <p className="text-xs sm:text-sm xl:text-base mx-auto whitespace-nowrap max-w-[700px] text-muted-foreground">
+                  {description}
+                </p>
+              )}
+            </div>
+            <div className="w-full mt-2 lg:mt-4 xl:mt-6 overflow-x-auto">
+              {renderContent()}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );
